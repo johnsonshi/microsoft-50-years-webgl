@@ -58,21 +58,16 @@ for (const particleCount of [25_000, 50_000, 100_000]) {
     const metrics = Object.fromEntries(
       performanceMetrics.metrics.map(({ name, value }) => [name, value]),
     );
-    const webgl = await session.page.locator("canvas").evaluate((canvas) => {
-      const context = canvas.getContext("webgl2");
-      if (!context) {
-        return { version: "unavailable", renderer: "unavailable" };
-      }
-      const debug = context.getExtension("WEBGL_debug_renderer_info");
-      return {
-        version: context.getParameter(context.VERSION),
-        renderer: debug
-          ? context.getParameter(debug.UNMASKED_RENDERER_WEBGL)
-          : context.getParameter(context.RENDERER),
-        drawingBufferWidth: context.drawingBufferWidth,
-        drawingBufferHeight: context.drawingBufferHeight,
-      };
-    });
+    const webgl = {
+      historical: await readWebglContext(
+        session.page,
+        "#experience-canvas",
+      ),
+      ambient: await readWebglContext(
+        session.page,
+        "#ambient-icon-canvas",
+      ),
+    };
 
     results.push({
       particleCount,
@@ -128,3 +123,20 @@ async function collectFiles(directory) {
   return files.sort((left, right) => left.path.localeCompare(right.path));
 }
 
+async function readWebglContext(page, selector) {
+  return page.locator(selector).evaluate((canvas) => {
+    const context = canvas.getContext("webgl2");
+    if (!context) {
+      return { version: "unavailable", renderer: "unavailable" };
+    }
+    const debug = context.getExtension("WEBGL_debug_renderer_info");
+    return {
+      version: context.getParameter(context.VERSION),
+      renderer: debug
+        ? context.getParameter(debug.UNMASKED_RENDERER_WEBGL)
+        : context.getParameter(context.RENDERER),
+      drawingBufferWidth: context.drawingBufferWidth,
+      drawingBufferHeight: context.drawingBufferHeight,
+    };
+  });
+}

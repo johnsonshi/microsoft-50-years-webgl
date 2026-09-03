@@ -6,6 +6,7 @@ import {
   choiceSampler,
   lineSampler,
   planeSampler,
+  polylineSampler,
   ringSampler,
   sphereShellSampler,
   sphereVolumeSampler,
@@ -60,7 +61,7 @@ function createSceneComponents(index: number): WeightedSampler[] {
     case 6:
       return microsoftScene();
     case 7:
-      return rocketScene();
+      return spaceScene();
     default:
       throw new Error(`Unknown scene index ${index}.`);
   }
@@ -483,103 +484,69 @@ function microsoftScene(): WeightedSampler[] {
   ];
 }
 
-function rocketScene(): WeightedSampler[] {
-  const rocketX = 1.15;
-  const rocketDepth = 0.65;
-  const bodyCenter: Vec3 = [rocketX, -0.3, rocketDepth];
-  const body = cylinderShellSampler(bodyCenter, 0.27, 3.55, 0.025);
-  const interstage = cylinderShellSampler(
-    [rocketX, 0.42, rocketDepth],
-    0.29,
-    0.3,
-    0.022,
-  );
-  const nose = ogiveShellSampler(
-    [rocketX, 1.475, rocketDepth],
-    0.27,
-    0.76,
-    0.025,
-  );
-  const stageBands = [-1.68, -0.88, 0.02, 0.58, 1.12].map((y) =>
-    ringSampler(
-      [rocketX, y, rocketDepth],
-      0.275,
-      0.275,
-      "xz",
-      0.024,
-    ),
-  );
-  const smoke = [
-    ellipsoidVolumeSampler([rocketX, -2.02, 0.98], [0.38, 0.2, 0.02]),
-    ellipsoidVolumeSampler([0.55, -1.94, 0.98], [0.65, 0.25, 0.02]),
-    ellipsoidVolumeSampler([1.8, -1.92, 0.98], [0.68, 0.25, 0.02]),
-    ellipsoidVolumeSampler([-0.08, -1.8, 0.98], [0.76, 0.32, 0.02]),
-    ellipsoidVolumeSampler([2.42, -1.78, 0.98], [0.74, 0.32, 0.02]),
-    ellipsoidVolumeSampler([0.95, -1.48, 0.98], [0.48, 0.56, 0.02]),
+function spaceScene(): WeightedSampler[] {
+  const moonCenter: Vec3 = [1.15, 0.55, -0.7];
+  const moon = discSampler(moonCenter, 1.28, 0.1);
+  const moonDetails = [
+    ringSampler([1.15, 0.55, -0.54], 1.3, 1.3, "xy", 0.045),
+    ringSampler([0.72, 0.9, -0.48], 0.28, 0.22, "xy", 0.035),
+    ringSampler([1.52, 0.25, -0.46], 0.2, 0.16, "xy", 0.03),
+    ringSampler([1.52, 1.03, -0.45], 0.13, 0.11, "xy", 0.025),
+    ringSampler([0.95, 0.18, -0.44], 0.11, 0.09, "xy", 0.022),
   ];
-  const exhaust = rocketExhaustSampler(
-    [rocketX, -2.12, rocketDepth],
-    1.35,
-    0.26,
+  const orbitLines = [
+    ringSampler(moonCenter, 1.78, 0.64, "xy", 0.03),
+    ringSampler([1.15, 0.55, -0.82], 2.2, 0.92, "xy", 0.025),
+  ];
+  const rocketCenter: Vec3 = [0.62, -0.12, 0.62];
+  const rocketAngle = -0.4;
+  const transform = (sample: PointSampler) =>
+    rotateTranslateSampler(sample, rocketCenter, rocketAngle);
+  const rocketBody = transform(
+    cylinderShellSampler([0, 0, 0], 0.24, 2.45, 0.025),
   );
-  const tower = [
-    lineSampler([2.05, -2.0, -0.22], [2.05, 1.62, -0.22], 0.035),
-    lineSampler([2.45, -2.0, -0.22], [2.45, 1.62, -0.22], 0.035),
-    ...Array.from({ length: 9 }, (_, index) =>
-      lineSampler(
-        [2.05, -1.82 + index * 0.42, -0.22],
-        [2.45, -1.82 + index * 0.42, -0.22],
+  const rocketNose = transform(
+    ogiveShellSampler([0, 1.225, 0], 0.24, 0.66, 0.025),
+  );
+  const rocketBands = [-1.2, -0.55, 0.18, 0.78, 1.18].map((y) =>
+    transform(ringSampler([0, y, 0], 0.245, 0.245, "xz", 0.022)),
+  );
+  const rocketDetails = [
+    transform(
+      polylineSampler(
+        [
+          [-0.22, -0.72, 0.02],
+          [-0.56, -1.34, 0.02],
+          [-0.2, -1.18, 0.02],
+        ],
         0.025,
       ),
     ),
-    ...Array.from({ length: 8 }, (_, index) =>
-      lineSampler(
-        [index % 2 === 0 ? 2.05 : 2.45, -1.82 + index * 0.42, -0.2],
-        [index % 2 === 0 ? 2.45 : 2.05, -1.4 + index * 0.42, -0.2],
-        0.022,
+    transform(
+      polylineSampler(
+        [
+          [0.22, -0.72, 0.02],
+          [0.56, -1.34, 0.02],
+          [0.2, -1.18, 0.02],
+        ],
+        0.025,
       ),
     ),
-    lineSampler([2.05, 0.9, -0.2], [1.42, 0.9, 0.22], 0.03),
-    lineSampler([2.05, 0.22, -0.2], [1.42, 0.22, 0.22], 0.03),
-    lineSampler([2.05, -0.5, -0.2], [1.42, -0.5, 0.22], 0.03),
+    transform(ringSampler([0, 0.42, 0.25], 0.11, 0.11, "xy", 0.025)),
   ];
-  const horizon = [
-    lineSampler([-4.5, -2.02, -0.55], [4.5, -2.02, -0.55], 0.025),
-    lineSampler([-4.5, -2.18, -0.25], [4.5, -2.18, -0.25], 0.035),
-    boxEdgesSampler([1.55, -1.92, -0.18], [2.5, 0.22, 0.6], 0.025),
-  ];
-  const crowd = crowdSilhouetteSamplers();
+  const stars = starFieldSamplers();
 
   return [
-    { weight: 0.25, sample: body },
-    { weight: 0.03, sample: interstage },
-    { weight: 0.08, sample: nose },
-    { weight: 0.065, sample: choiceSampler(stageBands) },
-    { weight: 0.1, sample: exhaust },
-    { weight: 0.1, sample: choiceSampler(smoke) },
-    { weight: 0.16, sample: choiceSampler(tower) },
-    { weight: 0.08, sample: choiceSampler(horizon) },
-    { weight: 0.135, sample: choiceSampler(crowd) },
+    { weight: 0.23, sample: moon },
+    { weight: 0.08, sample: choiceSampler(moonDetails) },
+    { weight: 0.08, sample: choiceSampler(orbitLines) },
+    { weight: 0.18, sample: rocketBody },
+    { weight: 0.06, sample: rocketNose },
+    { weight: 0.045, sample: choiceSampler(rocketBands) },
+    { weight: 0.045, sample: choiceSampler(rocketDetails) },
+    { weight: 0.1, sample: choiceSampler(stars) },
+    { weight: 0.175, sample: planeSampler([0, 0, -1.4], 8.6, 5.4, 0.5) },
   ];
-}
-
-function ellipsoidVolumeSampler(
-  center: Vec3,
-  radii: Vec3,
-): PointSampler {
-  return (random, output, offset) => {
-    const y = random() * 2 - 1;
-    const angle = random() * Math.PI * 2;
-    const radial = Math.sqrt(Math.max(0, 1 - y * y));
-    const distance = Math.cbrt(random());
-    writePoint(
-      output,
-      offset,
-      center[0] + Math.cos(angle) * radial * radii[0] * distance,
-      center[1] + y * radii[1] * distance,
-      center[2] + Math.sin(angle) * radial * radii[2] * distance,
-    );
-  };
 }
 
 function interfacePanelSamplers(
@@ -788,44 +755,65 @@ function ogiveShellSampler(
   };
 }
 
-function crowdSilhouetteSamplers(): PointSampler[] {
-  const samplers: PointSampler[] = [];
-  for (let index = 0; index < 28; index += 1) {
-    const row = index % 3;
-    const x = -4.35 + index * 0.325 + (row - 1) * 0.06;
-    const scale = 0.13 + ((index * 5) % 4) * 0.018;
-    const headY = -2.13 - row * 0.11;
-    const depth = 1.18 + row * 0.16;
-    samplers.push(
-      sphereVolumeSampler([x, headY, depth], scale),
-      ellipsoidVolumeSampler(
-        [x, headY - scale * 1.65, depth - 0.02],
-        [scale * 1.55, scale * 1.05, scale * 0.82],
-      ),
-    );
-  }
-  return samplers;
-}
-
-function rocketExhaustSampler(
-  origin: Vec3,
-  length: number,
-  maxRadius: number,
+function discSampler(
+  center: Vec3,
+  radius: number,
+  depth: number,
 ): PointSampler {
   return (random, output, offset) => {
-    const vertical = random();
     const angle = random() * Math.PI * 2;
-    const radius =
-      (0.025 + Math.pow(vertical, 0.72) * maxRadius) *
-      Math.sqrt(random());
+    const sampledRadius = Math.sqrt(random()) * radius;
     writePoint(
       output,
       offset,
-      origin[0] + Math.cos(angle) * radius,
-      origin[1] - vertical * length,
-      origin[2] + (random() - 0.5) * 0.08,
+      center[0] + Math.cos(angle) * sampledRadius,
+      center[1] + Math.sin(angle) * sampledRadius,
+      center[2] + (random() - 0.5) * depth,
     );
   };
+}
+
+function rotateTranslateSampler(
+  sample: PointSampler,
+  center: Vec3,
+  angle: number,
+): PointSampler {
+  const cosine = Math.cos(angle);
+  const sine = Math.sin(angle);
+  const sampled = new Float32Array(3);
+  return (random, output, offset) => {
+    sample(random, sampled, 0);
+    writePoint(
+      output,
+      offset,
+      center[0] + sampled[0] * cosine - sampled[1] * sine,
+      center[1] + sampled[0] * sine + sampled[1] * cosine,
+      center[2] + sampled[2],
+    );
+  };
+}
+
+function starFieldSamplers(): PointSampler[] {
+  return Array.from({ length: 28 }, (_, index) => {
+    const x = -4.1 + ((index * 47) % 97) / 96 * 8.2;
+    const y = -2.45 + ((index * 71) % 89) / 88 * 4.9;
+    const z = -1.15 + (index % 5) * 0.08;
+    const radius = 0.035 + (index % 4) * 0.018;
+    return choiceSampler([
+      lineSampler([x - radius, y, z], [x + radius, y, z], 0.012),
+      lineSampler([x, y - radius, z], [x, y + radius, z], 0.012),
+      lineSampler(
+        [x - radius * 0.55, y - radius * 0.55, z],
+        [x + radius * 0.55, y + radius * 0.55, z],
+        0.01,
+      ),
+      lineSampler(
+        [x + radius * 0.55, y - radius * 0.55, z],
+        [x - radius * 0.55, y + radius * 0.55, z],
+        0.01,
+      ),
+    ]);
+  });
 }
 
 function nextFrame(): Promise<void> {

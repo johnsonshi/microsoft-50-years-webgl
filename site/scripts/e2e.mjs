@@ -19,6 +19,16 @@ try {
     8,
   );
   assert.equal(
+    await desktop.page.locator("#ambient-icon-canvas").count(),
+    1,
+  );
+  assert.equal(
+    await desktop.page
+      .locator("#ambient-icon-canvas")
+      .getAttribute("aria-hidden"),
+    "true",
+  );
+  assert.equal(
     await desktop.page.locator(".era-copy__year, .era-copy h2").count(),
     0,
   );
@@ -106,6 +116,17 @@ try {
     "An unofficial personal tribute to Microsoft's first 50 years. By Johnson Shi.",
   );
   assert.equal(contentState.authorHref, "https://johnsonshi.com/");
+  await desktop.page.waitForTimeout(500);
+  const introAmbient = await getSnapshot(desktop.page);
+  assert.equal(introAmbient.ambientIcons.iconCount, 84);
+  assert.equal(introAmbient.ambientIcons.activePane, "intro");
+  assert.ok(introAmbient.ambientIcons.visibility > 0.95);
+  assert.equal(introAmbient.ambientIcons.drawCalls, 1);
+  await desktop.page.mouse.move(1260, 180);
+  await desktop.page.waitForTimeout(600);
+  const pointerAmbient = await getSnapshot(desktop.page);
+  assert.ok(pointerAmbient.ambientIcons.pointerX > 0.55);
+  await desktop.page.mouse.move(720, 450);
   const closingState = await desktop.page.locator(".closing").evaluate(
     (element) => ({
       height: element.getBoundingClientRect().height,
@@ -215,6 +236,7 @@ try {
       `Scene ${index} did not settle at ${progress}.`,
     );
     assert.equal(snapshot.drawCalls, 1);
+    assert.ok(snapshot.ambientIcons.visibility < 0.02);
   }
 
   await setTimelineProgress(desktop.page, 0, 850);
@@ -283,15 +305,22 @@ try {
 
   await desktop.page.setViewportSize({ width: 1024, height: 768 });
   await desktop.page.waitForTimeout(300);
-  const resizedCanvas = await desktop.page.locator("canvas").evaluate((canvas) => ({
-    cssWidth: canvas.clientWidth,
-    cssHeight: canvas.clientHeight,
-    width: canvas.width,
-    height: canvas.height,
-  }));
-  assert.equal(resizedCanvas.cssWidth, 1024);
-  assert.equal(resizedCanvas.cssHeight, 768);
-  assert.ok(resizedCanvas.width >= resizedCanvas.cssWidth);
+  const resizedCanvases = await desktop.page
+    .locator("canvas")
+    .evaluateAll((canvases) =>
+      canvases.map((canvas) => ({
+        cssWidth: canvas.clientWidth,
+        cssHeight: canvas.clientHeight,
+        width: canvas.width,
+        height: canvas.height,
+      })),
+    );
+  assert.equal(resizedCanvases.length, 2);
+  for (const resizedCanvas of resizedCanvases) {
+    assert.equal(resizedCanvas.cssWidth, 1024);
+    assert.equal(resizedCanvas.cssHeight, 768);
+    assert.ok(resizedCanvas.width >= resizedCanvas.cssWidth);
+  }
 
   await desktop.page.setViewportSize({ width: 1440, height: 900 });
   await setTimelineProgress(desktop.page, 0.46);
@@ -308,10 +337,8 @@ try {
     "Reload did not preserve a useful mid-page scroll position.",
   );
 
-  await setTimelineProgress(desktop.page, 6.8 / 7, 200);
-  const rocketOnPad = await getSnapshot(desktop.page);
-  await setTimelineProgress(desktop.page, 1, 200);
-  const rocketLiftoff = await getSnapshot(desktop.page);
+  await setTimelineProgress(desktop.page, 1, 700);
+  const spaceScene = await getSnapshot(desktop.page);
   await desktop.page.evaluate(() => {
     const section = document.querySelector("#timeline");
     const lastEra = section?.querySelector(".era:last-child");
@@ -328,7 +355,6 @@ try {
     window.scrollTo(0, activeEnd + window.innerHeight * 0.23);
   });
   await desktop.page.waitForTimeout(150);
-  const rocketAscent = await getSnapshot(desktop.page);
   const exitState = await desktop.page.evaluate(() => {
     const copy = document.querySelector(".era:last-child .era-copy");
     const stage = document.querySelector(".experience-stage");
@@ -342,11 +368,27 @@ try {
   });
   assert.ok(exitState.copyOpacity < 0.03);
   assert.ok(Math.abs(exitState.stageTop) < 2);
-  assert.ok(rocketOnPad.finaleProgress < 0.02);
-  assert.ok(rocketLiftoff.finaleProgress > 0.45);
-  assert.ok(rocketAscent.finaleProgress > 0.95);
-  assert.ok(rocketOnPad.finaleProgress < rocketLiftoff.finaleProgress);
-  assert.ok(rocketLiftoff.finaleProgress < rocketAscent.finaleProgress);
+  assert.equal(spaceScene.sceneA, 7);
+  assert.equal(spaceScene.sceneB, 7);
+
+  await desktop.page.evaluate(() => {
+    const closing = document.querySelector(".closing");
+    if (!(closing instanceof HTMLElement)) {
+      throw new Error("Closing section not found.");
+    }
+    window.scrollTo(
+      0,
+      window.scrollY + closing.getBoundingClientRect().top,
+    );
+  });
+  await desktop.page.waitForTimeout(500);
+  const closingAmbient = await getSnapshot(desktop.page);
+  assert.equal(closingAmbient.ambientIcons.activePane, "closing");
+  assert.ok(closingAmbient.ambientIcons.visibility > 0.95);
+  assert.ok(
+    closingAmbient.ambientIcons.paneProgress > 0.45 &&
+      closingAmbient.ambientIcons.paneProgress < 0.55,
+  );
 
   assert.deepEqual(desktop.consoleErrors, []);
   assert.deepEqual(desktop.failedRequests, []);
@@ -363,6 +405,7 @@ try {
   await setTimelineProgress(mobile.page, 1);
   const snapshot = await getSnapshot(mobile.page);
   assert.equal(snapshot.particleCount, 28_000);
+  assert.equal(snapshot.ambientIcons.iconCount, 45);
   assert.equal(snapshot.sceneA, 7);
   assert.equal(snapshot.sceneB, 7);
   assert.deepEqual(mobile.consoleErrors, []);
@@ -382,6 +425,7 @@ try {
   assert.equal(snapshot.sceneA, 3);
   assert.equal(snapshot.sceneB, 3);
   assert.equal(snapshot.morphProgress, 0);
+  assert.equal(snapshot.ambientIcons.reducedMotion, true);
   assert.deepEqual(reduced.consoleErrors, []);
   assert.deepEqual(reduced.failedRequests, []);
 } finally {
@@ -389,5 +433,5 @@ try {
 }
 
 console.log(
-  "Interaction checks passed: editorial chrome, forward/back scroll, held morphs, launch ascent, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
+  "Interaction checks passed: editorial chrome, ambient icons, forward/back scroll, held morphs, orbital finale, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
 );

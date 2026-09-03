@@ -4,9 +4,13 @@
 
 ```text
 semantic document
+├── ambient icon canvas
+│   └── AmbientIconField
+│       ├── procedural four-pane point sprites
+│       └── pointer/scroll parallax uniforms
 └── historical timeline section
     ├── sticky copy rail (HTML)
-    └── decorative canvas
+    └── particle canvas
         └── Experience
             ├── Renderer
             ├── ParticleSystem
@@ -25,6 +29,20 @@ Vite emits static files. TypeScript initializes the semantic page, generates
 scene targets, and owns the render lifecycle. Three.js handles WebGL resource
 creation and cleanup. There is no React renderer, animation dependency,
 backend, database, runtime fetch, model, texture, video, or font dependency.
+
+## Ambient icon field
+
+A fixed transparent WebGL canvas sits behind the semantic page. One
+`THREE.Points` draw call renders 84 desktop or 45 mobile icons. The fragment
+shader constructs each Microsoft mark from four soft-edged panes inside
+`gl_PointCoord`, so the field needs no image or sprite texture.
+
+Deterministic attributes vary each icon's position, size, depth, phase, and
+opacity. Pointer proximity attracts nearby icons while depth scales a broader
+parallax shift. Section-relative scroll progress adds a small vertical drift.
+All motion is uniform-driven; there are no per-frame particle loops or buffer
+uploads. The canvas opacity is nonzero only while the intro or closing
+intersects the viewport. Reduced-motion mode keeps the icons stationary.
 
 ## Particle population and buffers
 
@@ -88,7 +106,6 @@ Conceptually:
 
 ```glsl
 vec3 base = mix(positionA, positionB, easedProgress);
-base.y += rocketMask(positionB) * finaleProgress * liftDistance;
 float energy = sin(PI * progress);
 vec3 arc = transitionArc(base, aSeed) * energy;
 vec3 idle = lowFrequencyMotion(base, aSeed, time) * idleAmplitude;
@@ -101,8 +118,6 @@ The shader also:
 - derives subtle depth-aware point size;
 - fades peripheral and low-density particles;
 - reduces transition energy under reduced motion;
-- identifies final-target rocket particles and raises only that subset during
-  the finale;
 - supplies a monochrome graphite value to the fragment shader.
 
 The idle displacement is intentionally bounded and lower than the normal gap
@@ -141,18 +156,12 @@ the words darken from pale graphite to black. Each sentence is split into
 accessible word spans, and later eras use the same progressive color change as
 scroll advances.
 
-The final era also exposes `finaleProgress`. It begins only after the rocket is
-nearly formed, reaches a partial lift at the final scene's settled scroll
-position, and reaches `1` during the pinned exit hold. The vertex shader
-derives a mask from the final target's rocket-only X/Y/Z region, so the vehicle
-rises two world units while the crowd, tower, and horizon remain stationary.
-Two additional final-target depth bands identify launch effects. Ground-smoke
-positions stay collapsed at the pad with zero alpha until liftoff begins, then
-expand upward and outward. Exhaust particles also remain invisible before
-launch; afterward, the shader anchors their top to the lifted engine position
-and lengthens a tapered trail beneath the moving rocket. All three masks use
-the same finale uniform, avoid another per-particle attribute, and keep the
-renderer at one draw call.
+The final era is a normal deterministic scene target rather than a
+scroll-specific effect. Its spacecraft is built from transformed cylinder,
+ogive, ring, and fin samplers. A filled moon, crater rings, orbital ellipses,
+starbursts, and a sparse background field occupy separate depth bands. The
+standard morph, idle, pointer, and avoidance paths apply without any
+finale-only shader uniforms or geometry masks.
 
 Each scene definition also supplies interpolated:
 
@@ -184,7 +193,8 @@ orbit controls.
 
 ## Render lifecycle
 
-- A single RAF drives pointer damping, time, timeline uniforms, and rendering.
+- A single RAF drives pointer damping, time, timeline uniforms, and both
+  renderers.
 - The loop allocates no arrays, vectors, or objects.
 - Scroll/pointer handlers only update scalar targets and use passive listeners.
 - `ResizeObserver`/resize events update camera, drawing buffer, and framing.
@@ -207,7 +217,8 @@ small continuous idle motion. Other settled scenes use a lower idle amplitude.
 
 ## Performance plan
 
-- One `THREE.Points` draw call.
+- One `THREE.Points` draw call for the historical field and one lightweight
+  icon-field draw call only while the intro or closing is visible.
 - Static seed/accent attributes and pair buffers updated only at scene
   boundaries.
 - Typed arrays reused across transitions.

@@ -6,7 +6,6 @@ uniform float uPixelRatio;
 uniform float uPointSize;
 uniform float uTransitionStrength;
 uniform float uIdleAmplitude;
-uniform float uFinaleProgress;
 uniform float uReducedMotion;
 uniform vec3 uAccentA;
 uniform vec3 uAccentB;
@@ -53,62 +52,6 @@ void main() {
   float transitionEnergy = sin(morph * PI) * (1.0 - uReducedMotion);
 
   vec3 base = mix(position, positionTarget, morph);
-  float rocketHorizontal =
-    1.0 - smoothstep(0.48, 0.82, abs(positionTarget.x - 1.15));
-  float rocketDepth =
-    smoothstep(0.22, 0.38, positionTarget.z) *
-    (1.0 - smoothstep(1.0, 1.12, positionTarget.z));
-  float rocketHeight = smoothstep(-2.2, -2.12, positionTarget.y);
-  float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
-  float smokeDepth =
-    smoothstep(0.93, 0.95, positionTarget.z) *
-    (1.0 - smoothstep(1.01, 1.03, positionTarget.z));
-  float smokeHeight = 1.0 - smoothstep(-0.82, -0.62, positionTarget.y);
-  float smokeMask = smokeDepth * smokeHeight;
-  float exhaustDepth =
-    smoothstep(0.54, 0.58, positionTarget.z) *
-    (1.0 - smoothstep(0.72, 0.76, positionTarget.z));
-  float exhaustHorizontal =
-    1.0 - smoothstep(0.32, 0.42, abs(positionTarget.x - 1.15));
-  float exhaustHeight =
-    1.0 - smoothstep(-2.1, -2.085, positionTarget.y);
-  float exhaustMask =
-    exhaustDepth * exhaustHorizontal * exhaustHeight;
-  float liftProgress = mix(
-    smoother(uFinaleProgress),
-    step(0.001, uFinaleProgress) * 0.7,
-    uReducedMotion
-  );
-  base.y += rocketMask * liftProgress * 2.0;
-  float smokeProgress = smoother(
-    clamp((uFinaleProgress - 0.06) / 0.5, 0.0, 1.0)
-  );
-  vec3 smokeOrigin = vec3(1.15, -2.04, 0.98);
-  vec3 expandedSmoke =
-    smokeOrigin + (base - smokeOrigin) * smokeProgress;
-  base = mix(base, expandedSmoke, smokeMask);
-  float exhaustProgress = smoother(
-    clamp((uFinaleProgress - 0.08) / 0.35, 0.0, 1.0)
-  );
-  float exhaustT = clamp(
-    (-2.12 - positionTarget.y) / 1.35,
-    0.0,
-    1.0
-  );
-  float engineY = -2.08 + liftProgress * 2.0;
-  float exhaustLength = mix(0.38, 1.55, liftProgress);
-  vec3 exhaustPosition = positionTarget;
-  exhaustPosition.x =
-    1.15 +
-    (positionTarget.x - 1.15) *
-    mix(0.35, 1.0, exhaustProgress);
-  exhaustPosition.x +=
-    sin(uTime * 4.0 + aSeed * TAU + exhaustT * 12.0) *
-    exhaustT *
-    exhaustProgress *
-    0.055;
-  exhaustPosition.y = engineY - exhaustT * exhaustLength;
-  base = mix(base, exhaustPosition, exhaustMask);
   float seedAngle = aSeed * TAU;
   vec3 flow = vec3(
     sin(base.y * 1.25 + seedAngle * 0.35),
@@ -131,7 +74,10 @@ void main() {
     sin(uTime * 0.43 + seedAngle + base.y * 0.38),
     cos(uTime * 0.36 + seedAngle * 1.17 + base.x * 0.31),
     sin(uTime * 0.29 + seedAngle * 0.73 + base.z * 0.46)
-  ) * uIdleAmplitude * mix(0.45, 1.0, aAccent) * (1.0 - uReducedMotion);
+  ) *
+    uIdleAmplitude *
+    mix(0.45, 1.0, aAccent) *
+    (1.0 - uReducedMotion);
 
   vec3 transformed = base + arc + idle;
   vec4 modelViewPosition = modelViewMatrix * vec4(transformed, 1.0);
@@ -163,11 +109,5 @@ void main() {
   vAlpha =
     mix(0.45, 0.94, aAccent) *
     mix(1.0, 0.58, transitionEnergy) *
-    mix(1.0, 0.06, suppression) *
-    mix(1.0, smokeProgress, smokeMask) *
-    mix(
-      1.0,
-      exhaustProgress * mix(0.92, 0.38, exhaustT),
-      exhaustMask
-    );
+    mix(1.0, 0.06, suppression);
 }

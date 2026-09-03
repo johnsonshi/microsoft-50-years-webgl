@@ -104,8 +104,8 @@ try {
   }
 
   for (const [name, progress] of [
-    ["rocket-on-pad", 6.8 / 7],
-    ["rocket-liftoff", 1],
+    ["space-forming", 6.8 / 7],
+    ["space-scene", 1],
   ]) {
     await setTimelineProgress(desktop.page, progress);
     const snapshot = await getSnapshot(desktop.page);
@@ -136,12 +136,12 @@ try {
   await desktop.page.waitForTimeout(180);
   const exitSnapshot = await getSnapshot(desktop.page);
   samples.push({
-    name: "rocket-ascent",
+    name: "space-exit",
     progress: 1,
     snapshot: exitSnapshot,
   });
   await desktop.page.screenshot({
-    path: path.join(outputDirectory, "rocket-ascent.jpg"),
+    path: path.join(outputDirectory, "space-exit.jpg"),
     type: "jpeg",
     quality: 86,
   });

@@ -5,8 +5,8 @@
 An original scroll-driven WebGL essay marking Microsoft's first fifty years.
 One persistent field of particles reorganizes from the first BASIC source
 listing through PCs, Windows and the Internet, connected enterprise workflows,
-cloud datacenters, agent fleets, the Microsoft mark, and a rocket lifting
-toward an AI-enabled age of abundance as launch smoke rises from the pad.
+cloud datacenters, agent fleets, the Microsoft mark, and a spacecraft crossing
+a moonlit star field toward an AI-enabled age of abundance.
 
 **This is an unofficial personal tribute. It is not sponsored or endorsed by
 Microsoft.**
@@ -19,33 +19,36 @@ Microsoft.**
   scroll-driven word reveal.
 - GPU-side morphing between original procedural targets.
 - Subtle pointer yaw/pitch that reveals real Z depth at any scroll position.
+- Tiny procedural Microsoft icons with pointer and scroll parallax behind the
+  opening and closing panes.
 - Restrained time-based idle movement after scrolling stops.
 - Desktop, tablet, mobile, and reduced-motion quality tiers.
 - No backend, database, runtime API, remote model, texture, image, video, or
   font dependency.
 
 The complete generated visual review is in
-[`site/screenshots/`](site/screenshots/), including rocket-on-pad, liftoff, and
-ascent states.
+[`site/screenshots/`](site/screenshots/), including the orbital finale and its
+transition from the Microsoft mark.
 
 ## Architecture
 
 ```text
-semantic HTML timeline
-├── sticky copy rail
-└── decorative WebGL2 canvas
-    └── Three.js scene
-        ├── perspective camera
-        └── one THREE.Points draw
-            ├── source position buffer
-            ├── target position buffer
-            ├── seed/accent attributes
-            └── custom GLSL
-                ├── GPU morph + transition arc
-                ├── bounded idle motion
-                ├── final-scene rocket lift
-                ├── depth-aware point sizing
-                └── semantic-copy avoidance
+semantic HTML document
+├── ambient icon WebGL2 canvas
+│   └── one procedural four-pane points draw
+└── historical timeline
+    ├── sticky copy rail
+    └── particle WebGL2 canvas
+        └── Three.js scene
+            ├── perspective camera
+            └── one THREE.Points draw
+                ├── source/target position buffers
+                ├── seed/accent attributes
+                └── custom GLSL
+                    ├── GPU morph + transition arc
+                    ├── orbital spacecraft scene
+                    ├── depth-aware point sizing
+                    └── semantic-copy avoidance
 ```
 
 Each era is procedurally generated from original line, box, grid, curve,
@@ -95,11 +98,11 @@ npm run capture
 npm run profile
 ```
 
-The browser suite covers editorial chrome and attribution, forward/backward
-scroll, held transition midpoints, the three-stage rocket ascent, independent
-pointer axes, idle motion, resize, mobile, reduced motion, and mid-page reload
-restoration. It also fails on console errors, page errors, failed requests,
-missing assets, and unexpected draw counts.
+The browser suite covers editorial chrome and attribution, ambient icons,
+forward/backward scroll, held transition midpoints, the orbital finale,
+independent pointer axes, idle motion, resize, mobile, reduced motion, and
+mid-page reload restoration. It also fails on console errors, page errors,
+failed requests, missing assets, and unexpected draw counts.
 
 ## Production build
 

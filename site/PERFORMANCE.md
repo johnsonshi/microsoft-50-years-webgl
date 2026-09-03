@@ -12,10 +12,11 @@ The shipped quality selector uses:
 | Reduced-motion desktop | 64,000 | 1.5 | 1.62 px base |
 | Reduced-motion mobile | 20,000 | 1.0 | 1.85 px base |
 
-The renderer uses one `THREE.Points` object, one shader material, and one
-`drawArrays(POINTS)` call per frame. Particle interpolation, transition arcs,
-idle movement, depth sizing, accent color, and text avoidance all run in the
-vertex shader.
+The historical renderer uses one `THREE.Points` object, one shader material,
+and one `drawArrays(POINTS)` call per frame. Particle interpolation, transition
+arcs, idle movement, depth sizing, accent color, and text avoidance all run in
+the vertex shader. A separate 84-icon desktop or 45-icon mobile points draw is
+active only behind the opening and closing panes.
 
 ## Measured profile
 
@@ -26,9 +27,9 @@ the full timeline over five seconds.
 
 | Particles | Ready | Mean frame | p95 frame | Estimated cadence | Draws/frame | Active geometry |
 |---:|---:|---:|---:|---:|---:|---:|
-| 25,000 | 985 ms | 16.660 ms | 16.70 ms | 60.02 FPS | 1 | 0.80 MB |
-| 50,000 | 980 ms | 16.661 ms | 16.70 ms | 60.02 FPS | 1 | 1.60 MB |
-| 100,000 | 979 ms | 16.653 ms | 16.80 ms | 60.05 FPS | 1 | 3.20 MB |
+| 25,000 | 1,864 ms | 16.662 ms | 16.80 ms | 60.02 FPS | 1 | 0.80 MB |
+| 50,000 | 1,152 ms | 16.662 ms | 16.80 ms | 60.02 FPS | 1 | 1.60 MB |
+| 100,000 | 1,275 ms | 16.651 ms | 16.80 ms | 60.06 FPS | 1 | 3.20 MB |
 
 The 100k run used a 2160×1350 drawing buffer. It reported no console errors,
 failed requests, shader failures, or extra draw calls.
@@ -37,9 +38,9 @@ Chrome main-thread counters over the measured run remained small:
 
 | Particles | Task duration | Script duration | Sampled JS heap |
 |---:|---:|---:|---:|
-| 25,000 | 0.330 s | 0.076 s | 3.50 MB |
-| 50,000 | 0.350 s | 0.084 s | 4.42 MB |
-| 100,000 | 0.378 s | 0.093 s | 3.44 MB |
+| 25,000 | 0.305 s | 0.080 s | 4.93 MB |
+| 50,000 | 0.297 s | 0.080 s | 5.08 MB |
+| 100,000 | 0.288 s | 0.079 s | 4.98 MB |
 
 Heap samples are not monotonic because Chrome may collect garbage at different
 points in each run. They are included as bounded observations, not a claim that

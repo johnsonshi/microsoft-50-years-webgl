@@ -4,6 +4,10 @@ import { buildSceneTargets } from "../geometry/scenes";
 import { PointerController } from "../input/PointerController";
 import { ScrollTimeline } from "../timeline/ScrollTimeline";
 import { lerp, smootherstep } from "../utils/math";
+import {
+  AmbientIconField,
+  type AmbientIconSnapshot,
+} from "./AmbientIconField";
 import { ParticleSystem } from "./ParticleSystem";
 import { selectQuality, type QualitySettings } from "./quality";
 
@@ -14,7 +18,6 @@ export interface ExperienceSnapshot {
   sceneB: number;
   morphProgress: number;
   scrollProgress: number;
-  finaleProgress: number;
   pointerX: number;
   pointerY: number;
   drawCalls: number;
@@ -24,6 +27,7 @@ export interface ExperienceSnapshot {
   reducedMotion: boolean;
   meanFrameMs: number;
   p95FrameMs: number;
+  ambientIcons: AmbientIconSnapshot;
 }
 
 export class Experience {
@@ -37,6 +41,7 @@ export class Experience {
   private readonly pointer: PointerController;
   private readonly timeline: ScrollTimeline;
   private readonly particleSystem: ParticleSystem;
+  private readonly ambientIcons: AmbientIconField;
   private readonly frameIntervals = new Float32Array(600);
   private readonly avoidRectA = new Float32Array(4);
   private readonly avoidRectB = new Float32Array(4);
@@ -58,6 +63,7 @@ export class Experience {
     reducedMotion: boolean,
     timeline: ScrollTimeline,
     copyElements: readonly HTMLElement[],
+    ambientIcons: AmbientIconField,
   ) {
     this.canvas = canvas;
     this.renderer = renderer;
@@ -65,6 +71,7 @@ export class Experience {
     this.reducedMotion = reducedMotion;
     this.timeline = timeline;
     this.copyElements = copyElements;
+    this.ambientIcons = ambientIcons;
     this.pointer = new PointerController(reducedMotion);
     this.particleSystem = new ParticleSystem(
       quality.particleCount,
@@ -131,6 +138,14 @@ export class Experience {
       copies,
       reducedMotion,
     );
+    const ambientIcons = new AmbientIconField(
+      requireElement<HTMLCanvasElement>("#ambient-icon-canvas"),
+      requireElement<HTMLElement>(".intro"),
+      requireElement<HTMLElement>(".closing"),
+      quality.pixelRatio,
+      quality.mobile,
+      reducedMotion,
+    );
     const experience = new Experience(
       canvas,
       renderer,
@@ -138,14 +153,20 @@ export class Experience {
       reducedMotion,
       timeline,
       copies,
+      ambientIcons,
     );
 
-    experience.targets = await buildSceneTargets(
-      quality.particleCount,
-      onProgress,
-    );
-    experience.setPair(0, reducedMotion ? 0 : 1);
-    return experience;
+    try {
+      experience.targets = await buildSceneTargets(
+        quality.particleCount,
+        onProgress,
+      );
+      experience.setPair(0, reducedMotion ? 0 : 1);
+      return experience;
+    } catch (error) {
+      experience.dispose();
+      throw error;
+    }
   }
 
   start(): void {
@@ -171,7 +192,6 @@ export class Experience {
       sceneB: this.timeline.state.sceneB,
       morphProgress: this.timeline.state.eased,
       scrollProgress: this.timeline.state.progress,
-      finaleProgress: this.timeline.state.finale,
       pointerX: this.pointer.currentX,
       pointerY: this.pointer.currentY,
       drawCalls: this.renderer.info.render.calls,
@@ -181,6 +201,7 @@ export class Experience {
       reducedMotion: this.reducedMotion,
       meanFrameMs: mean,
       p95FrameMs: intervals[p95Index] ?? 0,
+      ambientIcons: this.ambientIcons.getSnapshot(),
     };
   }
 
@@ -190,6 +211,7 @@ export class Experience {
     this.timeline.dispose();
     this.pointer.dispose();
     this.particleSystem.dispose();
+    this.ambientIcons.dispose();
     this.renderer.dispose();
     this.canvas.removeEventListener("webglcontextlost", this.handleContextLost);
     window.removeEventListener("resize", this.handleResize);
@@ -209,6 +231,12 @@ export class Experience {
 
     const timeline = this.timeline.update(deltaSeconds);
     this.pointer.update(deltaSeconds);
+    this.ambientIcons.update(
+      deltaSeconds,
+      this.elapsedTime,
+      this.pointer.currentX,
+      this.pointer.currentY,
+    );
 
     if (
       timeline.sceneA !== this.activeSceneA ||
@@ -261,7 +289,6 @@ export class Experience {
         blend,
       ),
       lerp(sceneA.idleAmplitude, sceneB.idleAmplitude, blend),
-      timeline.finale,
     );
     this.updateAvoidance(
       timeline.sceneA,
@@ -314,6 +341,7 @@ export class Experience {
     const width = this.canvas.clientWidth || window.innerWidth;
     const height = this.canvas.clientHeight || window.innerHeight;
     this.renderer.setSize(width, height, false);
+    this.ambientIcons.resize();
     this.particleSystem.setPixelRatio(this.quality.pixelRatio);
     this.camera.aspect = width / Math.max(1, height);
     this.camera.updateProjectionMatrix();

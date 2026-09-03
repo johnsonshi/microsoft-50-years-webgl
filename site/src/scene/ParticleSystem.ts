@@ -10,7 +10,6 @@ interface ParticleUniforms {
   uPointSize: { value: number };
   uTransitionStrength: { value: number };
   uIdleAmplitude: { value: number };
-  uFinaleProgress: { value: number };
   uReducedMotion: { value: number };
   uAccentA: { value: THREE.Color };
   uAccentB: { value: THREE.Color };
@@ -64,7 +63,6 @@ export class ParticleSystem {
       uPointSize: { value: pointSize },
       uTransitionStrength: { value: 0.7 },
       uIdleAmplitude: { value: 0.018 },
-      uFinaleProgress: { value: 0 },
       uReducedMotion: { value: reducedMotion ? 1 : 0 },
       uAccentA: { value: new THREE.Color(0.1, 0.4, 0.68) },
       uAccentB: { value: new THREE.Color(0.1, 0.4, 0.68) },
@@ -117,13 +115,11 @@ export class ParticleSystem {
     time: number,
     transitionStrength: number,
     idleAmplitude: number,
-    finaleProgress: number,
   ): void {
     this.uniforms.uProgress.value = progress;
     this.uniforms.uTime.value = time;
     this.uniforms.uTransitionStrength.value = transitionStrength;
     this.uniforms.uIdleAmplitude.value = idleAmplitude;
-    this.uniforms.uFinaleProgress.value = finaleProgress;
   }
 
   setAvoidance(

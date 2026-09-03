@@ -7,13 +7,18 @@ editorial typography with large areas of empty space. The particles are not a
 literal museum of product replicas. They behave like one computational
 material learning new organizations over five decades.
 
+The opening and closing panes add a separate field of tiny four-pane Microsoft
+icons in extremely light graphite. Their varied depth creates gentle pointer
+and scroll parallax without competing with the editorial type. The field fades
+away before the historical timeline begins and returns only for the closing.
+
 Each scene sits in a shallow three-dimensional volume. The settled forms stay
 legible from the front while small pointer-driven rotation reveals depth.
 Transitions preserve broad spatial regions so the field reorganizes in
 currents rather than dissolving into noise.
 
 Each era uses one continuous editorial sentence rather than a year, heading,
-and subtitle. Entering words begin as pale graphite and fill to black as
+and subtitle. Entering words begin as pale graphite and darken to black as
 scrolling advances.
 
 ## 1. 1975 — Altair BASIC
@@ -99,30 +104,25 @@ scrolling advances.
 - **Composition:** Anniversary copy remains on the right while the logo shifts
   left.
 - **Camera:** Nearly frontal with reduced pointer parallax for recognition.
-- **Transition out:** The panes lengthen into the launch vehicle while the
-  wordmark disperses into the tower, horizon, smoke, and crowd.
+- **Transition out:** The panes lengthen into a spacecraft while the wordmark
+  disperses into the moon, orbit lines, and stars.
 
 ## 8. 2026 and Beyond — Powering abundance
 
 - **Copy:** `2026 and Beyond: Microsoft can power an age of abundance, expanding agency, discovery, and possibility.`
-- **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
-  tower and service arms, a Florida-like horizon, and 28 stationary foreground
-  crowd silhouettes. Ground smoke is collapsed and invisible on the pad, then
-  expands upward and outward after liftoff begins. A separate tapered exhaust
-  trail remains attached to the engine as the vehicle rises.
-- **Depth:** The crowd occupies the foreground, the pad and tower occupy the
-  middle plane, and the rocket sits slightly behind them before lifting.
-- **Camera:** Nearly frontal and vertically open, like a distant public launch
-  viewed across the coast.
-- **Composition:** The abundance statement sits on the left while the launch
-  rises on the right.
+- **Geometry:** An angled spacecraft crosses in front of a large filled moon
+  with crater rings, two orbital paths, 28 distinct starbursts, and a sparse
+  deep-space field.
+- **Depth:** The spacecraft sits forward, the moon occupies the middle plane,
+  and stars span several distant depth bands.
+- **Camera:** Nearly frontal with enough pointer parallax to separate the
+  spacecraft, moon, and star layers.
+- **Composition:** The abundance statement sits on the left while the moon and
+  spacecraft form one calm orbital image on the right.
 - **Intent:** AI is framed as infrastructure for greater human agency,
   accelerated discovery, and capabilities that become broadly available.
-- **End state:** Late-scroll shader displacement raises only the rocket by a
-  full two world units while a masked exhaust trail lengthens beneath it and a
-  separate smoke field expands from the pad. The crowd, tower, and horizon
-  remain fixed while the statement fades and the stage yields to the closing
-  line.
+- **End state:** The orbital composition remains intact while its layered star
+  field drifts subtly and the statement fades into the closing line.
 
 ## Transition language
 
@@ -135,7 +135,7 @@ scrolling advances.
 - A low-frequency sine field keeps the material alive without obscuring the
   target.
 - Copy crossfades in the DOM independently of the point buffer. The incoming
-  sentence fills word by word from pale graphite to black.
+  sentence darkens word by word from pale graphite to black.
 
 ## Responsive composition
 

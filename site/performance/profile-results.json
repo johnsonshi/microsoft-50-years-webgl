@@ -1,5 +1,5 @@
 {
-  "capturedAt": "2026-09-03T06:58:07.408Z",
+  "capturedAt": "2026-09-03T23:34:11.720Z",
   "viewport": {
     "width": 1440,
     "height": 900,
@@ -9,8 +9,8 @@
   "profiles": [
     {
       "particleCount": 25000,
-      "readyMs": 985.2216249999999,
-      "estimatedFps": 60.023639088076955,
+      "readyMs": 1864.4579580000002,
+      "estimatedFps": 60.01569459674916,
       "snapshot": {
         "ready": true,
         "particleCount": 25000,
@@ -21,31 +21,49 @@
         "pointerX": 0,
         "pointerY": 0,
         "drawCalls": 1,
-        "cumulativeFrames": 391,
+        "cumulativeFrames": 390,
         "geometryBytes": 800000,
         "pixelRatio": 1.5,
         "reducedMotion": false,
-        "meanFrameMs": 16.660102839360153,
-        "p95FrameMs": 16.700000762939453
+        "meanFrameMs": 16.662308196532422,
+        "p95FrameMs": 16.799999237060547,
+        "ambientIcons": {
+          "iconCount": 84,
+          "visibility": 7.168517631599036e-33,
+          "paneProgress": 0,
+          "pointerX": 0,
+          "pointerY": 0,
+          "drawCalls": 1,
+          "activePane": null,
+          "reducedMotion": false
+        }
       },
-      "jsHeapUsedBytes": 3499568,
-      "jsHeapTotalBytes": 8192000,
-      "taskDurationSeconds": 0.329987,
-      "scriptDurationSeconds": 0.076002,
-      "layoutCount": 371,
+      "jsHeapUsedBytes": 4934452,
+      "jsHeapTotalBytes": 9912320,
+      "taskDurationSeconds": 0.305087,
+      "scriptDurationSeconds": 0.079959,
+      "layoutCount": 1,
       "webgl": {
-        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
-        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
-        "drawingBufferWidth": 2160,
-        "drawingBufferHeight": 1350
+        "historical": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        },
+        "ambient": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        }
       },
       "consoleErrors": [],
       "failedRequests": []
     },
     {
       "particleCount": 50000,
-      "readyMs": 979.6144169999998,
-      "estimatedFps": 60.02031257538711,
+      "readyMs": 1151.8360000000011,
+      "estimatedFps": 60.0151175846944,
       "snapshot": {
         "ready": true,
         "particleCount": 50000,
@@ -56,31 +74,49 @@
         "pointerX": 0,
         "pointerY": 0,
         "drawCalls": 1,
-        "cumulativeFrames": 390,
+        "cumulativeFrames": 389,
         "geometryBytes": 1600000,
         "pixelRatio": 1.5,
         "reducedMotion": false,
-        "meanFrameMs": 16.661026194156744,
-        "p95FrameMs": 16.700000762939453
+        "meanFrameMs": 16.66246839538025,
+        "p95FrameMs": 16.799999237060547,
+        "ambientIcons": {
+          "iconCount": 84,
+          "visibility": 7.138515446118203e-33,
+          "paneProgress": 0,
+          "pointerX": 0,
+          "pointerY": 0,
+          "drawCalls": 1,
+          "activePane": null,
+          "reducedMotion": false
+        }
       },
-      "jsHeapUsedBytes": 4419984,
-      "jsHeapTotalBytes": 8716288,
-      "taskDurationSeconds": 0.350049,
-      "scriptDurationSeconds": 0.08406,
-      "layoutCount": 371,
+      "jsHeapUsedBytes": 5080488,
+      "jsHeapTotalBytes": 11223040,
+      "taskDurationSeconds": 0.296817,
+      "scriptDurationSeconds": 0.08033,
+      "layoutCount": 1,
       "webgl": {
-        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
-        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
-        "drawingBufferWidth": 2160,
-        "drawingBufferHeight": 1350
+        "historical": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        },
+        "ambient": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        }
       },
       "consoleErrors": [],
       "failedRequests": []
     },
     {
       "particleCount": 100000,
-      "readyMs": 978.8349170000001,
-      "estimatedFps": 60.04840922771156,
+      "readyMs": 1274.5263749999995,
+      "estimatedFps": 60.05769136988875,
       "snapshot": {
         "ready": true,
         "particleCount": 100000,
@@ -91,23 +127,41 @@
         "pointerX": 0,
         "pointerY": 0,
         "drawCalls": 1,
-        "cumulativeFrames": 387,
+        "cumulativeFrames": 381,
         "geometryBytes": 3200000,
         "pixelRatio": 1.5,
         "reducedMotion": false,
-        "meanFrameMs": 16.653230499543575,
-        "p95FrameMs": 16.799999237060547
+        "meanFrameMs": 16.65065668010962,
+        "p95FrameMs": 16.799999237060547,
+        "ambientIcons": {
+          "iconCount": 84,
+          "visibility": 6.445336261610917e-33,
+          "paneProgress": 0,
+          "pointerX": 0,
+          "pointerY": 0,
+          "drawCalls": 1,
+          "activePane": null,
+          "reducedMotion": false
+        }
       },
-      "jsHeapUsedBytes": 3435604,
-      "jsHeapTotalBytes": 8716288,
-      "taskDurationSeconds": 0.378212,
-      "scriptDurationSeconds": 0.093018,
-      "layoutCount": 372,
+      "jsHeapUsedBytes": 4977896,
+      "jsHeapTotalBytes": 13582336,
+      "taskDurationSeconds": 0.287952,
+      "scriptDurationSeconds": 0.079174,
+      "layoutCount": 1,
       "webgl": {
-        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
-        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
-        "drawingBufferWidth": 2160,
-        "drawingBufferHeight": 1350
+        "historical": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        },
+        "ambient": {
+          "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+          "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+          "drawingBufferWidth": 2160,
+          "drawingBufferHeight": 1350
+        }
       },
       "consoleErrors": [],
       "failedRequests": []
@@ -115,24 +169,24 @@
   ],
   "productionAssets": [
     {
-      "path": "dist/assets/Experience-CcvqHZOI.js",
-      "bytes": 29374
+      "path": "dist/assets/Experience-D33X4X5N.js",
+      "bytes": 40739
     },
     {
-      "path": "dist/assets/index-DHS22zWX.js",
+      "path": "dist/assets/index-7yNBwTA5.css",
+      "bytes": 4912
+    },
+    {
+      "path": "dist/assets/index-CzK32uW2.js",
       "bytes": 2749
     },
     {
-      "path": "dist/assets/index-lwzzOqjB.css",
-      "bytes": 7106
-    },
-    {
-      "path": "dist/assets/three-CJr60tdl.js",
-      "bytes": 494265
+      "path": "dist/assets/three-BxbHPkrB.js",
+      "bytes": 494281
     },
     {
       "path": "dist/index.html",
-      "bytes": 6077
+      "bytes": 4890
     }
   ]
 }

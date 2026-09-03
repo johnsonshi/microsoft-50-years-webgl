@@ -9,16 +9,25 @@
       "sceneB": 1,
       "morphProgress": 0,
       "scrollProgress": 0,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 126,
+      "cumulativeFrames": 128,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.623016440679155,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.591406740248203,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.4880233158211404e-7,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -31,16 +40,25 @@
       "sceneB": 1,
       "morphProgress": 0.4997459349717891,
       "scrollProgress": 0.07140921409214092,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 181,
+      "cumulativeFrames": 182,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.636464645849408,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.61373678668515,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 3.035493670699668e-12,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -53,16 +71,25 @@
       "sceneB": 1,
       "morphProgress": 0.99999999980105,
       "scrollProgress": 0.14281842818428184,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 236,
+      "cumulativeFrames": 238,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.64279715085434,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.626050945089645,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 4.152454210460225e-17,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -75,16 +102,25 @@
       "sceneB": 2,
       "morphProgress": 0.4992378052139135,
       "scrollProgress": 0.21422764227642277,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 291,
+      "cumulativeFrames": 293,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.64742322639911,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.63344763082042,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 6.940855240541111e-22,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -97,16 +133,25 @@
       "sceneB": 3,
       "morphProgress": 6.713203731448301e-10,
       "scrollProgress": 0.28577235772357723,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 346,
+      "cumulativeFrames": 348,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.65057855120973,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.638793630161505,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.1587772709363437e-26,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -119,16 +164,25 @@
       "sceneB": 3,
       "morphProgress": 0.5005081299817851,
       "scrollProgress": 0.35718157181571814,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 401,
+      "cumulativeFrames": 403,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.65236959909263,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.642432293288465,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.9369040297513727e-31,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -141,16 +195,25 @@
       "sceneB": 4,
       "morphProgress": 2.4873828699294545e-11,
       "scrollProgress": 0.4285907859078591,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 456,
+      "cumulativeFrames": 458,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.65416719829827,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.64519704169061,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 3.237548159221042e-36,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -163,16 +226,25 @@
       "sceneB": 4,
       "morphProgress": 0.5,
       "scrollProgress": 0.5,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 510,
+      "cumulativeFrames": 512,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.655490723778218,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.647461468353868,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 6.604437471786223e-41,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -185,16 +257,25 @@
       "sceneB": 4,
       "morphProgress": 0.9999999999751255,
       "scrollProgress": 0.571409214092141,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 566,
+      "cumulativeFrames": 568,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.65653763053274,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.649296305548976,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 9.034650426768606e-46,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -207,16 +288,25 @@
       "sceneB": 5,
       "morphProgress": 0.49949187001821405,
       "scrollProgress": 0.6428184281842818,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 621,
+      "cumulativeFrames": 623,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000528335573,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.66600054105123,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.5101479169385927e-50,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -229,16 +319,25 @@
       "sceneB": 5,
       "morphProgress": 0.9999999993286803,
       "scrollProgress": 0.7142276422764228,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 675,
+      "cumulativeFrames": 678,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.665833848317465,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.66600054105123,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 2.5242224361852252e-55,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -251,16 +350,25 @@
       "sceneB": 6,
       "morphProgress": 0.5007621947860857,
       "scrollProgress": 0.7857723577235772,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 731,
+      "cumulativeFrames": 733,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000509262084,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.666000537872314,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 4.214194770630317e-60,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -273,16 +381,25 @@
       "sceneB": 7,
       "morphProgress": 1.9895018270043432e-10,
       "scrollProgress": 0.8571815718157182,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 786,
+      "cumulativeFrames": 788,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000515619913,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.666000537872314,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 7.044055003594753e-65,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -295,16 +412,25 @@
       "sceneB": 7,
       "morphProgress": 0.5002540650282096,
       "scrollProgress": 0.928590785907859,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 841,
+      "cumulativeFrames": 843,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000515619913,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.66600055058797,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.1774185483659273e-69,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -317,20 +443,29 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
-      "finaleProgress": 0.573706199026424,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 896,
+      "cumulativeFrames": 898,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666167186101276,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.665833876927692,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 1.9680630507976674e-74,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
-    "name": "rocket-on-pad",
+    "name": "space-forming",
     "progress": 0.9714285714285714,
     "snapshot": {
       "ready": true,
@@ -339,20 +474,29 @@
       "sceneB": 7,
       "morphProgress": 0.9419758820797796,
       "scrollProgress": 0.9714092140921409,
-      "finaleProgress": 0.0010729779725508174,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 951,
+      "cumulativeFrames": 953,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000528335573,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.665833880106607,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 3.289630673213534e-79,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
-    "name": "rocket-liftoff",
+    "name": "space-scene",
     "progress": 1,
     "snapshot": {
       "ready": true,
@@ -361,20 +505,29 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
-      "finaleProgress": 0.573706199026424,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 1006,
+      "cumulativeFrames": 1008,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.66600051879883,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.66600054105123,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 5.492045463834866e-84,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
-    "name": "rocket-ascent",
+    "name": "space-exit",
     "progress": 1,
     "snapshot": {
       "ready": true,
@@ -383,16 +536,25 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
-      "finaleProgress": 1,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 1033,
+      "cumulativeFrames": 1035,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000515619913,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.666000537872314,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 84,
+        "visibility": 2.4805267877918877e-86,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -405,7 +567,6 @@
       "sceneB": 1,
       "morphProgress": 8.669437536579437e-11,
       "scrollProgress": 0.000029350142686847525,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
@@ -413,8 +574,18 @@
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.655556042989094,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.648611638281082,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 45,
+        "visibility": 0.000036604164847755615,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -427,16 +598,25 @@
       "sceneB": 7,
       "morphProgress": 2.3630333435565918e-11,
       "scrollProgress": 0.8571618863562476,
-      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 126,
+      "cumulativeFrames": 127,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.66111161973741,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.65511861936314,
+      "p95FrameMs": 16.799999237060547,
+      "ambientIcons": {
+        "iconCount": 45,
+        "visibility": 6.125757361011326e-10,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   },
   {
@@ -449,16 +629,25 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
-      "finaleProgress": 0.5757831643106314,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 180,
+      "cumulativeFrames": 181,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.66222276687622,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.75082928041068,
+      "p95FrameMs": 16.700000762939453,
+      "ambientIcons": {
+        "iconCount": 45,
+        "visibility": 1.0226965051438729e-14,
+        "paneProgress": 0,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "activePane": null,
+        "reducedMotion": false
+      }
     }
   }
 ]

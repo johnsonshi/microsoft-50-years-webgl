@@ -42,6 +42,18 @@ body::before {
   mix-blend-mode: multiply;
 }
 
+.ambient-icon-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  will-change: opacity;
+}
+
 button,
 a {
   color: inherit;
@@ -63,6 +75,8 @@ a {
 }
 
 .intro {
+  position: relative;
+  z-index: 1;
   display: flex;
   min-height: 100svh;
   align-items: stretch;
@@ -107,6 +121,7 @@ footer {
 
 .timeline {
   position: relative;
+  z-index: 1;
   min-height: 920svh;
 }
 
@@ -222,6 +237,8 @@ footer {
 }
 
 .closing {
+  position: relative;
+  z-index: 1;
   display: flex;
   min-height: 100svh;
   padding: clamp(5rem, 12vw, 12rem) clamp(1.25rem, 6vw, 7rem);
@@ -240,6 +257,8 @@ footer {
 }
 
 footer {
+  position: relative;
+  z-index: 1;
   display: flex;
   padding: 1.5rem clamp(1.25rem, 3vw, 3rem);
   justify-content: center;
@@ -258,7 +277,9 @@ footer a {
 }
 
 .is-webgl-unavailable #experience-canvas,
-.is-webgl-unavailable .stage-grain {
+.is-webgl-unavailable .stage-grain,
+.is-webgl-unavailable .ambient-icon-canvas,
+.is-ambient-icons-unavailable .ambient-icon-canvas {
   display: none;
 }
 
