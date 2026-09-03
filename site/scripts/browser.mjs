@@ -68,11 +68,22 @@ export async function openExperience(options = {}) {
 export async function setTimelineProgress(page, progress, settleMs = 850) {
   await page.evaluate((value) => {
     const section = document.querySelector("#timeline");
-    if (!(section instanceof HTMLElement)) {
-      throw new Error("Timeline section not found.");
+    const lastEra = section?.querySelector(".era:last-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(lastEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline bounds not found.");
     }
-    const range = Math.max(1, section.offsetHeight - window.innerHeight);
-    window.scrollTo(0, section.offsetTop + range * value);
+    const sectionTop =
+      window.scrollY + section.getBoundingClientRect().top;
+    const lastEraBottom =
+      window.scrollY + lastEra.getBoundingClientRect().bottom;
+    const range = Math.max(
+      1,
+      lastEraBottom - sectionTop - window.innerHeight,
+    );
+    window.scrollTo(0, sectionTop + range * value);
   }, progress);
   await page.waitForTimeout(settleMs);
 }
@@ -86,4 +97,3 @@ export async function getSnapshot(page) {
     return debug.getSnapshot();
   });
 }
-

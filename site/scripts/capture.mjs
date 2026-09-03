@@ -16,6 +16,14 @@ const desktop = await openExperience();
 const samples = [];
 
 try {
+  await desktop.page.evaluate(() => window.scrollTo(0, 0));
+  await desktop.page.waitForTimeout(250);
+  await desktop.page.screenshot({
+    path: path.join(outputDirectory, "intro.jpg"),
+    type: "jpeg",
+    quality: 88,
+  });
+
   for (let index = 0; index < 8; index += 1) {
     const progress = index / 7;
     await setTimelineProgress(desktop.page, progress);
@@ -49,6 +57,29 @@ try {
       });
     }
   }
+
+  await setTimelineProgress(desktop.page, 1, 200);
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const lastEra = section?.querySelector(".era:last-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(lastEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline bounds not found.");
+    }
+    const activeEnd =
+      window.scrollY +
+      lastEra.getBoundingClientRect().bottom -
+      window.innerHeight;
+    window.scrollTo(0, activeEnd + window.innerHeight * 0.23);
+  });
+  await desktop.page.waitForTimeout(180);
+  await desktop.page.screenshot({
+    path: path.join(outputDirectory, "timeline-exit-hold.jpg"),
+    type: "jpeg",
+    quality: 86,
+  });
 } finally {
   await desktop.browser.close();
 }
@@ -83,4 +114,3 @@ await fs.writeFile(
 );
 
 console.log(`Captured ${samples.length} states in ${outputDirectory}`);
-

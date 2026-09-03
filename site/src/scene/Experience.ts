@@ -128,10 +128,6 @@ export class Experience {
     const timeline = new ScrollTimeline(
       section,
       copies,
-      requireElement("#stage-year"),
-      requireElement("#stage-progress"),
-      requireElement("#stage-meter-fill"),
-      SCENES.map((scene) => scene.year),
       reducedMotion,
     );
     const experience = new Experience(
@@ -264,13 +260,12 @@ export class Experience {
       ),
       lerp(sceneA.idleAmplitude, sceneB.idleAmplitude, blend),
     );
-    if (this.cumulativeFrames % 5 === 0) {
-      this.updateAvoidance(
-        timeline.sceneA,
-        timeline.sceneB,
-        timeline.local,
-      );
-    }
+    this.updateAvoidance(
+      timeline.sceneA,
+      timeline.sceneB,
+      timeline.local,
+      timeline.visibility,
+    );
 
     this.renderer.render(this.scene, this.camera);
     this.cumulativeFrames += 1;
@@ -323,6 +318,7 @@ export class Experience {
       this.timeline.state.sceneA,
       this.timeline.state.sceneB,
       this.timeline.state.local,
+      this.timeline.state.visibility,
     );
   }
 
@@ -330,28 +326,29 @@ export class Experience {
     sceneA: number,
     sceneB: number,
     localProgress: number,
+    visibility: number,
   ): void {
     this.writeAvoidRect(this.copyElements[sceneA], this.avoidRectA);
-    this.writeAvoidRect(this.copyElements[sceneB], this.avoidRectB);
 
     if (sceneA === sceneB) {
       this.particleSystem.setAvoidance(
         this.avoidRectA,
-        1,
+        visibility,
         this.avoidRectB,
         0,
       );
       return;
     }
 
+    this.writeAvoidRect(this.copyElements[sceneB], this.avoidRectB);
     const sourceStrength = Math.min(
       1,
       smootherstep(1 - localProgress) * 1.5,
-    );
+    ) * visibility;
     const targetStrength = Math.min(
       1,
       smootherstep(localProgress) * 1.5,
-    );
+    ) * visibility;
     this.particleSystem.setAvoidance(
       this.avoidRectA,
       sourceStrength,
@@ -365,14 +362,21 @@ export class Experience {
     output: Float32Array,
   ): void {
     const rect = element.getBoundingClientRect();
+    const canvasRect = this.canvas.getBoundingClientRect();
+    const canvasWidth = Math.max(1, canvasRect.width);
+    const canvasHeight = Math.max(1, canvasRect.height);
     const paddingX = this.quality.mobile ? 12 : 30;
     const paddingY = this.quality.mobile ? 10 : 24;
-    output[0] = (rect.left - paddingX) / window.innerWidth;
+    output[0] =
+      (rect.left - paddingX - canvasRect.left) / canvasWidth;
     output[1] =
-      1 - (rect.bottom + paddingY) / window.innerHeight;
-    output[2] = (rect.right + paddingX) / window.innerWidth;
+      1 -
+      (rect.bottom + paddingY - canvasRect.top) / canvasHeight;
+    output[2] =
+      (rect.right + paddingX - canvasRect.left) / canvasWidth;
     output[3] =
-      1 - (rect.top - paddingY) / window.innerHeight;
+      1 -
+      (rect.top - paddingY - canvasRect.top) / canvasHeight;
   }
 
   private recordFrameInterval(frameMs: number): void {

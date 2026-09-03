@@ -86,22 +86,29 @@ currents rather than dissolving into noise.
   converted to original 3D particles.
 - **Depth:** The numerals have layered front, middle, and back surfaces; orbital
   markers cross those planes.
-- **Camera:** Centered and calm. Pointer parallax is reduced so the anniversary
-  mark remains readable.
+- **Composition:** Anniversary copy returns to the right side; the numeral
+  shifts left to preserve the alternating narrative rhythm.
+- **Camera:** Calm and nearly frontal. Pointer parallax is reduced so the
+  anniversary mark remains readable.
 - **Transition out:** The numerals release from their outer edges first,
   stretching into open trajectories rather than collapsing.
 
-## 8. Future — An open field
+## 8. 2026 and Beyond — An age of abundance
 
-- **Copy:** `NEXT` / `The next system is still taking shape.`
+- **Copy:** `2026 and Beyond` / `Toward an age of abundance.`
 - **Geometry:** A wide computational landscape: branching paths, layered waves,
   sparse towers, and unresolved nodes extending beyond the viewport.
 - **Depth:** The largest and deepest scene, fading into both near and far
   space. No single logo or product resolves.
 - **Camera:** Slowly opens and rises, ending with a horizon rather than a
   conclusion.
-- **End state:** The field continues a small, breathing idle motion while the
-  final statement and unofficial-project note remain readable.
+- **Composition:** The abundance statement sits on the left while the
+  computational landscape opens to the right.
+- **Intent:** As AI advances toward general intelligence, the field suggests
+  greater human agency, faster discovery, and once-scarce capabilities becoming
+  abundant.
+- **End state:** The field continues a small, breathing idle motion before the
+  final statement fades and the stage yields to the closing line.
 
 ## Transition language
 

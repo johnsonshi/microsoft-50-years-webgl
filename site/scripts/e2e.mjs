@@ -8,6 +8,22 @@ import {
 const desktop = await openExperience();
 
 try {
+  const removedChromeCount = await desktop.page
+    .locator(
+      ".intro__footer, .stage-status, .stage-meter, .era-copy__index",
+    )
+    .count();
+  assert.equal(removedChromeCount, 0);
+
+  const firstCopyBeforeTimeline = await desktop.page
+    .locator(".era-copy")
+    .first()
+    .evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity));
+  assert.ok(
+    firstCopyBeforeTimeline < 0.01,
+    "The first era is visible above the fold.",
+  );
+
   for (let index = 0; index < 8; index += 1) {
     const progress = index / 7;
     await setTimelineProgress(desktop.page, progress, 500);
@@ -20,6 +36,13 @@ try {
     );
     assert.equal(snapshot.drawCalls, 1);
   }
+
+  await setTimelineProgress(desktop.page, 0, 850);
+  const firstCopyAtTimeline = await desktop.page
+    .locator(".era-copy")
+    .first()
+    .evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity));
+  assert.ok(firstCopyAtTimeline > 0.95);
 
   for (let index = 6; index >= 0; index -= 1) {
     const progress = index / 7;
@@ -94,6 +117,37 @@ try {
     "Reload did not preserve a useful mid-page scroll position.",
   );
 
+  await setTimelineProgress(desktop.page, 1, 200);
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const lastEra = section?.querySelector(".era:last-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(lastEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline bounds not found.");
+    }
+    const activeEnd =
+      window.scrollY +
+      lastEra.getBoundingClientRect().bottom -
+      window.innerHeight;
+    window.scrollTo(0, activeEnd + window.innerHeight * 0.23);
+  });
+  await desktop.page.waitForTimeout(150);
+  const exitState = await desktop.page.evaluate(() => {
+    const copy = document.querySelector(".era:last-child .era-copy");
+    const stage = document.querySelector(".experience-stage");
+    if (!(copy instanceof HTMLElement) || !(stage instanceof HTMLElement)) {
+      throw new Error("Exit elements not found.");
+    }
+    return {
+      copyOpacity: Number.parseFloat(getComputedStyle(copy).opacity),
+      stageTop: stage.getBoundingClientRect().top,
+    };
+  });
+  assert.ok(exitState.copyOpacity < 0.03);
+  assert.ok(Math.abs(exitState.stageTop) < 2);
+
   assert.deepEqual(desktop.consoleErrors, []);
   assert.deepEqual(desktop.failedRequests, []);
 } finally {
@@ -137,4 +191,3 @@ try {
 console.log(
   "Interaction checks passed: forward/back scroll, held morphs, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
 );
-

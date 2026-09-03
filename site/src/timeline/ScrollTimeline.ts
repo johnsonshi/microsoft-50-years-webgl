@@ -7,6 +7,7 @@ export interface TimelineState {
   sceneB: number;
   local: number;
   eased: number;
+  visibility: number;
 }
 
 export function resolveTimeline(
@@ -21,6 +22,7 @@ export function resolveTimeline(
     sceneB: 0,
     local: 0,
     eased: 0,
+    visibility: 1,
   };
   writeTimelineState(state, progress, sceneCount, reducedMotion);
   return state;
@@ -34,36 +36,32 @@ export class ScrollTimeline {
     sceneB: 1,
     local: 0,
     eased: 0,
+    visibility: 0,
   };
 
   private readonly section: HTMLElement;
   private readonly copies: HTMLElement[];
-  private readonly year: HTMLElement;
-  private readonly progressLabel: HTMLElement;
-  private readonly meter: HTMLElement;
-  private readonly sceneYears: readonly string[];
+  private readonly lastEra: HTMLElement;
   private readonly reducedMotion: boolean;
   private readonly lastPresence: Float32Array;
   private sectionStart = 0;
   private sectionRange = 1;
   private targetProgress = 0;
   private currentProgress = 0;
+  private copyVisibility = 0;
 
   constructor(
     section: HTMLElement,
     copies: HTMLElement[],
-    year: HTMLElement,
-    progressLabel: HTMLElement,
-    meter: HTMLElement,
-    sceneYears: readonly string[],
     reducedMotion: boolean,
   ) {
     this.section = section;
     this.copies = copies;
-    this.year = year;
-    this.progressLabel = progressLabel;
-    this.meter = meter;
-    this.sceneYears = sceneYears;
+    const lastEra = copies.at(-1)?.closest<HTMLElement>(".era");
+    if (!lastEra) {
+      throw new Error("The timeline requires at least one era.");
+    }
+    this.lastEra = lastEra;
     this.reducedMotion = reducedMotion;
     this.lastPresence = new Float32Array(copies.length);
     this.lastPresence.fill(-1);
@@ -95,6 +93,7 @@ export class ScrollTimeline {
       this.copies.length,
       this.reducedMotion,
     );
+    this.state.visibility = this.copyVisibility;
     this.updateDom();
     return this.state;
   }
@@ -105,11 +104,22 @@ export class ScrollTimeline {
   }
 
   private readonly handleScroll = (): void => {
+    const scrollPosition = window.scrollY;
     this.targetProgress = clamp(
-      (window.scrollY - this.sectionStart) / this.sectionRange,
+      (scrollPosition - this.sectionStart) / this.sectionRange,
       0,
       1,
     );
+    const beforeTimeline = scrollPosition < this.sectionStart - 1;
+    const exitProgress = clamp(
+      (scrollPosition - (this.sectionStart + this.sectionRange)) /
+        (window.innerHeight * 0.22),
+      0,
+      1,
+    );
+    this.copyVisibility = beforeTimeline
+      ? 0
+      : 1 - smootherstep(exitProgress);
   };
 
   private readonly handleResize = (): void => {
@@ -118,26 +128,30 @@ export class ScrollTimeline {
   };
 
   private measure(): void {
-    const rect = this.section.getBoundingClientRect();
-    this.sectionStart = window.scrollY + rect.top;
-    this.sectionRange = Math.max(1, this.section.offsetHeight - window.innerHeight);
+    const sectionRect = this.section.getBoundingClientRect();
+    const lastEraRect = this.lastEra.getBoundingClientRect();
+    this.sectionStart = window.scrollY + sectionRect.top;
+    this.sectionRange = Math.max(
+      1,
+      window.scrollY +
+        lastEraRect.bottom -
+        this.sectionStart -
+        window.innerHeight,
+    );
   }
 
   private updateDom(): void {
     const activeIndex = Math.min(
-      this.sceneYears.length - 1,
+      this.copies.length - 1,
       Math.round(this.state.scaled),
     );
-
-    this.year.textContent = this.sceneYears[activeIndex];
-    this.progressLabel.textContent =
-      `${String(activeIndex + 1).padStart(2, "0")} / ${String(this.sceneYears.length).padStart(2, "0")}`;
-    this.meter.style.transform = `scaleX(${this.state.progress.toFixed(5)})`;
     document.body.dataset.sceneIndex = String(activeIndex);
 
     for (let index = 0; index < this.copies.length; index += 1) {
       const distance = Math.abs(this.state.scaled - index);
-      const presence = smootherstep(clamp(1 - distance, 0, 1));
+      const presence =
+        smootherstep(clamp(1 - distance, 0, 1)) *
+        this.copyVisibility;
       if (Math.abs(presence - this.lastPresence[index]) > 0.002) {
         this.copies[index].style.setProperty(
           "--scene-presence",
@@ -160,6 +174,7 @@ function writeTimelineState(
 
   state.progress = clamped;
   state.scaled = scaled;
+  state.visibility = 1;
 
   if (reducedMotion) {
     const nearest = Math.min(sceneCount - 1, Math.round(scaled));
@@ -184,4 +199,3 @@ function writeTimelineState(
   state.local = scaled - source;
   state.eased = smootherstep(state.local);
 }
-

@@ -12,12 +12,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 69,
+      "cumulativeFrames": 83,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.489855586618617,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 17.28554275667811,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -28,17 +28,17 @@
       "particleCount": 90000,
       "sceneA": 0,
       "sceneB": 1,
-      "morphProgress": 0.4994920076854547,
-      "scrollProgress": 0.07138986724464914,
+      "morphProgress": 0.4997459349717891,
+      "scrollProgress": 0.07140921409214092,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 124,
+      "cumulativeFrames": 139,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.568548956224994,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.156115651130676,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -47,19 +47,19 @@
     "snapshot": {
       "ready": true,
       "particleCount": 90000,
-      "sceneA": 1,
-      "sceneB": 2,
-      "morphProgress": 6.707749907545925e-10,
-      "scrollProgress": 0.14291519913302628,
+      "sceneA": 0,
+      "sceneB": 1,
+      "morphProgress": 0.99999999980105,
+      "scrollProgress": 0.14281842818428184,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 179,
+      "cumulativeFrames": 194,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.598324589223168,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.017010847932283,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -70,17 +70,17 @@
       "particleCount": 90000,
       "sceneA": 1,
       "sceneB": 2,
-      "morphProgress": 0.500253996194561,
-      "scrollProgress": 0.21430506637767543,
+      "morphProgress": 0.4992378052139135,
+      "scrollProgress": 0.21422764227642277,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 234,
+      "cumulativeFrames": 249,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.614103137937366,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.939759581443298,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -89,19 +89,19 @@
     "snapshot": {
       "ready": true,
       "particleCount": 90000,
-      "sceneA": 1,
-      "sceneB": 2,
-      "morphProgress": 0.9999999999751464,
-      "scrollProgress": 0.28569493362232457,
+      "sceneA": 2,
+      "sceneB": 3,
+      "morphProgress": 6.713203731448301e-10,
+      "scrollProgress": 0.28577235772357723,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 289,
+      "cumulativeFrames": 304,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.6242220063523,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.94506632144514,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -112,17 +112,17 @@
       "particleCount": 90000,
       "sceneA": 2,
       "sceneB": 3,
-      "morphProgress": 0.499238011714622,
-      "scrollProgress": 0.3570848008669737,
+      "morphProgress": 0.5005081299817851,
+      "scrollProgress": 0.35718157181571814,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 344,
+      "cumulativeFrames": 359,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.630814502405567,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.902228938171792,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -133,17 +133,17 @@
       "particleCount": 90000,
       "sceneA": 3,
       "sceneB": 4,
-      "morphProgress": 1.9878854411067638e-10,
-      "scrollProgress": 0.42861013275535087,
+      "morphProgress": 2.4873828699294545e-11,
+      "scrollProgress": 0.4285907859078591,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 399,
+      "cumulativeFrames": 415,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.635589523124217,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.870361963237624,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -159,12 +159,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 454,
+      "cumulativeFrames": 470,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.675991738945378,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.846383497309176,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -175,17 +175,17 @@
       "particleCount": 90000,
       "sceneA": 3,
       "sceneB": 4,
-      "morphProgress": 0.999999999801212,
-      "scrollProgress": 0.5713898672446491,
+      "morphProgress": 0.9999999999751255,
+      "scrollProgress": 0.571409214092141,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 509,
+      "cumulativeFrames": 525,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.675049671255536,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.82742910180773,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -196,17 +196,17 @@
       "particleCount": 90000,
       "sceneA": 4,
       "sceneB": 5,
-      "morphProgress": 0.500761988285379,
-      "scrollProgress": 0.6429151991330263,
+      "morphProgress": 0.49949187001821405,
+      "scrollProgress": 0.6428184281842818,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 564,
+      "cumulativeFrames": 580,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.67393672889006,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.812069498876046,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -215,19 +215,19 @@
     "snapshot": {
       "ready": true,
       "particleCount": 90000,
-      "sceneA": 5,
-      "sceneB": 6,
-      "morphProgress": 2.4853618398899528e-11,
-      "scrollProgress": 0.7143050663776754,
+      "sceneA": 4,
+      "sceneB": 5,
+      "morphProgress": 0.9999999993286803,
+      "scrollProgress": 0.7142276422764228,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 620,
+      "cumulativeFrames": 634,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.6938338915507,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.832667191823322,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -238,17 +238,17 @@
       "particleCount": 90000,
       "sceneA": 5,
       "sceneB": 6,
-      "morphProgress": 0.4997460038054391,
-      "scrollProgress": 0.7856949336223246,
+      "morphProgress": 0.5007621947860857,
+      "scrollProgress": 0.7857723577235772,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 675,
+      "cumulativeFrames": 690,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.69383389790853,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.693667192459106,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -257,19 +257,19 @@
     "snapshot": {
       "ready": true,
       "particleCount": 90000,
-      "sceneA": 5,
-      "sceneB": 6,
-      "morphProgress": 0.9999999993292245,
-      "scrollProgress": 0.8570848008669737,
+      "sceneA": 6,
+      "sceneB": 7,
+      "morphProgress": 1.9895018270043432e-10,
+      "scrollProgress": 0.8571815718157182,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 730,
+      "cumulativeFrames": 745,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.6938338915507,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.69366719563802,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -280,17 +280,17 @@
       "particleCount": 90000,
       "sceneA": 6,
       "sceneB": 7,
-      "morphProgress": 0.500507992314546,
-      "scrollProgress": 0.9286101327553509,
+      "morphProgress": 0.5002540650282096,
+      "scrollProgress": 0.928590785907859,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 785,
+      "cumulativeFrames": 800,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.693833894729615,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.693833859761558,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -306,12 +306,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 840,
+      "cumulativeFrames": 854,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.693833894729615,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.666000531514484,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -327,11 +327,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 73,
+      "cumulativeFrames": 72,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.653425203610773,
+      "meanFrameMs": 16.650000545713638,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -341,10 +341,10 @@
     "snapshot": {
       "ready": true,
       "particleCount": 28000,
-      "sceneA": 6,
-      "sceneB": 7,
-      "morphProgress": 0,
-      "scrollProgress": 0.8571428571428571,
+      "sceneA": 5,
+      "sceneB": 6,
+      "morphProgress": 0.9999999999962296,
+      "scrollProgress": 0.8571325362135607,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
@@ -352,7 +352,7 @@
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.659055672292634,
+      "meanFrameMs": 16.65669348108487,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -373,7 +373,7 @@
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.661326534840285,
+      "meanFrameMs": 16.659116576389714,
       "p95FrameMs": 16.700000762939453
     }
   }

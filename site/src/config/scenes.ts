@@ -95,9 +95,9 @@ export const SCENES: readonly SceneDefinition[] = [
     id: "fifty",
     year: "2025",
     accent: [0.08, 0.39, 0.67],
-    focusX: 0,
+    focusX: -1.05,
     focusY: 0,
-    scale: 1.08,
+    scale: 0.96,
     cameraZ: 7.55,
     rotation: [0, 0.025, 0],
     pointerScale: 0.42,
@@ -106,11 +106,11 @@ export const SCENES: readonly SceneDefinition[] = [
   },
   {
     id: "future",
-    year: "NEXT",
+    year: "2026 and Beyond",
     accent: [0.43, 0.24, 0.55],
-    focusX: 0,
+    focusX: 1.05,
     focusY: 0.18,
-    scale: 0.92,
+    scale: 0.88,
     cameraZ: 8.35,
     rotation: [-0.08, 0.02, 0],
     pointerScale: 0.72,
@@ -118,4 +118,3 @@ export const SCENES: readonly SceneDefinition[] = [
     idleAmplitude: 0.032,
   },
 ] as const;
-

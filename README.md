@@ -5,7 +5,8 @@
 An original scroll-driven WebGL essay marking Microsoft's first fifty years.
 One persistent field of particles reorganizes from terminal computing through
 PCs, graphical desktops, enterprise systems, cloud infrastructure,
-orchestrated AI systems, a monumental `50`, and an unresolved future.
+orchestrated AI systems, a monumental `50`, and an AI-enabled age of
+abundance.
 
 **This is an unofficial personal tribute. It is not sponsored or endorsed by
 Microsoft.**
