@@ -42,11 +42,10 @@ scrolling advances.
 ## 3. 1990s — Windows and the Internet
 
 - **Copy:** `In the 1990s, Windows and the Internet connected people beyond the desktop.`
-- **Geometry:** A dense software-only composition of overlapping browser,
-  email, terminal, contacts, and Windows-pane interfaces labeled `HTTP://`,
-  `MAIL @`, `> CONNECT`, `ONLINE`, `TCP/IP`, and `WWW`. Network nodes and
-  cross-links fill the surrounding field; there is no table, workstation, or
-  person.
+- **Geometry:** A software-only composition of overlapping browser, email,
+  terminal, and Windows-pane interfaces labeled `HTTP://`, `MAIL @`,
+  `> CONNECT`, `TCP/IP`, and `WWW`. Five network nodes form one restrained
+  perimeter path; there is no table, workstation, or person.
 - **Depth:** Interface layers overlap across several shallow planes while
   network paths weave through and behind them.
 - **Camera:** Wide enough to hold the intentionally complicated system without
@@ -81,10 +80,10 @@ scrolling advances.
 ## 6. 2020s — Agent fleets
 
 - **Copy:** `In the 2020s, Microsoft powered intelligence across people, software, and enterprise systems.`
-- **Geometry:** A central `AI` core surrounded by twelve
-  specialized panels (`PLAN`, `MEMORY`, `SEARCH`, `CODE`, `TEST`, `REVIEW`,
-  `DEPLOY`, `TOOLS`, `DATA`, `MAIL`, `DOCS`, and `VISION`), token streams,
-  rings, and numerous cross-links. There is no single chat or TUI window.
+- **Geometry:** A central `AI` core surrounded by eight specialized panels
+  (`PLAN`, `MEMORY`, `CODE`, `DEPLOY`, `TOOLS`, `DATA`, `VISION`, and
+  `SEARCH`), one token stream, and a restrained ring of links. There is no
+  single chat or TUI window.
 - **Depth:** The core sits forward while specialist panels occupy several
   planes and the connection mesh passes through the system.
 - **Camera:** Wide enough to preserve the deliberately dense fleet topology.
@@ -108,8 +107,8 @@ scrolling advances.
 - **Copy:** `2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.`
 - **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
   tower and service arms, a Florida-like horizon, and 28 stationary foreground
-  crowd silhouettes. Exhaust and ground-smoke geometry are intentionally
-  omitted.
+  crowd silhouettes. Ground smoke is collapsed and invisible on the pad, then
+  expands upward and outward after liftoff begins.
 - **Depth:** The crowd occupies the foreground, the pad and tower occupy the
   middle plane, and the rocket sits slightly behind them before lifting.
 - **Camera:** Nearly frontal and vertically open, like a distant public launch
@@ -119,8 +118,9 @@ scrolling advances.
 - **Intent:** AI is framed as infrastructure for greater human agency,
   accelerated discovery, and capabilities that become broadly available.
 - **End state:** Late-scroll shader displacement raises only the rocket by a
-  full two world units. The crowd, tower, and horizon remain fixed while the
-  statement fades and the stage yields to the closing line.
+  full two world units while a separately masked smoke field expands from the
+  pad. The crowd, tower, and horizon remain fixed while the statement fades
+  and the stage yields to the closing line.
 
 ## Transition language
 

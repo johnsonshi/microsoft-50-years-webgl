@@ -193,57 +193,43 @@ function windowsInternetScene(): WeightedSampler[] {
     4.35,
     3.0,
     "HTTP://",
-    6,
+    5,
   );
   const mailWindow = interfacePanelSamplers(
     [0.1, -0.42, 0.2],
     3.45,
     2.35,
     "MAIL @",
-    5,
+    4,
   );
   const terminalWindow = interfacePanelSamplers(
     [-2.05, -1.28, 0.72],
     2.45,
     1.35,
     "> CONNECT",
-    4,
-  );
-  const contactsWindow = interfacePanelSamplers(
-    [1.48, 1.02, 0.56],
-    1.85,
-    1.55,
-    "ONLINE",
-    5,
+    3,
   );
   const windowsPanes = paneSamplers([-2.7, 1.55, 0.66], 0.24);
   const envelope = envelopeSamplers([0.72, 0.12, 0.48], 0.95, 0.58);
   const nodeCenters: Vec3[] = [
-    [-3.25, 1.95, -0.75],
-    [-2.75, -2.0, 0.3],
-    [-1.1, 2.05, 0.15],
-    [0.65, 1.95, -0.35],
-    [1.85, 1.75, 0.6],
-    [2.35, 0.35, -0.45],
-    [1.85, -1.55, 0.55],
-    [0.25, -1.95, -0.2],
+    [-3.05, 1.75, -0.7],
+    [-2.6, -1.85, 0.3],
+    [0.25, 1.88, -0.35],
+    [2.3, 0.45, -0.45],
+    [1.55, -1.62, 0.55],
   ];
   const nodes = nodeCenters.map((center) =>
     sphereShellSampler(center, 0.11, 0.035),
   );
-  const connections = nodeCenters.flatMap((center, index) => {
+  const connections = nodeCenters.map((center, index) => {
     const next = nodeCenters[(index + 1) % nodeCenters.length];
-    const opposite = nodeCenters[(index + 3) % nodeCenters.length];
-    return [
-      bezierSampler(
-        center,
-        [center[0] * 0.75, center[1] * 0.35, center[2] + 0.35],
-        [next[0] * 0.75, next[1] * 0.35, next[2] - 0.35],
-        next,
-        0.022,
-      ),
-      lineSampler(center, opposite, 0.018),
-    ];
+    return bezierSampler(
+      center,
+      [center[0] * 0.75, center[1] * 0.35, center[2] + 0.35],
+      [next[0] * 0.75, next[1] * 0.35, next[2] - 0.35],
+      next,
+      0.022,
+    );
   });
   const protocolLabels = [
     textSampler("TCP/IP", {
@@ -267,13 +253,12 @@ function windowsInternetScene(): WeightedSampler[] {
   ];
 
   return [
-    { weight: 0.18, sample: choiceSampler(browserWindow) },
-    { weight: 0.18, sample: choiceSampler(mailWindow) },
-    { weight: 0.13, sample: choiceSampler(terminalWindow) },
-    { weight: 0.1, sample: choiceSampler(contactsWindow) },
-    { weight: 0.07, sample: choiceSampler(windowsPanes) },
-    { weight: 0.08, sample: choiceSampler(envelope) },
-    { weight: 0.16, sample: choiceSampler(connections) },
+    { weight: 0.24, sample: choiceSampler(browserWindow) },
+    { weight: 0.22, sample: choiceSampler(mailWindow) },
+    { weight: 0.14, sample: choiceSampler(terminalWindow) },
+    { weight: 0.08, sample: choiceSampler(windowsPanes) },
+    { weight: 0.1, sample: choiceSampler(envelope) },
+    { weight: 0.12, sample: choiceSampler(connections) },
     { weight: 0.06, sample: choiceSampler(nodes) },
     { weight: 0.04, sample: choiceSampler(protocolLabels) },
   ];
@@ -404,21 +389,16 @@ function agentsScene(): WeightedSampler[] {
     sphereShellSampler(coreCenter, 0.82, 0.05),
     ringSampler(coreCenter, 1.02, 1.02, "xy", 0.045),
     ringSampler(coreCenter, 1.08, 0.72, "xz", 0.045),
-    ringSampler(coreCenter, 0.85, 1.05, "yz", 0.045),
   ];
   const systemSpecs: Array<{ center: Vec3; label: string }> = [
-    { center: [-2.75, 1.42, 0.48], label: "PLAN" },
-    { center: [-1.42, 1.92, 0.18], label: "MEMORY" },
-    { center: [0.08, 2.05, 0.58], label: "SEARCH" },
-    { center: [1.58, 1.82, 0.22], label: "CODE" },
-    { center: [2.88, 1.28, 0.62], label: "TEST" },
-    { center: [3.28, 0.18, 0.24], label: "REVIEW" },
-    { center: [2.92, -1.02, 0.64], label: "DEPLOY" },
-    { center: [1.62, -1.66, 0.22], label: "TOOLS" },
-    { center: [0.15, -1.92, 0.58], label: "DATA" },
-    { center: [-1.35, -1.72, 0.22], label: "MAIL" },
-    { center: [-2.62, -1.18, 0.62], label: "DOCS" },
-    { center: [-3.02, 0.08, 0.26], label: "VISION" },
+    { center: [-2.65, 1.25, 0.48], label: "PLAN" },
+    { center: [-1.2, 1.85, 0.18], label: "MEMORY" },
+    { center: [1.2, 1.85, 0.58], label: "CODE" },
+    { center: [2.7, 1.15, 0.22], label: "DEPLOY" },
+    { center: [2.78, -0.9, 0.62], label: "TOOLS" },
+    { center: [1.25, -1.65, 0.24], label: "DATA" },
+    { center: [-1.25, -1.7, 0.64], label: "VISION" },
+    { center: [-2.75, -0.75, 0.22], label: "SEARCH" },
   ];
   const systemPanels = systemSpecs.flatMap(({ center, label }) =>
     labeledPanelSamplers(center, 1.05, 0.62, label),
@@ -428,7 +408,6 @@ function agentsScene(): WeightedSampler[] {
   );
   const systemLinks = systemSpecs.flatMap(({ center }, index) => {
     const next = systemSpecs[(index + 1) % systemSpecs.length].center;
-    const across = systemSpecs[(index + 4) % systemSpecs.length].center;
     return [
       bezierSampler(
         coreCenter,
@@ -438,15 +417,6 @@ function agentsScene(): WeightedSampler[] {
         0.025,
       ),
       lineSampler(center, next, 0.02),
-      index % 2 === 0
-        ? bezierSampler(
-            center,
-            [center[0] * 0.4, center[1] * 0.2, 0.8],
-            [across[0] * 0.4, across[1] * 0.2, -0.7],
-            across,
-            0.018,
-          )
-        : lineSampler(center, next, 0.02),
     ];
   });
   const tokenStreams = [
@@ -457,26 +427,12 @@ function agentsScene(): WeightedSampler[] {
       [3.6, -1.55, 0.75],
       0.035,
     ),
-    bezierSampler(
-      [-3.7, -1.65, 0.7],
-      [-1.75, -0.55, -0.85],
-      [1.55, -0.45, 0.9],
-      [3.7, 1.68, -0.7],
-      0.035,
-    ),
-    bezierSampler(
-      [-2.9, 2.28, 0.45],
-      [-0.7, 1.05, -0.95],
-      [0.85, -1.25, 0.95],
-      [2.75, -2.12, -0.45],
-      0.03,
-    ),
   ];
 
   return [
-    { weight: 0.18, sample: choiceSampler(core) },
+    { weight: 0.22, sample: choiceSampler(core) },
     {
-      weight: 0.08,
+      weight: 0.1,
       sample: textSampler("AI", {
         center: coreCenter,
         width: 0.88,
@@ -487,10 +443,10 @@ function agentsScene(): WeightedSampler[] {
         scanStep: 2,
       }),
     },
-    { weight: 0.28, sample: choiceSampler(systemPanels) },
+    { weight: 0.32, sample: choiceSampler(systemPanels) },
     { weight: 0.06, sample: choiceSampler(systemNodes) },
-    { weight: 0.28, sample: choiceSampler(systemLinks) },
-    { weight: 0.12, sample: choiceSampler(tokenStreams) },
+    { weight: 0.24, sample: choiceSampler(systemLinks) },
+    { weight: 0.06, sample: choiceSampler(tokenStreams) },
   ];
 }
 
@@ -553,6 +509,14 @@ function rocketScene(): WeightedSampler[] {
       0.024,
     ),
   );
+  const smoke = [
+    ellipsoidVolumeSampler([rocketX, -2.02, 2.12], [0.38, 0.2, 0.18]),
+    ellipsoidVolumeSampler([0.55, -1.94, 2.08], [0.65, 0.25, 0.2]),
+    ellipsoidVolumeSampler([1.8, -1.92, 2.15], [0.68, 0.25, 0.22]),
+    ellipsoidVolumeSampler([-0.08, -1.8, 2.05], [0.76, 0.32, 0.18]),
+    ellipsoidVolumeSampler([2.42, -1.78, 2.1], [0.74, 0.32, 0.2]),
+    ellipsoidVolumeSampler([0.95, -1.48, 2.18], [0.48, 0.56, 0.18]),
+  ];
   const tower = [
     lineSampler([2.05, -2.0, -0.22], [2.05, 1.62, -0.22], 0.035),
     lineSampler([2.45, -2.0, -0.22], [2.45, 1.62, -0.22], 0.035),
@@ -582,13 +546,14 @@ function rocketScene(): WeightedSampler[] {
   const crowd = crowdSilhouetteSamplers();
 
   return [
-    { weight: 0.3, sample: body },
-    { weight: 0.04, sample: interstage },
-    { weight: 0.1, sample: nose },
-    { weight: 0.08, sample: choiceSampler(stageBands) },
-    { weight: 0.19, sample: choiceSampler(tower) },
-    { weight: 0.1, sample: choiceSampler(horizon) },
-    { weight: 0.19, sample: choiceSampler(crowd) },
+    { weight: 0.27, sample: body },
+    { weight: 0.035, sample: interstage },
+    { weight: 0.085, sample: nose },
+    { weight: 0.07, sample: choiceSampler(stageBands) },
+    { weight: 0.12, sample: choiceSampler(smoke) },
+    { weight: 0.17, sample: choiceSampler(tower) },
+    { weight: 0.09, sample: choiceSampler(horizon) },
+    { weight: 0.16, sample: choiceSampler(crowd) },
   ];
 }
 

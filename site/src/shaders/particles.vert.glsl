@@ -60,12 +60,24 @@ void main() {
     (1.0 - smoothstep(1.0, 1.12, positionTarget.z));
   float rocketHeight = smoothstep(-2.2, -2.12, positionTarget.y);
   float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
+  float smokeDepth =
+    smoothstep(1.7, 1.78, positionTarget.z) *
+    (1.0 - smoothstep(2.5, 2.58, positionTarget.z));
+  float smokeHeight = 1.0 - smoothstep(-0.82, -0.62, positionTarget.y);
+  float smokeMask = smokeDepth * smokeHeight;
   float liftProgress = mix(
     smoother(uFinaleProgress),
     step(0.001, uFinaleProgress) * 0.7,
     uReducedMotion
   );
   base.y += rocketMask * liftProgress * 2.0;
+  float smokeProgress = smoother(
+    clamp((uFinaleProgress - 0.06) / 0.5, 0.0, 1.0)
+  );
+  vec3 smokeOrigin = vec3(1.15, -2.04, 2.12);
+  vec3 expandedSmoke =
+    smokeOrigin + (base - smokeOrigin) * smokeProgress;
+  base = mix(base, expandedSmoke, smokeMask);
   float seedAngle = aSeed * TAU;
   vec3 flow = vec3(
     sin(base.y * 1.25 + seedAngle * 0.35),
@@ -120,5 +132,6 @@ void main() {
   vAlpha =
     mix(0.45, 0.94, aAccent) *
     mix(1.0, 0.58, transitionEnergy) *
-    mix(1.0, 0.06, suppression);
+    mix(1.0, 0.06, suppression) *
+    mix(1.0, smokeProgress, smokeMask);
 }

@@ -56,6 +56,9 @@ try {
       enterpriseStatement: normalize(statements[3]?.textContent ?? ""),
       intelligenceStatement: normalize(statements[5]?.textContent ?? ""),
       finalStatement: normalize(finalStatement.textContent ?? ""),
+      closing: normalize(
+        document.querySelector(".closing h2")?.textContent ?? "",
+      ),
       footer: normalize(footer.textContent ?? ""),
       authorHref: author.href,
     };
@@ -75,10 +78,27 @@ try {
     "2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.",
   );
   assert.equal(
+    contentState.closing,
+    "Microsoft's history of computing is a history of becoming.",
+  );
+  assert.equal(
     contentState.footer,
     "An unofficial personal tribute to Microsoft's first 50 years. By Johnson Shi.",
   );
   assert.equal(contentState.authorHref, "https://johnsonshi.com/");
+  const closingState = await desktop.page.locator(".closing").evaluate(
+    (element) => ({
+      height: element.getBoundingClientRect().height,
+      viewportHeight: window.innerHeight,
+    }),
+  );
+  assert.ok(closingState.height >= closingState.viewportHeight - 1);
+  assert.equal(
+    await desktop.page.locator("footer").evaluate(
+      (element) => getComputedStyle(element).borderTopWidth,
+    ),
+    "0px",
+  );
 
   const firstCopyBeforeTimeline = await desktop.page
     .locator(".era-copy")

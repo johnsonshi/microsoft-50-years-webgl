@@ -145,6 +145,23 @@ try {
     type: "jpeg",
     quality: 86,
   });
+
+  await desktop.page.evaluate(() => {
+    const closing = document.querySelector(".closing");
+    if (!(closing instanceof HTMLElement)) {
+      throw new Error("Closing section not found.");
+    }
+    window.scrollTo(
+      0,
+      window.scrollY + closing.getBoundingClientRect().top,
+    );
+  });
+  await desktop.page.waitForTimeout(180);
+  await desktop.page.screenshot({
+    path: path.join(outputDirectory, "closing.jpg"),
+    type: "jpeg",
+    quality: 88,
+  });
 } finally {
   await desktop.browser.close();
 }

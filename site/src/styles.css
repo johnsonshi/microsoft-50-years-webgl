@@ -227,7 +227,7 @@ footer {
 
 .closing {
   display: flex;
-  min-height: 88svh;
+  min-height: 100svh;
   padding: clamp(5rem, 12vw, 12rem) clamp(1.25rem, 6vw, 7rem);
   align-items: center;
   justify-content: center;
@@ -246,7 +246,6 @@ footer {
 footer {
   display: flex;
   padding: 1.5rem clamp(1.25rem, 3vw, 3rem);
-  border-top: 1px solid var(--hairline);
   justify-content: center;
   gap: 2rem;
   color: var(--muted);
