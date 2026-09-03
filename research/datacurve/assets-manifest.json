@@ -1,0 +1,4485 @@
+{
+  "capturedAt": "2026-09-03T05:59:53.766Z",
+  "target": "https://datacurve.ai/",
+  "notes": [
+    "Only same-origin JS/CSS and particle-relevant depth data/media were downloaded.",
+    "Fonts, editorial images, RSC route-prefetch payloads, and third-party-hosted analytics are enumerated but not retained.",
+    "Observed encoded sizes are transfer sizes from CDP; sizeBytes is local decoded size when downloaded.",
+    "Initial HTML references include src, href, and every declared srcset candidate.",
+    "dynamic is true for script requests absent from the initial HTML; scroll itself issued no additional requests.",
+    "Cache-busted depth-scenes.json requests are grouped under one canonical URL and retained in observedUrls."
+  ],
+  "assets": [
+    {
+      "url": "https://datacurve.ai/",
+      "resourceTypes": [
+        "Document"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/html",
+      "observedEncodedSizes": [
+        10128,
+        10069
+      ],
+      "initiator": {
+        "type": "other",
+        "url": null,
+        "lineNumber": null,
+        "columnNumber": null,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js server-rendered homepage document",
+      "localPath": "index.html",
+      "sizeBytes": 65311
+    },
+    {
+      "url": "https://datacurve.ai/120ee41005470f3c/script.js",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        1546,
+        1567
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0snb55fva1xw1.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 2247,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Vercel Web Analytics client",
+      "localPath": "raw/public/120ee41005470f3c/script.js",
+      "sizeBytes": 2495
+    },
+    {
+      "url": "https://datacurve.ai/?_rsc=7h4NYy5eoyMcNlUN",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        1015,
+        1030
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js server-rendered homepage document",
+      "localPath": null,
+      "sizeBytes": 1030
+    },
+    {
+      "url": "https://datacurve.ai/?_rsc=8nTjltbQWvg6NcbE",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        575,
+        746
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js server-rendered homepage document",
+      "localPath": null,
+      "sizeBytes": 746
+    },
+    {
+      "url": "https://datacurve.ai/?_rsc=yIp22O3xgPPxC28X",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        1735,
+        1938
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js server-rendered homepage document",
+      "localPath": null,
+      "sizeBytes": 1938
+    },
+    {
+      "url": "https://datacurve.ai/Datacurve-Wordmark.svg",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/svg+xml",
+      "observedEncodedSizes": [
+        1721,
+        1707
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1444,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "image",
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Brand or editorial vector image",
+      "localPath": null,
+      "sizeBytes": 1721
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=1080&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=1200&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=128&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=1920&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=2048&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=256&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/webp",
+      "observedEncodedSizes": [
+        4472
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "localPath": null,
+      "sizeBytes": 4472
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=32&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=384&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=3840&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=48&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=64&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=640&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=750&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=828&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-brain.png&w=96&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=1080&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=1200&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=128&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=1920&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=2048&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=256&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/webp",
+      "observedEncodedSizes": [
+        5922
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "localPath": null,
+      "sizeBytes": 5922
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=32&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=384&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=3840&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=48&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=64&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=640&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=750&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=828&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-chip.png&w=96&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=1080&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=1200&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=128&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=1920&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=2048&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=256&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/webp",
+      "observedEncodedSizes": [
+        6116
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "localPath": null,
+      "sizeBytes": 6116
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=32&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=384&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=3840&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=48&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=64&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=640&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=750&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=828&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-datacenter.png&w=96&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=1080&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1080w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=1200&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1200w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=128&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/webp",
+      "observedEncodedSizes": [
+        1489
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "128w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "localPath": null,
+      "sizeBytes": 1489
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=1920&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "1920w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=2048&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "2048w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=256&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/webp",
+      "observedEncodedSizes": [
+        3107
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "256w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "localPath": null,
+      "sizeBytes": 3107
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=32&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "32w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=384&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "384w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=3840&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "3840w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=48&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "48w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=64&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "64w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=640&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "640w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=750&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "750w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=828&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "828w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/image?url=%2Fimages%2Ffooter-head.png&w=96&q=75&dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        },
+        {
+          "tag": "img",
+          "attribute": "srcset",
+          "descriptor": "96w",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js optimized editorial/footer raster image",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0-8bo-cwkrg~r.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        9794,
+        9844
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1807,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0-8bo-cwkrg~r.js",
+      "sizeBytes": 44409
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        41755,
+        41671
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2128,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0.tp.7j35zjnj.js",
+      "sizeBytes": 150422
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/00qiauex1uugr.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        40366,
+        40305
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 10191,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/00qiauex1uugr.js",
+      "sizeBytes": 102897
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/03~yq9q893hmn.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "mimeType": "application/javascript",
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": "raw/public/_next/static/chunks/03~yq9q893hmn.js",
+      "sizeBytes": 112594
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/07acnwh_9824e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        14408,
+        14437
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2994,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Homepage interaction orchestrator, React UI, and Lenis 1.3.23 smooth scrolling",
+      "localPath": "raw/public/_next/static/chunks/07acnwh_9824e.js",
+      "sizeBytes": 40949
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        62940,
+        62994
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1914,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/07v3hlx-_m76e.js",
+      "sizeBytes": 186941
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0_ra_h.eo_91i.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        1884,
+        1830
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 10191,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0_ra_h.eo_91i.js",
+      "sizeBytes": 3779
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0avex1pe4pzh7.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        13526,
+        13529
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2780,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0avex1pe4pzh7.js",
+      "sizeBytes": 54647
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0hbuqc96yj-a4.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        1656,
+        1664
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2673,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0hbuqc96yj-a4.js",
+      "sizeBytes": 3377
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0k.v~yblu3n-n.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        8025,
+        8069
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1709,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "script",
+          "declaredType": null
+        },
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0k.v~yblu3n-n.js",
+      "sizeBytes": 24101
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0s99a.txitfa_.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        147231,
+        147194
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 10191,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Dynamically imported Three.js r184 DotMorph particle renderer and shaders",
+      "localPath": "raw/public/_next/static/chunks/0s99a.txitfa_.js",
+      "sizeBytes": 566860
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0snb55fva1xw1.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        14641,
+        14656
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2566,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0snb55fva1xw1.js",
+      "sizeBytes": 44829
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0tp82_dmliadx.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        1780,
+        1888
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 10191,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0tp82_dmliadx.js",
+      "sizeBytes": 3204
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0xyc02bewuh8y.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        47482,
+        47473
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 10191,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Route-prefetched chunk containing GSAP 3.15.0 and ScrollTrigger; not the particle driver",
+      "localPath": "raw/public/_next/static/chunks/0xyc02bewuh8y.js",
+      "sizeBytes": 116266
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0yvmmfpav1fa7.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        72746,
+        72716
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2021,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0yvmmfpav1fa7.js",
+      "sizeBytes": 227626
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/0~pnzyyk-lw7a.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        7402
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2352,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/0~pnzyyk-lw7a.js",
+      "sizeBytes": 18546
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/12t~.4oe6y.g8.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        41991,
+        41910
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2459,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/12t~.4oe6y.g8.js",
+      "sizeBytes": 121108
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/162jwj064jq2p.css?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Stylesheet"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/css",
+      "observedEncodedSizes": [
+        12824,
+        12789
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1574,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "stylesheet",
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled site stylesheet",
+      "localPath": "raw/public/_next/static/chunks/162jwj064jq2p.css",
+      "sizeBytes": 60870
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/16zhkj.7~j3p~.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        393,
+        383
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2887,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Compiled Next.js runtime or application chunk; rendering role refined in architecture.md",
+      "localPath": "raw/public/_next/static/chunks/16zhkj.7~j3p~.js",
+      "sizeBytes": 215
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        4738,
+        4744
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 2245,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "script",
+          "attribute": "src",
+          "rel": null,
+          "as": null,
+          "declaredType": null
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Next.js/Turbopack runtime",
+      "localPath": "raw/public/_next/static/chunks/turbopack-0.8fe5.1-_rhy.js",
+      "sizeBytes": 11052
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/70bc3e132a0a741e-s.p.1409xf.ylxg8g.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        40731
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 528,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 40731
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/exposure_italic_var-s.p.0fmy77v-63hry.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        214711,
+        214669
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 700,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 214711
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/exposure_var-s.p.0~ic5x2rcfe2t.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        583241,
+        583215
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 865,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 583241
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/suisse_intl_medium-s.p.0l-v90mx9xhv7.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        6187,
+        6193
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1036,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 6193
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/suisse_intl_regular-s.p.0w-j-mvnwxlql.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        6084,
+        6152
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1208,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 6152
+    },
+    {
+      "url": "https://datacurve.ai/_next/static/media/suisse_intl_semibold-s.p.030jtgfxf68c2.woff2?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Font"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "font/woff2",
+      "observedEncodedSizes": [
+        6352,
+        6357
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 1381,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "preload",
+          "as": "font",
+          "declaredType": "font/woff2"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Web font",
+      "localPath": null,
+      "sizeBytes": 6357
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-01.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        105648,
+        105661
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-01.mp4",
+      "sizeBytes": 105464
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-02.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        53669,
+        53668
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-02.mp4",
+      "sizeBytes": 53448
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-03.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        62610,
+        62616
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-03.mp4",
+      "sizeBytes": 62480
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-04.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        165205,
+        165229
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-04.mp4",
+      "sizeBytes": 165020
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-05.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        90951,
+        90939
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-05.mp4",
+      "sizeBytes": 90765
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-06.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        100500,
+        100501
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-06.mp4",
+      "sizeBytes": 100351
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-07.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        745550,
+        745576
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-07.mp4",
+      "sizeBytes": 745039
+    },
+    {
+      "url": "https://datacurve.ai/api/depth-assets/media/depth-clip-08.mp4?v=2026-05-16T06%3A09%3A47.741Z",
+      "resourceTypes": [
+        "Media"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "video/mp4",
+      "observedEncodedSizes": [
+        235059,
+        235113
+      ],
+      "initiator": {
+        "type": "parser",
+        "url": "https://datacurve.ai/",
+        "lineNumber": 0,
+        "columnNumber": 65308,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Depth-map video sampled by the particle vertex shader",
+      "localPath": "raw/public/api/depth-assets/media/depth-clip-08.mp4",
+      "sizeBytes": 234801
+    },
+    {
+      "url": "https://datacurve.ai/apple-icon?21bbc7811497e303",
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "apple-touch-icon",
+          "as": null,
+          "declaredType": "image/png"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Public frontend resource",
+      "mimeType": null,
+      "initiator": null,
+      "resourceTypes": [],
+      "phases": [],
+      "statuses": [],
+      "observedEncodedSizes": [],
+      "dynamic": false,
+      "localPath": null,
+      "sizeBytes": null
+    },
+    {
+      "url": "https://datacurve.ai/careers?_rsc=2mFfRjCTP3zE4_j_",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        2223,
+        2246
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 2246
+    },
+    {
+      "url": "https://datacurve.ai/careers?_rsc=5CB68i4pnAekjehf",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        515
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 515
+    },
+    {
+      "url": "https://datacurve.ai/careers?_rsc=7h4NYy5eoyMcNlUN",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        1068,
+        1263
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 1263
+    },
+    {
+      "url": "https://datacurve.ai/careers?_rsc=xhP9WpivtHrPccig",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        691
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 691
+    },
+    {
+      "url": "https://datacurve.ai/fcfda350746e391d/script.js",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        5012,
+        4881
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0snb55fva1xw1.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 5829,
+        "functionName": null
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Vercel Speed Insights client",
+      "localPath": "raw/public/fcfda350746e391d/script.js",
+      "sizeBytes": 12567
+    },
+    {
+      "url": "https://datacurve.ai/gifs/depth-scenes.json",
+      "observedUrls": [
+        "https://datacurve.ai/gifs/depth-scenes.json?ts=1788415112710",
+        "https://datacurve.ai/gifs/depth-scenes.json?ts=1788415182473"
+      ],
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/json",
+      "observedEncodedSizes": [
+        860,
+        863
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0s99a.txitfa_.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 381,
+        "columnNumber": 55425,
+        "functionName": "aE"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Particle scene manifest describing depth-video sources and scene metadata",
+      "localPath": "raw/public/gifs/depth-scenes.json",
+      "sizeBytes": 4267
+    },
+    {
+      "url": "https://datacurve.ai/icon.svg?icon.15v5t5zfbse82.svg?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+      "resourceTypes": [
+        "Other"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/svg+xml",
+      "observedEncodedSizes": [
+        813,
+        830
+      ],
+      "initiator": {
+        "type": "other",
+        "url": null,
+        "lineNumber": null,
+        "columnNumber": null,
+        "functionName": null
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [
+        {
+          "tag": "link",
+          "attribute": "href",
+          "rel": "icon",
+          "as": null,
+          "declaredType": "image/svg+xml"
+        }
+      ],
+      "initialHtmlReference": true,
+      "role": "Brand or editorial vector image",
+      "localPath": null,
+      "sizeBytes": 830
+    },
+    {
+      "url": "https://datacurve.ai/images/deepswe-card.jpg",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/jpeg",
+      "observedEncodedSizes": [
+        918692,
+        918659
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0yvmmfpav1fa7.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 191459,
+        "functionName": "L"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Editorial raster image",
+      "localPath": null,
+      "sizeBytes": 918692
+    },
+    {
+      "url": "https://datacurve.ai/images/research-glyph.svg",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/svg+xml",
+      "observedEncodedSizes": [
+        505,
+        503
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0yvmmfpav1fa7.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 191459,
+        "functionName": "L"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Brand or editorial vector image",
+      "localPath": null,
+      "sizeBytes": 505
+    },
+    {
+      "url": "https://datacurve.ai/images/research-lines.svg",
+      "resourceTypes": [
+        "Image"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "image/svg+xml",
+      "observedEncodedSizes": [
+        816,
+        860
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0yvmmfpav1fa7.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 191459,
+        "functionName": "L"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Brand or editorial vector image",
+      "localPath": null,
+      "sizeBytes": 860
+    },
+    {
+      "url": "https://datacurve.ai/products?_rsc=5CB68i4pnAekjehf",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        517,
+        532
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 532
+    },
+    {
+      "url": "https://datacurve.ai/products?_rsc=7h4NYy5eoyMcNlUN",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        1134,
+        1130
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 1134
+    },
+    {
+      "url": "https://datacurve.ai/products?_rsc=_O6s5kzTWVZlEW9T",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        926,
+        719
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 926
+    },
+    {
+      "url": "https://datacurve.ai/products?_rsc=u2Wueao__XdOruSe",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        2219,
+        2228
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 2228
+    },
+    {
+      "url": "https://datacurve.ai/research?_rsc=5CB68i4pnAekjehf",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        735,
+        561
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 735
+    },
+    {
+      "url": "https://datacurve.ai/research?_rsc=7h4NYy5eoyMcNlUN",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        1055,
+        1029
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 1055
+    },
+    {
+      "url": "https://datacurve.ai/research?_rsc=jL5qEi402wa9RlLc",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        925,
+        696
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 925
+    },
+    {
+      "url": "https://datacurve.ai/research?_rsc=qX4Ea18kVS_dUClC",
+      "resourceTypes": [
+        "Fetch"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/x-component",
+      "observedEncodedSizes": [
+        4753
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/0.tp.7j35zjnj.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 105646,
+        "functionName": "T"
+      },
+      "dynamic": false,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Next.js React Server Component route prefetch",
+      "localPath": null,
+      "sizeBytes": 4753
+    },
+    {
+      "url": "https://ph.shipd.ai/array/phc_JhsMY9k4NzWbyL2U1rNN8fIDwbufkpyPRGMShkUkgJv/config.js",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "application/javascript",
+      "observedEncodedSizes": [
+        888,
+        836
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 20815,
+        "functionName": "a"
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Third-party PostHog analytics/session-replay runtime",
+      "localPath": null,
+      "sizeBytes": 888
+    },
+    {
+      "url": "https://ph.shipd.ai/static/dead-clicks-autocapture.js?v=1.373.2",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/javascript",
+      "observedEncodedSizes": [
+        7060,
+        7377
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 20815,
+        "functionName": "a"
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Third-party PostHog analytics/session-replay runtime",
+      "localPath": null,
+      "sizeBytes": 7377
+    },
+    {
+      "url": "https://ph.shipd.ai/static/posthog-recorder.js?v=1.373.2",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/javascript",
+      "observedEncodedSizes": [
+        62205,
+        62248
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 20815,
+        "functionName": "a"
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Third-party PostHog analytics/session-replay runtime",
+      "localPath": null,
+      "sizeBytes": 62248
+    },
+    {
+      "url": "https://ph.shipd.ai/static/surveys.js?v=1.373.2",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/javascript",
+      "observedEncodedSizes": [
+        33644,
+        33362
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 20815,
+        "functionName": "a"
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Third-party PostHog analytics/session-replay runtime",
+      "localPath": null,
+      "sizeBytes": 33644
+    },
+    {
+      "url": "https://ph.shipd.ai/static/web-vitals.js?v=1.373.2",
+      "resourceTypes": [
+        "Script"
+      ],
+      "phases": [
+        "desktop-load",
+        "mobile-load"
+      ],
+      "statuses": [
+        200
+      ],
+      "mimeType": "text/javascript",
+      "observedEncodedSizes": [
+        3004,
+        2963
+      ],
+      "initiator": {
+        "type": "script",
+        "url": "https://datacurve.ai/_next/static/chunks/07v3hlx-_m76e.js?dpl=dpl_12uQ6K7qQDnM2xHofuQ7W2CwPSMP",
+        "lineNumber": 0,
+        "columnNumber": 20815,
+        "functionName": "a"
+      },
+      "dynamic": true,
+      "initialHtmlReferences": [],
+      "initialHtmlReference": false,
+      "role": "Third-party PostHog analytics/session-replay runtime",
+      "localPath": null,
+      "sizeBytes": 3004
+    }
+  ]
+}

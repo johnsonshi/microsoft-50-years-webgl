@@ -1,0 +1,14 @@
+.DS_Store
+
+# Local dependency and build output
+site/node_modules/
+site/dist/
+site/coverage/
+site/playwright-report/
+site/test-results/
+
+# Publicly served third-party material retained only for local research.
+research/datacurve/index.html
+research/datacurve/raw/
+research/datacurve/screenshots/
+

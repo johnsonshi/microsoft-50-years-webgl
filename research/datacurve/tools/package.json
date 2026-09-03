@@ -1,0 +1,9 @@
+{
+  "name": "datacurve-public-runtime-research",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node capture.mjs",
+    "assets": "python3 download-assets.py"
+  }
+}
