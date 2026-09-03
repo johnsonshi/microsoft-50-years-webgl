@@ -134,19 +134,20 @@ A smootherstep curve shapes `local` for particle motion while raw local
 progress remains available for copy opacity. The controller updates the active
 pair only when `sceneA`/`sceneB` changes.
 
-The entry hold keeps scene zero fixed while its single sentence fades in
-continuously, eliminating the previous threshold where copy and its particle
-clearance appeared at once. Each sentence is split into accessible word spans;
-the incoming sentence fills from pale graphite to black as scroll progress
+The first sentence begins fading in as its era enters the viewport, before the
+sticky stage reaches the top. Its complete text is therefore visible in pale
+graphite during the approach. The entry hold then keeps scene zero fixed while
+the words fill from pale graphite to black. Each sentence is split into
+accessible word spans, and later eras use the same progressive fill as scroll
 advances.
 
 The final era also exposes `finaleProgress`. It begins only after the rocket is
 nearly formed, reaches a partial lift at the final scene's settled scroll
 position, and reaches `1` during the pinned exit hold. The vertex shader
 derives a mask from the final target's rocket-only X/Y/Z region, so the vehicle
-and upper plume rise while the crowd, tower, horizon, and ground smoke remain
-stationary. This avoids another per-particle attribute and keeps the renderer
-at one draw call.
+rises two world units while the crowd, tower, and horizon remain stationary.
+This avoids another per-particle attribute and keeps the renderer at one draw
+call.
 
 Each scene definition also supplies interpolated:
 

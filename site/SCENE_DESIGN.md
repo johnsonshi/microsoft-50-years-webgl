@@ -51,14 +51,14 @@ scrolling advances.
   network paths weave through and behind them.
 - **Camera:** Wide enough to hold the intentionally complicated system without
   resolving it into one physical desktop.
-- **Transition out:** Window frames flatten into Word, PowerPoint, and email
-  artifacts moving through a shared flow.
+- **Transition out:** Window frames flatten into document, slide, report, and
+  email artifacts moving through a shared flow.
 
 ## 4. 2000s — Work begins to flow
 
-- **Copy:** `In the 2000s, email, Word, and PowerPoint made work flow across the web.`
-- **Geometry:** Email, `WORD`, and explicitly labeled `POWER` / `POINT` cards
-  moving through one continuous system of broad Bezier paths.
+- **Copy:** `In the 2000s, enterprise work moved online, connecting teams, information, and decisions across the web.`
+- **Geometry:** Email, `DOCS`, `SLIDES`, and `REPORT` cards moving through one
+  continuous system of broad Bezier paths.
 - **Depth:** Artifacts occupy staggered planes along the flow, with no desk or
   human figure anchoring the composition.
 - **Camera:** Wider than the 1990s scene so the movement between tools is the
@@ -69,9 +69,9 @@ scrolling advances.
 ## 5. 2010s — Enterprise cloud
 
 - **Copy:** `In the 2010s, enterprise systems moved into cloud datacenters built for global scale.`
-- **Geometry:** Three dense server racks with repeated units, routed cables,
-  a broad infrastructure ring, and connected enterprise panels labeled `ERP`,
-  `CRM`, `DB`, `IDENTITY`, and `APPS`.
+- **Geometry:** Three dense server racks with repeated units and infrastructure
+  routes kept below the cabinets. No application cards or decorative routing
+  sits above the rack line.
 - **Depth:** Racks occupy distinct depth bands while routes pass over and under
   the aisle.
 - **Camera:** Broad and architectural, conveying a room-scale system.
@@ -80,8 +80,8 @@ scrolling advances.
 
 ## 6. 2020s — Agent fleets
 
-- **Copy:** `In the 2020s, conversation became an interface to fleets of intelligent agents.`
-- **Geometry:** A central `AI` / `ORCHESTRATOR` core surrounded by twelve
+- **Copy:** `In the 2020s, Microsoft powered intelligence across people, software, and enterprise systems.`
+- **Geometry:** A central `AI` core surrounded by twelve
   specialized panels (`PLAN`, `MEMORY`, `SEARCH`, `CODE`, `TEST`, `REVIEW`,
   `DEPLOY`, `TOOLS`, `DATA`, `MAIL`, `DOCS`, and `VISION`), token streams,
   rings, and numerous cross-links. There is no single chat or TUI window.
@@ -105,10 +105,11 @@ scrolling advances.
 
 ## 8. 2026 and Beyond — Powering abundance
 
-- **Copy:** `2026 and Beyond: AI can power an age of abundance—expanding agency, discovery, and possibility.`
+- **Copy:** `2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.`
 - **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
-  tower and service arms, exhaust, broad pad smoke, a Florida-like horizon,
-  and 28 stationary foreground crowd silhouettes.
+  tower and service arms, a Florida-like horizon, and 28 stationary foreground
+  crowd silhouettes. Exhaust and ground-smoke geometry are intentionally
+  omitted.
 - **Depth:** The crowd occupies the foreground, the pad and tower occupy the
   middle plane, and the rocket sits slightly behind them before lifting.
 - **Camera:** Nearly frontal and vertically open, like a distant public launch
@@ -117,8 +118,8 @@ scrolling advances.
   rises on the right.
 - **Intent:** AI is framed as infrastructure for greater human agency,
   accelerated discovery, and capabilities that become broadly available.
-- **End state:** Late-scroll shader displacement raises only the rocket and
-  upper plume. The crowd, tower, horizon, and pad smoke remain fixed while the
+- **End state:** Late-scroll shader displacement raises only the rocket by a
+  full two world units. The crowd, tower, and horizon remain fixed while the
   statement fades and the stage yields to the closing line.
 
 ## Transition language

@@ -4,7 +4,7 @@
 
 An original scroll-driven WebGL essay marking Microsoft's first fifty years.
 One persistent field of particles reorganizes from the first BASIC source
-listing through PCs, Windows and the Internet, connected Office workflows,
+listing through PCs, Windows and the Internet, connected enterprise workflows,
 cloud datacenters, agent fleets, the Microsoft mark, and a rocket lifting
 toward an AI-enabled age of abundance.
 

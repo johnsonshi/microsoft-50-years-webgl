@@ -32,6 +32,9 @@ try {
 
   const contentState = await desktop.page.evaluate(() => {
     const statement = document.querySelector(".era-copy__statement");
+    const statements = Array.from(
+      document.querySelectorAll(".era-copy__statement"),
+    );
     const finalStatement = document.querySelector(
       ".era:last-child .era-copy__statement",
     );
@@ -50,6 +53,8 @@ try {
     return {
       fontFamily: style.fontFamily,
       fontWeight: Number.parseInt(style.fontWeight, 10),
+      enterpriseStatement: normalize(statements[3]?.textContent ?? ""),
+      intelligenceStatement: normalize(statements[5]?.textContent ?? ""),
       finalStatement: normalize(finalStatement.textContent ?? ""),
       footer: normalize(footer.textContent ?? ""),
       authorHref: author.href,
@@ -58,8 +63,16 @@ try {
   assert.match(contentState.fontFamily, /Segoe UI|Helvetica|Arial/);
   assert.ok(contentState.fontWeight <= 400);
   assert.equal(
+    contentState.enterpriseStatement,
+    "In the 2000s, enterprise work moved online, connecting teams, information, and decisions across the web.",
+  );
+  assert.equal(
+    contentState.intelligenceStatement,
+    "In the 2020s, Microsoft powered intelligence across people, software, and enterprise systems.",
+  );
+  assert.equal(
     contentState.finalStatement,
-    "2026 and Beyond: AI can power an age of abundance—expanding agency, discovery, and possibility.",
+    "2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.",
   );
   assert.equal(
     contentState.footer,
@@ -75,6 +88,44 @@ try {
     firstCopyBeforeTimeline < 0.01,
     "The first era is visible above the fold.",
   );
+
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const firstEra = section?.querySelector(".era:first-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(firstEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline preview bounds not found.");
+    }
+    const sectionTop =
+      window.scrollY + section.getBoundingClientRect().top;
+    const firstEraTop =
+      window.scrollY + firstEra.getBoundingClientRect().top;
+    const previewStart = firstEraTop - window.innerHeight;
+    window.scrollTo(0, previewStart + (sectionTop - previewStart) * 0.65);
+  });
+  await desktop.page.waitForTimeout(300);
+  const previewState = await desktop.page
+    .locator(".era-copy")
+    .first()
+    .evaluate((element) => {
+      const words = element.querySelectorAll(".era-copy__word");
+      return {
+        opacity: Number.parseFloat(getComputedStyle(element).opacity),
+        firstWord: Number.parseFloat(
+          getComputedStyle(words[0]).getPropertyValue("--word-reveal"),
+        ),
+        lastWord: Number.parseFloat(
+          getComputedStyle(words[words.length - 1]).getPropertyValue(
+            "--word-reveal",
+          ),
+        ),
+      };
+    });
+  assert.ok(previewState.opacity > 0.65);
+  assert.ok(previewState.firstWord < 0.05);
+  assert.ok(previewState.lastWord < 0.05);
 
   await desktop.page.evaluate(() => {
     const section = document.querySelector("#timeline");
@@ -109,7 +160,7 @@ try {
         ),
       };
     });
-  assert.ok(entryState.opacity > 0.35 && entryState.opacity < 0.65);
+  assert.ok(entryState.opacity > 0.95);
   assert.ok(entryState.firstWord > 0.95);
   assert.ok(entryState.lastWord < 0.05);
 

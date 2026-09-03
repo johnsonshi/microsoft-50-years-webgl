@@ -31,6 +31,29 @@ try {
       !(section instanceof HTMLElement) ||
       !(firstEra instanceof HTMLElement)
     ) {
+      throw new Error("Timeline preview bounds not found.");
+    }
+    const sectionTop =
+      window.scrollY + section.getBoundingClientRect().top;
+    const firstEraTop =
+      window.scrollY + firstEra.getBoundingClientRect().top;
+    const previewStart = firstEraTop - window.innerHeight;
+    window.scrollTo(0, previewStart + (sectionTop - previewStart) * 0.65);
+  });
+  await desktop.page.waitForTimeout(300);
+  await desktop.page.screenshot({
+    path: path.join(outputDirectory, "timeline-preentry.jpg"),
+    type: "jpeg",
+    quality: 88,
+  });
+
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const firstEra = section?.querySelector(".era:first-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(firstEra instanceof HTMLElement)
+    ) {
       throw new Error("Timeline entry bounds not found.");
     }
     const sectionTop =

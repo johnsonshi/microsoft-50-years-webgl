@@ -58,14 +58,14 @@ void main() {
   float rocketDepth =
     smoothstep(0.22, 0.38, positionTarget.z) *
     (1.0 - smoothstep(1.0, 1.12, positionTarget.z));
-  float rocketHeight = smoothstep(-2.18, -1.92, positionTarget.y);
+  float rocketHeight = smoothstep(-2.2, -2.12, positionTarget.y);
   float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
   float liftProgress = mix(
     smoother(uFinaleProgress),
     step(0.001, uFinaleProgress) * 0.7,
     uReducedMotion
   );
-  base.y += rocketMask * liftProgress * 1.2;
+  base.y += rocketMask * liftProgress * 2.0;
   float seedAngle = aSeed * TAU;
   vec3 flow = vec3(
     sin(base.y * 1.25 + seedAngle * 0.35),

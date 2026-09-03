@@ -285,20 +285,20 @@ function productivityScene(): WeightedSampler[] {
     [-0.7, 0.48, 0.42],
     1.5,
     1.55,
-    "WORD",
+    "DOCS",
   );
   const presentation = documentSamplers(
     [0.92, -0.52, 0.62],
     2.35,
     1.18,
-    "POWERPOINT",
+    "SLIDES",
   );
   const secondMail = envelopeSamplers([2.38, 0.92, -0.25], 1.08, 0.68);
   const secondDocument = documentSamplers(
     [2.85, -1.02, 0.22],
     1.48,
     1.4,
-    "WORD",
+    "REPORT",
   );
   const streams = [
     bezierSampler(
@@ -384,39 +384,16 @@ function datacenterScene(): WeightedSampler[] {
     ),
   );
   const routes = [
-    bezierSampler([-2, 1.95, -0.45], [-1.5, 2.65, 0], [-0.55, 2.65, 0.2], [0, 1.95, 0], 0.035),
-    bezierSampler([0, 1.95, 0], [0.6, 2.8, -0.2], [1.55, 2.65, 0.25], [2, 1.95, 0.45], 0.035),
     bezierSampler([-2, -1.95, -0.45], [-1, -2.55, 0.35], [1, -2.55, -0.25], [2, -1.95, 0.45], 0.035),
   ];
-  const enterpriseSpecs: Array<{ center: Vec3; label: string }> = [
-    { center: [-3.15, 1.72, 0.72], label: "ERP" },
-    { center: [-1.55, 2.18, 0.48], label: "CRM" },
-    { center: [0.15, 2.32, 0.72], label: "DB" },
-    { center: [1.82, 2.08, 0.5], label: "IDENTITY" },
-    { center: [3.05, 1.48, 0.7], label: "APPS" },
-  ];
-  const enterprisePanels = enterpriseSpecs.flatMap(({ center, label }) =>
-    labeledPanelSamplers(center, 1.0, 0.58, label),
-  );
-  const enterpriseLinks = enterpriseSpecs.map(({ center }, index) =>
-    bezierSampler(
-      center,
-      [center[0] * 0.8, 1.5, center[2] - 0.35],
-      [rackCenters[index % rackCenters.length], 1.8, 0.2],
-      [rackCenters[index % rackCenters.length], 1.62, 0.25],
-      0.022,
-    ),
-  );
 
   return [
-    { weight: 0.22, sample: choiceSampler(racks) },
-    { weight: 0.11, sample: choiceSampler(rackEdges) },
-    { weight: 0.2, sample: choiceSampler(units) },
-    { weight: 0.14, sample: choiceSampler(routes) },
-    { weight: 0.07, sample: ringSampler([0, 0, -0.7], 3.45, 2.35, "xy", 0.06) },
+    { weight: 0.31, sample: choiceSampler(racks) },
+    { weight: 0.14, sample: choiceSampler(rackEdges) },
+    { weight: 0.3, sample: choiceSampler(units) },
+    { weight: 0.1, sample: choiceSampler(routes) },
+    { weight: 0.1, sample: ringSampler([0, -1.72, -0.7], 3.45, 0.52, "xy", 0.06) },
     { weight: 0.05, sample: sphereVolumeSampler([0, 0, 0], 0.5) },
-    { weight: 0.14, sample: choiceSampler(enterprisePanels) },
-    { weight: 0.07, sample: choiceSampler(enterpriseLinks) },
   ];
 }
 
@@ -497,27 +474,15 @@ function agentsScene(): WeightedSampler[] {
   ];
 
   return [
-    { weight: 0.14, sample: choiceSampler(core) },
+    { weight: 0.18, sample: choiceSampler(core) },
     {
-      weight: 0.06,
+      weight: 0.08,
       sample: textSampler("AI", {
         center: coreCenter,
         width: 0.88,
         height: 0.68,
         depth: 0.06,
         family: '"Segoe UI", Helvetica, Arial, sans-serif',
-        weight: 700,
-        scanStep: 2,
-      }),
-    },
-    {
-      weight: 0.06,
-      sample: textSampler("ORCHESTRATOR", {
-        center: [0.08, 1.16, 0.72],
-        width: 2.4,
-        height: 0.34,
-        depth: 0.05,
-        family: '"Cascadia Mono", "Courier New", monospace',
         weight: 700,
         scanStep: 2,
       }),
@@ -588,16 +553,6 @@ function rocketScene(): WeightedSampler[] {
       0.024,
     ),
   );
-  const smokeCenters: Array<{ center: Vec3; radius: number }> = [
-    { center: [rocketX, -2.08, 0.02], radius: 0.44 },
-    { center: [0.58, -2.18, 0.04], radius: 0.58 },
-    { center: [1.72, -2.2, -0.06], radius: 0.62 },
-    { center: [-0.08, -2.26, -0.18], radius: 0.52 },
-    { center: [2.4, -2.28, 0.1], radius: 0.5 },
-  ];
-  const smoke = smokeCenters.map(({ center, radius }) =>
-    sphereVolumeSampler(center, radius),
-  );
   const tower = [
     lineSampler([2.05, -2.0, -0.22], [2.05, 1.62, -0.22], 0.035),
     lineSampler([2.45, -2.0, -0.22], [2.45, 1.62, -0.22], 0.035),
@@ -627,22 +582,13 @@ function rocketScene(): WeightedSampler[] {
   const crowd = crowdSilhouetteSamplers();
 
   return [
-    { weight: 0.23, sample: body },
-    { weight: 0.035, sample: interstage },
-    { weight: 0.075, sample: nose },
-    { weight: 0.06, sample: choiceSampler(stageBands) },
-    {
-      weight: 0.14,
-      sample: rocketPlumeSampler(
-        [rocketX, -2.08, rocketDepth],
-        1.12,
-        0.36,
-      ),
-    },
-    { weight: 0.1, sample: choiceSampler(smoke) },
-    { weight: 0.15, sample: choiceSampler(tower) },
-    { weight: 0.07, sample: choiceSampler(horizon) },
-    { weight: 0.14, sample: choiceSampler(crowd) },
+    { weight: 0.3, sample: body },
+    { weight: 0.04, sample: interstage },
+    { weight: 0.1, sample: nose },
+    { weight: 0.08, sample: choiceSampler(stageBands) },
+    { weight: 0.19, sample: choiceSampler(tower) },
+    { weight: 0.1, sample: choiceSampler(horizon) },
+    { weight: 0.19, sample: choiceSampler(crowd) },
   ];
 }
 
@@ -803,37 +749,15 @@ function documentSamplers(
   label: string,
 ): PointSampler[] {
   const [x, y, z] = center;
-  const labelSampler =
-    label === "POWERPOINT"
-      ? choiceSampler([
-          textSampler("POWER", {
-            center: [x, y + height * 0.24, z + 0.09],
-            width: width * 0.66,
-            height: height * 0.24,
-            depth: 0.06,
-            family: '"Segoe UI", Helvetica, Arial, sans-serif',
-            weight: 750,
-            scanStep: 2,
-          }),
-          textSampler("POINT", {
-            center: [x, y - height * 0.02, z + 0.09],
-            width: width * 0.62,
-            height: height * 0.24,
-            depth: 0.06,
-            family: '"Segoe UI", Helvetica, Arial, sans-serif',
-            weight: 750,
-            scanStep: 2,
-          }),
-        ])
-      : textSampler(label, {
-          center: [x, y + height * 0.16, z + 0.09],
-          width: width * 0.82,
-          height: height * 0.32,
-          depth: 0.06,
-          family: '"Segoe UI", Helvetica, Arial, sans-serif',
-          weight: 750,
-          scanStep: 2,
-        });
+  const labelSampler = textSampler(label, {
+    center: [x, y + height * 0.16, z + 0.09],
+    width: width * 0.82,
+    height: height * 0.32,
+    depth: 0.06,
+    family: '"Segoe UI", Helvetica, Arial, sans-serif',
+    weight: 750,
+    scanStep: 2,
+  });
 
   return [
     boxEdgesSampler(center, [width, height, 0.12], 0.025),
@@ -910,28 +834,6 @@ function crowdSilhouetteSamplers(): PointSampler[] {
     );
   }
   return samplers;
-}
-
-function rocketPlumeSampler(
-  origin: Vec3,
-  length: number,
-  maxRadius: number,
-): PointSampler {
-  return (random, output, offset) => {
-    const vertical = Math.pow(random(), 0.72);
-    const angle = random() * Math.PI * 2;
-    const radius =
-      (0.035 + vertical * maxRadius) * Math.sqrt(random());
-    const turbulence =
-      Math.sin(vertical * 18 + angle * 2) * 0.07 * vertical;
-    writePoint(
-      output,
-      offset,
-      origin[0] + Math.cos(angle) * radius + turbulence,
-      origin[1] - vertical * length,
-      origin[2] + Math.sin(angle) * radius,
-    );
-  };
 }
 
 function nextFrame(): Promise<void> {

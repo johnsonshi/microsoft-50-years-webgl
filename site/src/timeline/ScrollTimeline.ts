@@ -50,12 +50,14 @@ export class ScrollTimeline {
   private readonly lastPresence: Float32Array;
   private readonly words: HTMLElement[][];
   private readonly lastWordReveal: Float32Array[];
+  private previewStart = 0;
   private entryStart = 0;
   private sectionStart = 0;
   private sectionRange = 1;
   private targetProgress = 0;
   private currentProgress = 0;
   private entryProgress = 0;
+  private entryVisibility = 0;
   private copyVisibility = 0;
   private finaleProgress = 0;
 
@@ -132,6 +134,10 @@ export class ScrollTimeline {
     this.entryProgress = smootherstep(
       clamp((scrollPosition - this.entryStart) / entryRange, 0, 1),
     );
+    const previewRange = Math.max(1, this.entryStart - this.previewStart);
+    this.entryVisibility = smootherstep(
+      clamp((scrollPosition - this.previewStart) / previewRange, 0, 1),
+    );
     const exitProgress = clamp(
       (scrollPosition - (this.sectionStart + this.sectionRange)) /
         (window.innerHeight * 0.22),
@@ -139,7 +145,7 @@ export class ScrollTimeline {
       1,
     );
     this.copyVisibility =
-      this.entryProgress * (1 - smootherstep(exitProgress));
+      this.entryVisibility * (1 - smootherstep(exitProgress));
     const liftLead = 0.22;
     const finalSceneStart =
       this.sectionStart +
@@ -174,6 +180,7 @@ export class ScrollTimeline {
     const lastEraRect = this.lastEra.getBoundingClientRect();
     this.entryStart = window.scrollY + sectionRect.top;
     this.sectionStart = window.scrollY + firstEraRect.top;
+    this.previewStart = this.sectionStart - window.innerHeight;
     this.sectionRange = Math.max(
       1,
       window.scrollY +

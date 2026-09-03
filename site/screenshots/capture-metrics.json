@@ -13,11 +13,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 75,
+      "cumulativeFrames": 136,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 18.12933380126953,
+      "meanFrameMs": 16.60147111906725,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -35,12 +35,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 131,
+      "cumulativeFrames": 192,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.503053941799482,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.70729222148657,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -57,12 +57,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 186,
+      "cumulativeFrames": 247,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.25537685681415,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.697571397310327,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -79,12 +79,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 241,
+      "cumulativeFrames": 302,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.121162359150613,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.692053518547915,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -101,11 +101,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 290,
+      "cumulativeFrames": 357,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.331379844402445,
+      "meanFrameMs": 16.687955718748377,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -123,11 +123,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 346,
+      "cumulativeFrames": 412,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.223699961094496,
+      "meanFrameMs": 16.685194711083348,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -145,12 +145,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 401,
+      "cumulativeFrames": 467,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.147132716571303,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.6828699183413,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -167,12 +167,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 455,
+      "cumulativeFrames": 521,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.090110439258616,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.681190568517586,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -189,11 +189,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 510,
+      "cumulativeFrames": 576,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.044510358922622,
+      "meanFrameMs": 16.708681104083855,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -211,11 +211,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 566,
+      "cumulativeFrames": 631,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.007067687098633,
+      "meanFrameMs": 16.721333872477214,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -233,11 +233,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 620,
+      "cumulativeFrames": 686,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.94383388519287,
+      "meanFrameMs": 16.721667207082113,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -255,11 +255,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 675,
+      "cumulativeFrames": 742,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.83250055948893,
+      "meanFrameMs": 16.693833888371785,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -277,11 +277,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 729,
+      "cumulativeFrames": 798,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.832667223612468,
+      "meanFrameMs": 16.69383388201396,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -299,11 +299,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 785,
+      "cumulativeFrames": 853,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.832667226791383,
+      "meanFrameMs": 16.694000549316407,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -321,11 +321,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 840,
+      "cumulativeFrames": 908,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.832667226791383,
+      "meanFrameMs": 16.693667214711507,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -343,12 +343,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 895,
+      "cumulativeFrames": 964,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.69366722424825,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.6938338692983,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -365,11 +365,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 949,
+      "cumulativeFrames": 1019,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.69366722424825,
+      "meanFrameMs": 16.69383387565613,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -387,12 +387,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 977,
+      "cumulativeFrames": 1046,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.69383388519287,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.69366720199585,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -409,12 +409,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 70,
+      "cumulativeFrames": 72,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.64714343207223,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.655556016498142,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -431,12 +431,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 124,
+      "cumulativeFrames": 127,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.65564570119304,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.659842994269425,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -453,12 +453,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 178,
+      "cumulativeFrames": 181,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.658427522423562,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.661878933564076,
+      "p95FrameMs": 16.799999237060547
     }
   }
 ]
