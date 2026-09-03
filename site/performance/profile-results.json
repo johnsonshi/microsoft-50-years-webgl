@@ -1,0 +1,138 @@
+{
+  "capturedAt": "2026-09-03T06:58:07.408Z",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "deviceScaleFactor": 2
+  },
+  "browser": "Installed Google Chrome via playwright-core",
+  "profiles": [
+    {
+      "particleCount": 25000,
+      "readyMs": 985.2216249999999,
+      "estimatedFps": 60.023639088076955,
+      "snapshot": {
+        "ready": true,
+        "particleCount": 25000,
+        "sceneA": 7,
+        "sceneB": 7,
+        "morphProgress": 0,
+        "scrollProgress": 1,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "cumulativeFrames": 391,
+        "geometryBytes": 800000,
+        "pixelRatio": 1.5,
+        "reducedMotion": false,
+        "meanFrameMs": 16.660102839360153,
+        "p95FrameMs": 16.700000762939453
+      },
+      "jsHeapUsedBytes": 3499568,
+      "jsHeapTotalBytes": 8192000,
+      "taskDurationSeconds": 0.329987,
+      "scriptDurationSeconds": 0.076002,
+      "layoutCount": 371,
+      "webgl": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+        "drawingBufferWidth": 2160,
+        "drawingBufferHeight": 1350
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "particleCount": 50000,
+      "readyMs": 979.6144169999998,
+      "estimatedFps": 60.02031257538711,
+      "snapshot": {
+        "ready": true,
+        "particleCount": 50000,
+        "sceneA": 7,
+        "sceneB": 7,
+        "morphProgress": 0,
+        "scrollProgress": 1,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "cumulativeFrames": 390,
+        "geometryBytes": 1600000,
+        "pixelRatio": 1.5,
+        "reducedMotion": false,
+        "meanFrameMs": 16.661026194156744,
+        "p95FrameMs": 16.700000762939453
+      },
+      "jsHeapUsedBytes": 4419984,
+      "jsHeapTotalBytes": 8716288,
+      "taskDurationSeconds": 0.350049,
+      "scriptDurationSeconds": 0.08406,
+      "layoutCount": 371,
+      "webgl": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+        "drawingBufferWidth": 2160,
+        "drawingBufferHeight": 1350
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    {
+      "particleCount": 100000,
+      "readyMs": 978.8349170000001,
+      "estimatedFps": 60.04840922771156,
+      "snapshot": {
+        "ready": true,
+        "particleCount": 100000,
+        "sceneA": 7,
+        "sceneB": 7,
+        "morphProgress": 0,
+        "scrollProgress": 1,
+        "pointerX": 0,
+        "pointerY": 0,
+        "drawCalls": 1,
+        "cumulativeFrames": 387,
+        "geometryBytes": 3200000,
+        "pixelRatio": 1.5,
+        "reducedMotion": false,
+        "meanFrameMs": 16.653230499543575,
+        "p95FrameMs": 16.799999237060547
+      },
+      "jsHeapUsedBytes": 3435604,
+      "jsHeapTotalBytes": 8716288,
+      "taskDurationSeconds": 0.378212,
+      "scriptDurationSeconds": 0.093018,
+      "layoutCount": 372,
+      "webgl": {
+        "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+        "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M3 Pro, Unspecified Version)",
+        "drawingBufferWidth": 2160,
+        "drawingBufferHeight": 1350
+      },
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "productionAssets": [
+    {
+      "path": "dist/assets/Experience-CcvqHZOI.js",
+      "bytes": 29374
+    },
+    {
+      "path": "dist/assets/index-DHS22zWX.js",
+      "bytes": 2749
+    },
+    {
+      "path": "dist/assets/index-lwzzOqjB.css",
+      "bytes": 7106
+    },
+    {
+      "path": "dist/assets/three-CJr60tdl.js",
+      "bytes": 494265
+    },
+    {
+      "path": "dist/index.html",
+      "bytes": 6077
+    }
+  ]
+}

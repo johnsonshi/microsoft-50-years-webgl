@@ -1,0 +1,380 @@
+[
+  {
+    "name": "scene-0",
+    "progress": 0,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 0,
+      "sceneB": 1,
+      "morphProgress": 0,
+      "scrollProgress": 0,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 69,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.489855586618617,
+      "p95FrameMs": 16.799999237060547
+    }
+  },
+  {
+    "name": "transition-0-1",
+    "progress": 0.07142857142857142,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 0,
+      "sceneB": 1,
+      "morphProgress": 0.4994920076854547,
+      "scrollProgress": 0.07138986724464914,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 124,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.568548956224994,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-1",
+    "progress": 0.14285714285714285,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 1,
+      "sceneB": 2,
+      "morphProgress": 6.707749907545925e-10,
+      "scrollProgress": 0.14291519913302628,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 179,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.598324589223168,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-1-2",
+    "progress": 0.21428571428571427,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 1,
+      "sceneB": 2,
+      "morphProgress": 0.500253996194561,
+      "scrollProgress": 0.21430506637767543,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 234,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.614103137937366,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-2",
+    "progress": 0.2857142857142857,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 1,
+      "sceneB": 2,
+      "morphProgress": 0.9999999999751464,
+      "scrollProgress": 0.28569493362232457,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 289,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.6242220063523,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-2-3",
+    "progress": 0.35714285714285715,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 2,
+      "sceneB": 3,
+      "morphProgress": 0.499238011714622,
+      "scrollProgress": 0.3570848008669737,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 344,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.630814502405567,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-3",
+    "progress": 0.42857142857142855,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 3,
+      "sceneB": 4,
+      "morphProgress": 1.9878854411067638e-10,
+      "scrollProgress": 0.42861013275535087,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 399,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.635589523124217,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-3-4",
+    "progress": 0.5,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 3,
+      "sceneB": 4,
+      "morphProgress": 0.5,
+      "scrollProgress": 0.5,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 454,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.675991738945378,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-4",
+    "progress": 0.5714285714285714,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 3,
+      "sceneB": 4,
+      "morphProgress": 0.999999999801212,
+      "scrollProgress": 0.5713898672446491,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 509,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.675049671255536,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-4-5",
+    "progress": 0.6428571428571429,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 4,
+      "sceneB": 5,
+      "morphProgress": 0.500761988285379,
+      "scrollProgress": 0.6429151991330263,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 564,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.67393672889006,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-5",
+    "progress": 0.7142857142857143,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 5,
+      "sceneB": 6,
+      "morphProgress": 2.4853618398899528e-11,
+      "scrollProgress": 0.7143050663776754,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 620,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.6938338915507,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-5-6",
+    "progress": 0.7857142857142857,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 5,
+      "sceneB": 6,
+      "morphProgress": 0.4997460038054391,
+      "scrollProgress": 0.7856949336223246,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 675,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.69383389790853,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-6",
+    "progress": 0.8571428571428571,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 5,
+      "sceneB": 6,
+      "morphProgress": 0.9999999993292245,
+      "scrollProgress": 0.8570848008669737,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 730,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.6938338915507,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "transition-6-7",
+    "progress": 0.9285714285714286,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 6,
+      "sceneB": 7,
+      "morphProgress": 0.500507992314546,
+      "scrollProgress": 0.9286101327553509,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 785,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.693833894729615,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "scene-7",
+    "progress": 1,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 7,
+      "sceneB": 7,
+      "morphProgress": 0,
+      "scrollProgress": 1,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 840,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.693833894729615,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "mobile-origin",
+    "progress": 0,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 28000,
+      "sceneA": 0,
+      "sceneB": 1,
+      "morphProgress": 0,
+      "scrollProgress": 0,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 73,
+      "geometryBytes": 896000,
+      "pixelRatio": 1,
+      "reducedMotion": false,
+      "meanFrameMs": 16.653425203610773,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "mobile-fifty",
+    "progress": 0.8571428571428571,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 28000,
+      "sceneA": 6,
+      "sceneB": 7,
+      "morphProgress": 0,
+      "scrollProgress": 0.8571428571428571,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 127,
+      "geometryBytes": 896000,
+      "pixelRatio": 1,
+      "reducedMotion": false,
+      "meanFrameMs": 16.659055672292634,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "mobile-future",
+    "progress": 1,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 28000,
+      "sceneA": 7,
+      "sceneB": 7,
+      "morphProgress": 0,
+      "scrollProgress": 1,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 181,
+      "geometryBytes": 896000,
+      "pixelRatio": 1,
+      "reducedMotion": false,
+      "meanFrameMs": 16.661326534840285,
+      "p95FrameMs": 16.700000762939453
+    }
+  }
+]

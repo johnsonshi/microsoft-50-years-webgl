@@ -1,0 +1,140 @@
+import assert from "node:assert/strict";
+import {
+  getSnapshot,
+  openExperience,
+  setTimelineProgress,
+} from "./browser.mjs";
+
+const desktop = await openExperience();
+
+try {
+  for (let index = 0; index < 8; index += 1) {
+    const progress = index / 7;
+    await setTimelineProgress(desktop.page, progress, 500);
+    const snapshot = await getSnapshot(desktop.page);
+    assert.equal(snapshot.ready, true);
+    assert.equal(snapshot.particleCount, 90_000);
+    assert.ok(
+      Math.abs(snapshot.scrollProgress - progress) < 0.012,
+      `Scene ${index} did not settle at ${progress}.`,
+    );
+    assert.equal(snapshot.drawCalls, 1);
+  }
+
+  for (let index = 6; index >= 0; index -= 1) {
+    const progress = index / 7;
+    await setTimelineProgress(desktop.page, progress, 450);
+    const snapshot = await getSnapshot(desktop.page);
+    assert.ok(Math.abs(snapshot.scrollProgress - progress) < 0.015);
+  }
+
+  for (let index = 0; index < 7; index += 1) {
+    const progress = (index + 0.5) / 7;
+    await setTimelineProgress(desktop.page, progress, 550);
+    const snapshot = await getSnapshot(desktop.page);
+    assert.equal(snapshot.sceneA, index);
+    assert.equal(snapshot.sceneB, index + 1);
+    assert.ok(
+      snapshot.morphProgress > 0.42 && snapshot.morphProgress < 0.58,
+      `Transition ${index} was not held near its midpoint.`,
+    );
+  }
+
+  await setTimelineProgress(desktop.page, 3.25 / 7);
+  await desktop.page.mouse.move(30, 450);
+  await desktop.page.waitForTimeout(700);
+  const left = await getSnapshot(desktop.page);
+  await desktop.page.mouse.move(1410, 450);
+  await desktop.page.waitForTimeout(900);
+  const right = await getSnapshot(desktop.page);
+  assert.ok(left.pointerX < -0.75);
+  assert.ok(right.pointerX > 0.75);
+
+  await desktop.page.mouse.move(720, 30);
+  await desktop.page.waitForTimeout(700);
+  const top = await getSnapshot(desktop.page);
+  await desktop.page.mouse.move(720, 870);
+  await desktop.page.waitForTimeout(900);
+  const bottom = await getSnapshot(desktop.page);
+  assert.ok(top.pointerY < -0.7);
+  assert.ok(bottom.pointerY > 0.7);
+
+  await desktop.page.mouse.move(720, 450);
+  const beforeIdle = await getSnapshot(desktop.page);
+  await desktop.page.waitForTimeout(2200);
+  const afterIdle = await getSnapshot(desktop.page);
+  assert.equal(afterIdle.sceneA, beforeIdle.sceneA);
+  assert.equal(afterIdle.sceneB, beforeIdle.sceneB);
+  assert.ok(afterIdle.cumulativeFrames > beforeIdle.cumulativeFrames + 90);
+
+  await desktop.page.setViewportSize({ width: 1024, height: 768 });
+  await desktop.page.waitForTimeout(300);
+  const resizedCanvas = await desktop.page.locator("canvas").evaluate((canvas) => ({
+    cssWidth: canvas.clientWidth,
+    cssHeight: canvas.clientHeight,
+    width: canvas.width,
+    height: canvas.height,
+  }));
+  assert.equal(resizedCanvas.cssWidth, 1024);
+  assert.equal(resizedCanvas.cssHeight, 768);
+  assert.ok(resizedCanvas.width >= resizedCanvas.cssWidth);
+
+  await desktop.page.setViewportSize({ width: 1440, height: 900 });
+  await setTimelineProgress(desktop.page, 0.46);
+  await desktop.page.reload({ waitUntil: "networkidle" });
+  await desktop.page.waitForFunction(
+    () => window.__MICROSOFT_50__?.getSnapshot().ready === true,
+    undefined,
+    { timeout: 60_000 },
+  );
+  await desktop.page.waitForTimeout(600);
+  const restored = await getSnapshot(desktop.page);
+  assert.ok(
+    restored.scrollProgress > 0.3,
+    "Reload did not preserve a useful mid-page scroll position.",
+  );
+
+  assert.deepEqual(desktop.consoleErrors, []);
+  assert.deepEqual(desktop.failedRequests, []);
+} finally {
+  await desktop.browser.close();
+}
+
+const mobile = await openExperience({
+  viewport: { width: 390, height: 844 },
+  isMobile: true,
+});
+
+try {
+  await setTimelineProgress(mobile.page, 1);
+  const snapshot = await getSnapshot(mobile.page);
+  assert.equal(snapshot.particleCount, 28_000);
+  assert.equal(snapshot.sceneA, 7);
+  assert.equal(snapshot.sceneB, 7);
+  assert.deepEqual(mobile.consoleErrors, []);
+  assert.deepEqual(mobile.failedRequests, []);
+} finally {
+  await mobile.browser.close();
+}
+
+const reduced = await openExperience({
+  reducedMotion: "reduce",
+});
+
+try {
+  await setTimelineProgress(reduced.page, 2.6 / 7, 100);
+  const snapshot = await getSnapshot(reduced.page);
+  assert.equal(snapshot.reducedMotion, true);
+  assert.equal(snapshot.sceneA, 3);
+  assert.equal(snapshot.sceneB, 3);
+  assert.equal(snapshot.morphProgress, 0);
+  assert.deepEqual(reduced.consoleErrors, []);
+  assert.deepEqual(reduced.failedRequests, []);
+} finally {
+  await reduced.browser.close();
+}
+
+console.log(
+  "Interaction checks passed: forward/back scroll, held morphs, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
+);
+

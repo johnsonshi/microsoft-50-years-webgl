@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An unofficial interactive particle tribute to Microsoft's first 50 years."
+    />
+    <meta name="theme-color" content="#f2efe6" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f2efe6'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='%2311110f'%3E50%3C/text%3E%3C/svg%3E"
+    />
+    <title>Microsoft: 50 Years of Computing</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#timeline">Skip to the historical timeline</a>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro__measure">
+          <p class="eyebrow">1975 / 2025</p>
+          <h1 id="page-title">
+            Microsoft:
+            <span>50 years of computing.</span>
+          </h1>
+          <div class="intro__footer">
+            <p class="intro__lede">
+              One field of particles follows five decades of ideas, from a
+              first interpreter to systems still taking shape.
+            </p>
+            <p class="scroll-cue" aria-hidden="true">
+              <span></span>
+              Scroll through the field
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="timeline" class="timeline" aria-label="Microsoft computing eras">
+        <div class="experience-stage">
+          <canvas id="experience-canvas" aria-hidden="true"></canvas>
+          <div class="stage-grain" aria-hidden="true"></div>
+
+          <div class="stage-status" aria-hidden="true">
+            <span id="stage-year">1975</span>
+            <span class="stage-status__rule"></span>
+            <span id="stage-progress">01 / 08</span>
+          </div>
+
+          <div class="stage-meter" aria-hidden="true">
+            <span id="stage-meter-fill"></span>
+          </div>
+
+          <p id="loading-status" class="loading-status" role="status">
+            Assembling the particle field...
+          </p>
+        </div>
+
+        <ol class="era-list">
+          <li class="era era--right" data-scene-index="0">
+            <article class="era-copy">
+              <p class="era-copy__index">01 / Origin</p>
+              <p class="era-copy__year">1975</p>
+              <h2>The first instruction</h2>
+              <p>A language for a machine waiting to be useful.</p>
+            </article>
+          </li>
+          <li class="era era--left" data-scene-index="1">
+            <article class="era-copy">
+              <p class="era-copy__index">02 / Personal</p>
+              <p class="era-copy__year">1980s</p>
+              <h2>The computer comes home</h2>
+              <p>The command line becomes a doorway into millions of homes.</p>
+            </article>
+          </li>
+          <li class="era era--right" data-scene-index="2">
+            <article class="era-copy">
+              <p class="era-copy__index">03 / Visual</p>
+              <p class="era-copy__year">1990s</p>
+              <h2>Windows and connection</h2>
+              <p>Computing becomes visual. Networks make it shared.</p>
+            </article>
+          </li>
+          <li class="era era--left" data-scene-index="3">
+            <article class="era-copy">
+              <p class="era-copy__index">04 / Platform</p>
+              <p class="era-copy__year">2000s</p>
+              <h2>Systems at enterprise scale</h2>
+              <p>Software becomes a platform for organizations and the web.</p>
+            </article>
+          </li>
+          <li class="era era--right" data-scene-index="4">
+            <article class="era-copy">
+              <p class="era-copy__index">05 / Cloud</p>
+              <p class="era-copy__year">2010s</p>
+              <h2>The world becomes the computer</h2>
+              <p>Datacenters become a system anyone can call on demand.</p>
+            </article>
+          </li>
+          <li class="era era--left" data-scene-index="5">
+            <article class="era-copy">
+              <p class="era-copy__index">06 / Fabric</p>
+              <p class="era-copy__year">2020s</p>
+              <h2>Orchestrated intelligence</h2>
+              <p>
+                Containers, accelerators, and AI turn infrastructure into a
+                living fabric.
+              </p>
+            </article>
+          </li>
+          <li class="era era--center" data-scene-index="6">
+            <article class="era-copy">
+              <p class="era-copy__index">07 / Anniversary</p>
+              <p class="era-copy__year">2025</p>
+              <h2>Fifty years</h2>
+              <p>Turning possibility into tools people can use.</p>
+            </article>
+          </li>
+          <li class="era era--center era--future" data-scene-index="7">
+            <article class="era-copy">
+              <p class="era-copy__index">08 / Open</p>
+              <p class="era-copy__year">Next</p>
+              <h2>The field is still forming</h2>
+              <p>The next system has not resolved into a single shape.</p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section class="closing" aria-labelledby="closing-title">
+        <p class="eyebrow">One material / many eras</p>
+        <h2 id="closing-title">A history of computing is a history of becoming.</h2>
+        <p>
+          This experience uses original procedural geometry. No product logo,
+          interface artwork, or historical asset is reproduced.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>An unofficial personal tribute to Microsoft's 50 years.</p>
+      <p>Independent project / 2025</p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

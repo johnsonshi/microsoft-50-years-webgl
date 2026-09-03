@@ -81,9 +81,9 @@ currents rather than dissolving into noise.
 ## 7. 2025 — Fifty years
 
 - **Copy:** `2025` / `Fifty years of turning possibility into tools people can use.`
-- **Geometry:** A monumental `50`, the small line `1975—2025`, and a halo of
-  fifty orbital markers. Text geometry is generated locally from an off-screen
-  system-font canvas and converted to original 3D particles.
+- **Geometry:** A monumental `50` and a halo of fifty orbital markers. Text
+  geometry is generated locally from an off-screen system-font canvas and
+  converted to original 3D particles.
 - **Depth:** The numerals have layered front, middle, and back surfaces; orbital
   markers cross those planes.
 - **Camera:** Centered and calm. Pointer parallax is reduced so the anniversary
@@ -125,4 +125,3 @@ currents rather than dissolving into noise.
   two-thirds, and particle count/depth/parallax are reduced.
 - **Reduced motion:** All eras remain in the document. The renderer shows the
   nearest settled scene with no transition arcs and minimal ambient motion.
-
