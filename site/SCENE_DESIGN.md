@@ -2,27 +2,27 @@
 
 ## Shared visual system
 
-The page uses warm paper, dark graphite particles, restrained blue/green/red
-accents, and editorial typography with large areas of empty space. The
-particles are not a literal museum of product replicas. They behave like one
-computational material learning new organizations over five decades.
+The page uses warm paper, dark graphite particles, and light sans-serif
+editorial typography with large areas of empty space. The particles are not a
+literal museum of product replicas. They behave like one computational
+material learning new organizations over five decades.
 
 Each scene sits in a shallow three-dimensional volume. The settled forms stay
 legible from the front while small pointer-driven rotation reveals depth.
 Transitions preserve broad spatial regions so the field reorganizes in
 currents rather than dissolving into noise.
 
-Each era now uses one continuous editorial sentence rather than a year,
-heading, and subtitle. Entering words begin as pale graphite and fill with the
-era accent as scrolling advances.
+Each era uses one continuous editorial sentence rather than a year, heading,
+and subtitle. Entering words begin as pale graphite and fill to black as
+scrolling advances.
 
 ## 1. 1975 — Altair BASIC
 
 - **Copy:** `In 1975, Altair BASIC turned a few pages of code into Microsoft's first product.`
-- **Geometry:** A tall source-code listing with punched binder holes, an
-  `ALTAIR BASIC` title, and one `MICRO-SOFT` card.
-- **Depth:** Code lines sit above a thin sheet while the card lifts toward the
-  reader.
+- **Geometry:** A tall `ALTAIR BASIC` source-code listing with punched binder
+  holes and layered program rows. No separate Microsoft or Micro-Soft card is
+  present.
+- **Depth:** Code lines sit just above the thin source sheet.
 - **Camera:** Frontal and document-like, preserving the archival silhouette
   without reproducing the reference photograph.
 - **Transition out:** Code rows compress into the screen and keyboard strata
@@ -31,31 +31,34 @@ era accent as scrolling advances.
 ## 2. 1980s — The personal computer
 
 - **Copy:** `In the 1980s, the personal computer moved into everyday life.`
-- **Geometry:** A compact PC silhouette, keyboard strata, and a large
-  `C:\>` prompt assembled from dense rectilinear particles.
-- **Depth:** The prompt floats just ahead of the monitor; keyboard rows step
-  toward the viewer.
+- **Geometry:** A compact PC silhouette, keyboard strata, nested terminal
+  frames, status areas, and multiple `READY`, `> RUN`, and prompt rows.
+- **Depth:** The detailed terminal interface floats just ahead of the monitor;
+  keyboard rows step toward the viewer.
 - **Camera:** Moves back slightly to reveal the whole workstation.
-- **Transition out:** Prompt strokes split into the four Windows panes while
-  the workstation gains a human figure and network path.
+- **Transition out:** Terminal rows split into overlapping Windows, browser,
+  mail, and network interface structures.
 
 ## 3. 1990s — Windows and the Internet
 
 - **Copy:** `In the 1990s, Windows and the Internet connected people beyond the desktop.`
-- **Geometry:** A solid seated silhouette at a CRT workstation, the four-pane
-  Windows mark on screen, and an `@` envelope suspended above on a network arc.
-- **Depth:** The monitor sits forward, the person occupies a middle plane, and
-  the email path recedes into the network.
-- **Camera:** Frontal enough to read as a period desktop while retaining a
-  shallow three-dimensional profile.
-- **Transition out:** The envelope leaves the screen and multiplies into a
-  stream of connected work artifacts.
+- **Geometry:** A dense software-only composition of overlapping browser,
+  email, terminal, contacts, and Windows-pane interfaces labeled `HTTP://`,
+  `MAIL @`, `> CONNECT`, `ONLINE`, `TCP/IP`, and `WWW`. Network nodes and
+  cross-links fill the surrounding field; there is no table, workstation, or
+  person.
+- **Depth:** Interface layers overlap across several shallow planes while
+  network paths weave through and behind them.
+- **Camera:** Wide enough to hold the intentionally complicated system without
+  resolving it into one physical desktop.
+- **Transition out:** Window frames flatten into Word, PowerPoint, and email
+  artifacts moving through a shared flow.
 
 ## 4. 2000s — Work begins to flow
 
 - **Copy:** `In the 2000s, email, Word, and PowerPoint made work flow across the web.`
-- **Geometry:** Email, Word-document, and PowerPoint-slide cards moving through
-  one continuous system of broad Bezier paths.
+- **Geometry:** Email, `WORD`, and explicitly labeled `POWER` / `POINT` cards
+  moving through one continuous system of broad Bezier paths.
 - **Depth:** Artifacts occupy staggered planes along the flow, with no desk or
   human figure anchoring the composition.
 - **Camera:** Wider than the 1990s scene so the movement between tools is the
@@ -63,29 +66,30 @@ era accent as scrolling advances.
 - **Transition out:** Document frames straighten, stack, and deepen into rows
   of server equipment.
 
-## 5. 2010s — Cloud datacenters
+## 5. 2010s — Enterprise cloud
 
-- **Copy:** `In the 2010s, cloud datacenters made global computing available on demand.`
+- **Copy:** `In the 2010s, enterprise systems moved into cloud datacenters built for global scale.`
 - **Geometry:** Three dense server racks with repeated units, routed cables,
-  and a broad infrastructure ring.
+  a broad infrastructure ring, and connected enterprise panels labeled `ERP`,
+  `CRM`, `DB`, `IDENTITY`, and `APPS`.
 - **Depth:** Racks occupy distinct depth bands while routes pass over and under
   the aisle.
 - **Camera:** Broad and architectural, conveying a room-scale system.
-- **Transition out:** Rack rows collapse into terminal lines while routing
-  paths fan out into an agent topology.
+- **Transition out:** Rack rows and enterprise routes fan out into a dense
+  orchestration topology.
 
 ## 6. 2020s — Agent fleets
 
 - **Copy:** `In the 2020s, conversation became an interface to fleets of intelligent agents.`
-- **Geometry:** A platform-neutral bordered TUI with textual `YOU>` and `AI>`
-  prompts, response lines, and no desktop-window controls, connected to a
-  three-by-three fleet of small agent terminals.
-- **Depth:** The chat surface sits forward while agents step backward by
-  column and remain linked as one system.
-- **Camera:** Close enough to read the terminal structure without flattening
-  the fleet.
-- **Transition out:** Agent cards merge into four solid panes and terminal
-  lines form the Microsoft wordmark.
+- **Geometry:** A central `AI` / `ORCHESTRATOR` core surrounded by twelve
+  specialized panels (`PLAN`, `MEMORY`, `SEARCH`, `CODE`, `TEST`, `REVIEW`,
+  `DEPLOY`, `TOOLS`, `DATA`, `MAIL`, `DOCS`, and `VISION`), token streams,
+  rings, and numerous cross-links. There is no single chat or TUI window.
+- **Depth:** The core sits forward while specialist panels occupy several
+  planes and the connection mesh passes through the system.
+- **Camera:** Wide enough to preserve the deliberately dense fleet topology.
+- **Transition out:** Panels and connection rings merge into four solid panes
+  and the Microsoft wordmark.
 
 ## 7. 2025 — Microsoft at fifty
 
@@ -96,23 +100,26 @@ era accent as scrolling advances.
 - **Composition:** Anniversary copy remains on the right while the logo shifts
   left.
 - **Camera:** Nearly frontal with reduced pointer parallax for recognition.
-- **Transition out:** The panes lift into the rocket body, fins, and exhaust
-  plume.
+- **Transition out:** The panes lengthen into the launch vehicle while the
+  wordmark disperses into the tower, horizon, smoke, and crowd.
 
 ## 8. 2026 and Beyond — Powering abundance
 
-- **Copy:** `Beyond 2026, AI can power an age of abundance—expanding agency, discovery, and possibility.`
-- **Geometry:** A rising rocket with cylindrical body, conical nose, fins,
-  window, turbulent exhaust, smoke volumes, stars, and an upward trajectory.
-- **Depth:** The rocket occupies the near plane while smoke spreads toward the
-  reader and stars recede behind it.
-- **Camera:** Opens vertically to emphasize lift and forward momentum.
+- **Copy:** `2026 and Beyond: AI can power an age of abundance—expanding agency, discovery, and possibility.`
+- **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
+  tower and service arms, exhaust, broad pad smoke, a Florida-like horizon,
+  and 28 stationary foreground crowd silhouettes.
+- **Depth:** The crowd occupies the foreground, the pad and tower occupy the
+  middle plane, and the rocket sits slightly behind them before lifting.
+- **Camera:** Nearly frontal and vertically open, like a distant public launch
+  viewed across the coast.
 - **Composition:** The abundance statement sits on the left while the launch
   rises on the right.
 - **Intent:** AI is framed as infrastructure for greater human agency,
   accelerated discovery, and capabilities that become broadly available.
-- **End state:** The field continues a small, breathing idle motion before the
-  final statement fades and the stage yields to the closing line.
+- **End state:** Late-scroll shader displacement raises only the rocket and
+  upper plume. The crowd, tower, horizon, and pad smoke remain fixed while the
+  statement fades and the stage yields to the closing line.
 
 ## Transition language
 
@@ -125,7 +132,7 @@ era accent as scrolling advances.
 - A low-frequency sine field keeps the material alive without obscuring the
   target.
 - Copy crossfades in the DOM independently of the point buffer. The incoming
-  sentence fills word by word from pale graphite to its era accent.
+  sentence fills word by word from pale graphite to black.
 
 ## Responsive composition
 

@@ -6,6 +6,7 @@ uniform float uPixelRatio;
 uniform float uPointSize;
 uniform float uTransitionStrength;
 uniform float uIdleAmplitude;
+uniform float uFinaleProgress;
 uniform float uReducedMotion;
 uniform vec3 uAccentA;
 uniform vec3 uAccentB;
@@ -52,6 +53,19 @@ void main() {
   float transitionEnergy = sin(morph * PI) * (1.0 - uReducedMotion);
 
   vec3 base = mix(position, positionTarget, morph);
+  float rocketHorizontal =
+    1.0 - smoothstep(0.48, 0.82, abs(positionTarget.x - 1.15));
+  float rocketDepth =
+    smoothstep(0.22, 0.38, positionTarget.z) *
+    (1.0 - smoothstep(1.0, 1.12, positionTarget.z));
+  float rocketHeight = smoothstep(-2.18, -1.92, positionTarget.y);
+  float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
+  float liftProgress = mix(
+    smoother(uFinaleProgress),
+    step(0.001, uFinaleProgress) * 0.7,
+    uReducedMotion
+  );
+  base.y += rocketMask * liftProgress * 1.2;
   float seedAngle = aSeed * TAU;
   vec3 flow = vec3(
     sin(base.y * 1.25 + seedAngle * 0.35),

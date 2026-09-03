@@ -8,6 +8,7 @@ export interface TimelineState {
   local: number;
   eased: number;
   visibility: number;
+  finale: number;
 }
 
 export function resolveTimeline(
@@ -23,6 +24,7 @@ export function resolveTimeline(
     local: 0,
     eased: 0,
     visibility: 1,
+    finale: 0,
   };
   writeTimelineState(state, progress, sceneCount, reducedMotion);
   return state;
@@ -37,6 +39,7 @@ export class ScrollTimeline {
     local: 0,
     eased: 0,
     visibility: 0,
+    finale: 0,
   };
 
   private readonly section: HTMLElement;
@@ -54,6 +57,7 @@ export class ScrollTimeline {
   private currentProgress = 0;
   private entryProgress = 0;
   private copyVisibility = 0;
+  private finaleProgress = 0;
 
   constructor(
     section: HTMLElement,
@@ -107,6 +111,7 @@ export class ScrollTimeline {
       this.reducedMotion,
     );
     this.state.visibility = this.copyVisibility;
+    this.state.finale = this.finaleProgress;
     this.updateDom();
     return this.state;
   }
@@ -135,6 +140,27 @@ export class ScrollTimeline {
     );
     this.copyVisibility =
       this.entryProgress * (1 - smootherstep(exitProgress));
+    const liftLead = 0.22;
+    const finalSceneStart =
+      this.sectionStart +
+      this.sectionRange *
+        Math.max(
+          0,
+          (this.copies.length - 1 - liftLead) /
+            (this.copies.length - 1),
+        );
+    const finalSceneEnd =
+      this.sectionStart +
+      this.sectionRange +
+      window.innerHeight * 0.22;
+    this.finaleProgress = smootherstep(
+      clamp(
+        (scrollPosition - finalSceneStart) /
+          Math.max(1, finalSceneEnd - finalSceneStart),
+        0,
+        1,
+      ),
+    );
   };
 
   private readonly handleResize = (): void => {
@@ -242,6 +268,11 @@ function writeTimelineState(
   state.progress = clamped;
   state.scaled = scaled;
   state.visibility = 1;
+  state.finale = clamp(
+    scaled - Math.max(0, sceneCount - 2),
+    0,
+    1,
+  );
 
   if (reducedMotion) {
     const nearest = Math.min(sceneCount - 1, Math.round(scaled));

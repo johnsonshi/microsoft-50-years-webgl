@@ -79,7 +79,6 @@ a {
   padding: clamp(1rem, 4vh, 3.5rem) 0 clamp(2rem, 7vh, 5.5rem);
 }
 
-.eyebrow,
 .loading-status,
 footer {
   font-family:
@@ -89,10 +88,6 @@ footer {
   letter-spacing: 0.12em;
   line-height: 1.4;
   text-transform: uppercase;
-}
-
-.eyebrow {
-  margin: 0;
 }
 
 .intro h1 {
@@ -182,7 +177,7 @@ footer {
 
 .era-copy {
   --scene-presence: 0;
-  --scene-accent: #0067a8;
+  --scene-accent: var(--ink);
   --word-unread: rgba(17, 17, 15, 0.14);
   position: sticky;
   top: 50%;
@@ -208,11 +203,11 @@ footer {
 
 .era-copy__statement {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.2rem, 3.75vw, 4.35rem);
-  font-weight: 600;
-  letter-spacing: -0.047em;
-  line-height: 1.02;
+  font-family: inherit;
+  font-size: clamp(2.2rem, 3.7vw, 4.3rem);
+  font-weight: 350;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
   text-wrap: balance;
 }
 
@@ -260,6 +255,11 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+footer a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
 }
 
 .is-webgl-unavailable #experience-canvas,

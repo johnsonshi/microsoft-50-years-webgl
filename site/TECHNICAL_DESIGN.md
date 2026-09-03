@@ -42,7 +42,7 @@ contains:
 - `positionA: vec3` — current scene target;
 - `positionB: vec3` — next scene target;
 - `aSeed: float` — deterministic transition/idle phase;
-- `aAccent: float` — sparse color and brightness variation.
+- `aAccent: float` — sparse density and graphite-tone variation.
 
 Only `positionA` and `positionB` change when the timeline crosses into another
 scene pair. They are never interpolated on the CPU. A frame changes only
@@ -88,6 +88,7 @@ Conceptually:
 
 ```glsl
 vec3 base = mix(positionA, positionB, easedProgress);
+base.y += rocketMask(positionB) * finaleProgress * liftDistance;
 float energy = sin(PI * progress);
 vec3 arc = transitionArc(base, aSeed) * energy;
 vec3 idle = lowFrequencyMotion(base, aSeed, time) * idleAmplitude;
@@ -100,7 +101,9 @@ The shader also:
 - derives subtle depth-aware point size;
 - fades peripheral and low-density particles;
 - reduces transition energy under reduced motion;
-- supplies an ink/accent color to the fragment shader.
+- identifies final-target rocket particles and raises only that subset during
+  the finale;
+- supplies a monochrome graphite value to the fragment shader.
 
 The idle displacement is intentionally bounded and lower than the normal gap
 between important silhouette points. It remains active when scroll stops,
@@ -110,8 +113,8 @@ which is a deliberate difference from the observed Datacurve runtime.
 
 `gl_PointCoord` forms an antialiased circular core with a soft outer falloff.
 The shader discards transparent corners and outputs near-black graphite with
-sparse restrained accent color. No sprite texture, lighting pass,
-post-processing, or framebuffer simulation is used.
+restrained tonal variation. No sprite texture, lighting pass, post-processing,
+or framebuffer simulation is used.
 
 ## Scroll architecture
 
@@ -134,8 +137,16 @@ pair only when `sceneA`/`sceneB` changes.
 The entry hold keeps scene zero fixed while its single sentence fades in
 continuously, eliminating the previous threshold where copy and its particle
 clearance appeared at once. Each sentence is split into accessible word spans;
-the incoming sentence fills from pale graphite to its era accent as scroll
-progress advances.
+the incoming sentence fills from pale graphite to black as scroll progress
+advances.
+
+The final era also exposes `finaleProgress`. It begins only after the rocket is
+nearly formed, reaches a partial lift at the final scene's settled scroll
+position, and reaches `1` during the pinned exit hold. The vertex shader
+derives a mask from the final target's rocket-only X/Y/Z region, so the vehicle
+and upper plume rise while the crowd, tower, horizon, and ground smoke remain
+stationary. This avoids another per-particle attribute and keeps the renderer
+at one draw call.
 
 Each scene definition also supplies interpolated:
 
@@ -179,12 +190,13 @@ small continuous idle motion. Other settled scenes use a lower idle amplitude.
 
 ## DOM and accessibility
 
-- The document contains one `h1` and ordered era sections with headings and
-  concise descriptions.
+- The document contains one `h1` and an ordered set of eight accessible
+  editorial era statements.
 - The canvas uses `aria-hidden="true"` and cannot receive focus.
 - A non-WebGL/reduced-motion presentation keeps the timeline legible.
 - CSS follows the system motion preference and avoids scroll interception.
-- A status line identifies the project as an unofficial personal tribute.
+- The footer identifies the project as an unofficial personal tribute and
+  links the author attribution.
 - Contrast is checked against the warm paper background.
 
 ## Performance plan

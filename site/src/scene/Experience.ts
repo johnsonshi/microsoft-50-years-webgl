@@ -14,6 +14,7 @@ export interface ExperienceSnapshot {
   sceneB: number;
   morphProgress: number;
   scrollProgress: number;
+  finaleProgress: number;
   pointerX: number;
   pointerY: number;
   drawCalls: number;
@@ -170,6 +171,7 @@ export class Experience {
       sceneB: this.timeline.state.sceneB,
       morphProgress: this.timeline.state.eased,
       scrollProgress: this.timeline.state.progress,
+      finaleProgress: this.timeline.state.finale,
       pointerX: this.pointer.currentX,
       pointerY: this.pointer.currentY,
       drawCalls: this.renderer.info.render.calls,
@@ -259,6 +261,7 @@ export class Experience {
         blend,
       ),
       lerp(sceneA.idleAmplitude, sceneB.idleAmplitude, blend),
+      timeline.finale,
     );
     this.updateAvoidance(
       timeline.sceneA,

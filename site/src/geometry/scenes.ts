@@ -6,7 +6,6 @@ import {
   choiceSampler,
   lineSampler,
   planeSampler,
-  polylineSampler,
   ringSampler,
   sphereShellSampler,
   sphereVolumeSampler,
@@ -89,27 +88,13 @@ function originScene(): WeightedSampler[] {
       0.014,
     ),
   );
-  const cardFrame = boxEdgesSampler(
-    [0.72, -1.58, 0.58],
-    [2.45, 0.94, 0.12],
-    0.025,
-  );
-  const cardLabel = textSampler("MICRO-SOFT", {
-    center: [0.72, -1.57, 0.67],
-    width: 2.02,
-    height: 0.4,
-    depth: 0.06,
-    weight: 750,
-    scanStep: 2,
-  });
-
   return [
     {
-      weight: 0.13,
+      weight: 0.15,
       sample: boxEdgesSampler([-0.18, 0.05, 0], [4.85, 4.7, 0.22], 0.03),
     },
     {
-      weight: 0.17,
+      weight: 0.19,
       sample: textSampler("ALTAIR BASIC", {
         center: [-0.02, 1.94, 0.19],
         width: 3.55,
@@ -120,12 +105,10 @@ function originScene(): WeightedSampler[] {
         scanStep: 2,
       }),
     },
-    { weight: 0.34, sample: choiceSampler(codeLines) },
-    { weight: 0.08, sample: choiceSampler(punchHoles) },
-    { weight: 0.09, sample: cardFrame },
-    { weight: 0.13, sample: cardLabel },
+    { weight: 0.48, sample: choiceSampler(codeLines) },
+    { weight: 0.1, sample: choiceSampler(punchHoles) },
     {
-      weight: 0.06,
+      weight: 0.08,
       sample: choiceSampler([
         lineSampler([-1.88, 1.7, 0.18], [1.93, 1.7, 0.18], 0.018),
         lineSampler([-1.88, -1.93, 0.18], [1.92, -1.93, 0.18], 0.018),
@@ -146,68 +129,177 @@ function personalScene(): WeightedSampler[] {
   const vents = Array.from({ length: 8 }, (_, index) =>
     lineSampler([1.75, -0.65 + index * 0.19, -0.08], [2.35, -0.65 + index * 0.19, -0.08], 0.02),
   );
+  const terminalLines = [
+    lineSampler([-1.68, 1.02, 0.42], [0.55, 1.02, 0.42], 0.02),
+    lineSampler([-1.68, 0.72, 0.42], [0.1, 0.72, 0.42], 0.02),
+    lineSampler([-1.38, 0.42, 0.42], [0.72, 0.42, 0.42], 0.02),
+    lineSampler([-1.68, 0.08, 0.42], [-0.28, 0.08, 0.42], 0.02),
+    lineSampler([-1.38, -0.22, 0.42], [0.46, -0.22, 0.42], 0.02),
+    lineSampler([-1.68, -0.55, 0.42], [-0.55, -0.55, 0.42], 0.02),
+  ];
+  const terminalFrames = [
+    boxEdgesSampler([-0.52, 0.45, 0.4], [2.85, 1.86, 0.08], 0.022),
+    lineSampler([-1.94, 0.72, 0.45], [-1.94, 1.38, 0.45], 0.02),
+    lineSampler([-1.94, 0.72, 0.45], [-1.25, 0.72, 0.45], 0.02),
+    boxEdgesSampler([0.18, -0.58, 0.45], [1.05, 0.35, 0.05], 0.018),
+  ];
+  const terminalText = [
+    textSampler("READY", {
+      center: [-0.95, 1.28, 0.47],
+      width: 1.42,
+      height: 0.3,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+    textSampler("> RUN", {
+      center: [-1.1, 0.14, 0.47],
+      width: 1.25,
+      height: 0.3,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+    textSampler(">_", {
+      center: [0.1, -0.57, 0.48],
+      width: 0.62,
+      height: 0.25,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+  ];
 
   return [
-    { weight: 0.16, sample: boxEdgesSampler([-0.45, 0.45, 0], [3.75, 2.65, 0.72], 0.035) },
-    { weight: 0.07, sample: planeSampler([-0.45, 0.45, -0.28], 3.2, 2.1, 0.04) },
-    {
-      weight: 0.22,
-      sample: textSampler("C:\\>", {
-        center: [-0.55, 0.5, 0.42],
-        width: 2.85,
-        height: 1.45,
-        depth: 0.2,
-        family: '"Cascadia Mono", "Courier New", monospace',
-        weight: 700,
-      }),
-    },
-    { weight: 0.14, sample: boxSurfaceSampler([1.95, 0.05, -0.1], [1.25, 3.35, 1.05], 0.035) },
-    { weight: 0.08, sample: choiceSampler(vents) },
-    { weight: 0.16, sample: choiceSampler(keyboardRows) },
-    { weight: 0.11, sample: planeSampler([-0.62, -1.62, 1.02], 4.1, 1.05, 0.25) },
-    { weight: 0.06, sample: lineSampler([-2.8, -2.05, 1.28], [1.65, -2.05, 1.28], 0.05) },
+    { weight: 0.15, sample: boxEdgesSampler([-0.45, 0.45, 0], [3.75, 2.65, 0.72], 0.035) },
+    { weight: 0.05, sample: planeSampler([-0.45, 0.45, -0.28], 3.2, 2.1, 0.04) },
+    { weight: 0.12, sample: choiceSampler(terminalFrames) },
+    { weight: 0.2, sample: choiceSampler(terminalLines) },
+    { weight: 0.15, sample: choiceSampler(terminalText) },
+    { weight: 0.12, sample: boxSurfaceSampler([1.95, 0.05, -0.1], [1.25, 3.35, 1.05], 0.035) },
+    { weight: 0.06, sample: choiceSampler(vents) },
+    { weight: 0.09, sample: choiceSampler(keyboardRows) },
+    { weight: 0.04, sample: planeSampler([-0.62, -1.62, 1.02], 4.1, 1.05, 0.25) },
+    { weight: 0.02, sample: lineSampler([-2.8, -2.05, 1.28], [1.65, -2.05, 1.28], 0.05) },
   ];
 }
 
 function windowsInternetScene(): WeightedSampler[] {
-  const monitor = crtMonitorSamplers([-1.25, 0.2, 0], 2.5, 1.95);
-  const desk = deskSamplers([-0.65, -1.0, 0.45], 4.65);
-  const person = seatedPersonSamplers([1.25, -0.72, 0.28], 1);
-  const windowsPanes = paneSamplers([-1.25, 0.26, 0.36], 0.48);
-  const envelope = envelopeSamplers([0.82, 1.72, 0.58], 1.28, 0.76);
-  const connections = [
-    bezierSampler(
-      [-1.15, 1.05, 0.25],
-      [-0.7, 1.7, -0.25],
-      [-0.05, 1.9, 0.4],
-      [0.18, 1.72, 0.58],
-      0.025,
-    ),
-    bezierSampler(
-      [1.46, 1.72, 0.58],
-      [1.85, 2.25, -0.15],
-      [2.45, 1.65, 0.45],
-      [3.2, 1.95, -0.35],
-      0.025,
-    ),
+  const browserWindow = interfacePanelSamplers(
+    [-1.35, 0.52, -0.5],
+    4.35,
+    3.0,
+    "HTTP://",
+    6,
+  );
+  const mailWindow = interfacePanelSamplers(
+    [0.1, -0.42, 0.2],
+    3.45,
+    2.35,
+    "MAIL @",
+    5,
+  );
+  const terminalWindow = interfacePanelSamplers(
+    [-2.05, -1.28, 0.72],
+    2.45,
+    1.35,
+    "> CONNECT",
+    4,
+  );
+  const contactsWindow = interfacePanelSamplers(
+    [1.48, 1.02, 0.56],
+    1.85,
+    1.55,
+    "ONLINE",
+    5,
+  );
+  const windowsPanes = paneSamplers([-2.7, 1.55, 0.66], 0.24);
+  const envelope = envelopeSamplers([0.72, 0.12, 0.48], 0.95, 0.58);
+  const nodeCenters: Vec3[] = [
+    [-3.25, 1.95, -0.75],
+    [-2.75, -2.0, 0.3],
+    [-1.1, 2.05, 0.15],
+    [0.65, 1.95, -0.35],
+    [1.85, 1.75, 0.6],
+    [2.35, 0.35, -0.45],
+    [1.85, -1.55, 0.55],
+    [0.25, -1.95, -0.2],
+  ];
+  const nodes = nodeCenters.map((center) =>
+    sphereShellSampler(center, 0.11, 0.035),
+  );
+  const connections = nodeCenters.flatMap((center, index) => {
+    const next = nodeCenters[(index + 1) % nodeCenters.length];
+    const opposite = nodeCenters[(index + 3) % nodeCenters.length];
+    return [
+      bezierSampler(
+        center,
+        [center[0] * 0.75, center[1] * 0.35, center[2] + 0.35],
+        [next[0] * 0.75, next[1] * 0.35, next[2] - 0.35],
+        next,
+        0.022,
+      ),
+      lineSampler(center, opposite, 0.018),
+    ];
+  });
+  const protocolLabels = [
+    textSampler("TCP/IP", {
+      center: [-0.8, 1.82, 0.75],
+      width: 1.05,
+      height: 0.28,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+    textSampler("WWW", {
+      center: [1.92, -1.25, 0.78],
+      width: 0.8,
+      height: 0.3,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
   ];
 
   return [
-    { weight: 0.3, sample: choiceSampler(monitor) },
-    { weight: 0.11, sample: choiceSampler(desk) },
-    { weight: 0.18, sample: choiceSampler(person) },
-    { weight: 0.14, sample: choiceSampler(windowsPanes) },
-    { weight: 0.12, sample: choiceSampler(envelope) },
-    { weight: 0.15, sample: choiceSampler(connections) },
+    { weight: 0.18, sample: choiceSampler(browserWindow) },
+    { weight: 0.18, sample: choiceSampler(mailWindow) },
+    { weight: 0.13, sample: choiceSampler(terminalWindow) },
+    { weight: 0.1, sample: choiceSampler(contactsWindow) },
+    { weight: 0.07, sample: choiceSampler(windowsPanes) },
+    { weight: 0.08, sample: choiceSampler(envelope) },
+    { weight: 0.16, sample: choiceSampler(connections) },
+    { weight: 0.06, sample: choiceSampler(nodes) },
+    { weight: 0.04, sample: choiceSampler(protocolLabels) },
   ];
 }
 
 function productivityScene(): WeightedSampler[] {
   const firstMail = envelopeSamplers([-2.2, 1.12, 0.15], 1.15, 0.72);
-  const wordDocument = documentSamplers([-0.7, 0.48, 0.42], 1.18, 1.5, "W");
-  const presentation = documentSamplers([0.92, -0.52, 0.62], 1.58, 1.06, "PPT");
+  const wordDocument = documentSamplers(
+    [-0.7, 0.48, 0.42],
+    1.5,
+    1.55,
+    "WORD",
+  );
+  const presentation = documentSamplers(
+    [0.92, -0.52, 0.62],
+    2.35,
+    1.18,
+    "POWERPOINT",
+  );
   const secondMail = envelopeSamplers([2.38, 0.92, -0.25], 1.08, 0.68);
-  const secondDocument = documentSamplers([2.85, -1.02, 0.22], 1.12, 1.38, "W");
+  const secondDocument = documentSamplers(
+    [2.85, -1.02, 0.22],
+    1.48,
+    1.4,
+    "WORD",
+  );
   const streams = [
     bezierSampler(
       [-3.7, 0.45, -0.65],
@@ -224,40 +316,40 @@ function productivityScene(): WeightedSampler[] {
       0.03,
     ),
     bezierSampler(
-      [-0.7, 0.48, 0.42],
-      [-0.1, 0.1, -0.35],
-      [0.45, -0.15, 0.85],
-      [0.92, -0.52, 0.62],
+      [0.0, -0.12, 0.42],
+      [0.05, -0.3, -0.35],
+      [-0.08, 0.08, 0.85],
+      [-0.22, 0.02, 0.62],
       0.03,
     ),
     bezierSampler(
-      [0.92, -0.52, 0.62],
-      [1.2, 0.35, 0.8],
-      [1.95, 1.3, -0.5],
-      [2.38, 0.92, -0.25],
+      [1.98, -0.02, 0.62],
+      [2.12, 0.38, 0.8],
+      [2.12, 0.75, -0.5],
+      [1.88, 0.88, -0.25],
       0.03,
     ),
     bezierSampler(
-      [0.92, -0.52, 0.62],
-      [1.55, -1.35, -0.55],
-      [2.4, -1.55, 0.65],
-      [2.85, -1.02, 0.22],
+      [2.02, -0.72, 0.62],
+      [2.22, -0.86, -0.55],
+      [2.12, -0.95, 0.65],
+      [2.14, -0.98, 0.22],
       0.03,
     ),
     bezierSampler(
       [-3.8, -1.55, -0.7],
-      [-1.6, -2.2, 0.75],
-      [1.65, 2.15, -0.65],
-      [3.75, 1.55, 0.6],
+      [-1.7, -2.45, 0.75],
+      [1.7, -2.35, -0.65],
+      [3.75, -1.62, 0.6],
       0.035,
     ),
   ];
   const flowNodeCenters: Vec3[] = [
     [-2.2, 1.12, 0.15],
-    [-0.7, 0.48, 0.42],
-    [0.92, -0.52, 0.62],
-    [2.38, 0.92, -0.25],
-    [2.85, -1.02, 0.22],
+    [0.0, -0.12, 0.42],
+    [-0.22, 0.02, 0.62],
+    [1.88, 0.88, -0.25],
+    [2.14, -0.98, 0.22],
   ];
   const flowNodes = flowNodeCenters.map((point) =>
     sphereShellSampler(point, 0.1, 0.035),
@@ -296,124 +388,144 @@ function datacenterScene(): WeightedSampler[] {
     bezierSampler([0, 1.95, 0], [0.6, 2.8, -0.2], [1.55, 2.65, 0.25], [2, 1.95, 0.45], 0.035),
     bezierSampler([-2, -1.95, -0.45], [-1, -2.55, 0.35], [1, -2.55, -0.25], [2, -1.95, 0.45], 0.035),
   ];
+  const enterpriseSpecs: Array<{ center: Vec3; label: string }> = [
+    { center: [-3.15, 1.72, 0.72], label: "ERP" },
+    { center: [-1.55, 2.18, 0.48], label: "CRM" },
+    { center: [0.15, 2.32, 0.72], label: "DB" },
+    { center: [1.82, 2.08, 0.5], label: "IDENTITY" },
+    { center: [3.05, 1.48, 0.7], label: "APPS" },
+  ];
+  const enterprisePanels = enterpriseSpecs.flatMap(({ center, label }) =>
+    labeledPanelSamplers(center, 1.0, 0.58, label),
+  );
+  const enterpriseLinks = enterpriseSpecs.map(({ center }, index) =>
+    bezierSampler(
+      center,
+      [center[0] * 0.8, 1.5, center[2] - 0.35],
+      [rackCenters[index % rackCenters.length], 1.8, 0.2],
+      [rackCenters[index % rackCenters.length], 1.62, 0.25],
+      0.022,
+    ),
+  );
 
   return [
-    { weight: 0.27, sample: choiceSampler(racks) },
-    { weight: 0.14, sample: choiceSampler(rackEdges) },
-    { weight: 0.24, sample: choiceSampler(units) },
-    { weight: 0.17, sample: choiceSampler(routes) },
-    { weight: 0.1, sample: ringSampler([0, 0, -0.7], 3.45, 2.35, "xy", 0.06) },
-    { weight: 0.08, sample: sphereVolumeSampler([0, 0, 0], 0.5) },
+    { weight: 0.22, sample: choiceSampler(racks) },
+    { weight: 0.11, sample: choiceSampler(rackEdges) },
+    { weight: 0.2, sample: choiceSampler(units) },
+    { weight: 0.14, sample: choiceSampler(routes) },
+    { weight: 0.07, sample: ringSampler([0, 0, -0.7], 3.45, 2.35, "xy", 0.06) },
+    { weight: 0.05, sample: sphereVolumeSampler([0, 0, 0], 0.5) },
+    { weight: 0.14, sample: choiceSampler(enterprisePanels) },
+    { weight: 0.07, sample: choiceSampler(enterpriseLinks) },
   ];
 }
 
 function agentsScene(): WeightedSampler[] {
-  const terminal = [
-    boxEdgesSampler([-1.0, 0.1, 0], [4.2, 3.35, 0.36], 0.03),
-    boxEdgesSampler([-1.0, 0.04, 0.2], [3.72, 2.75, 0.06], 0.025),
-    lineSampler([-2.55, 1.08, 0.25], [0.55, 1.08, 0.25], 0.02),
+  const coreCenter: Vec3 = [0.08, 0.02, 0.12];
+  const core = [
+    sphereVolumeSampler(coreCenter, 0.64),
+    sphereShellSampler(coreCenter, 0.82, 0.05),
+    ringSampler(coreCenter, 1.02, 1.02, "xy", 0.045),
+    ringSampler(coreCenter, 1.08, 0.72, "xz", 0.045),
+    ringSampler(coreCenter, 0.85, 1.05, "yz", 0.045),
   ];
-  const chatLines = [
-    lineSampler([-2.55, 0.82, 0.27], [-0.35, 0.82, 0.27], 0.025),
-    lineSampler([-2.2, 0.48, 0.27], [0.45, 0.48, 0.27], 0.025),
-    lineSampler([-2.55, 0.02, 0.27], [-0.72, 0.02, 0.27], 0.025),
-    lineSampler([-2.2, -0.32, 0.27], [0.25, -0.32, 0.27], 0.025),
-    lineSampler([-2.55, -0.78, 0.27], [-0.15, -0.78, 0.27], 0.025),
+  const systemSpecs: Array<{ center: Vec3; label: string }> = [
+    { center: [-2.75, 1.42, 0.48], label: "PLAN" },
+    { center: [-1.42, 1.92, 0.18], label: "MEMORY" },
+    { center: [0.08, 2.05, 0.58], label: "SEARCH" },
+    { center: [1.58, 1.82, 0.22], label: "CODE" },
+    { center: [2.88, 1.28, 0.62], label: "TEST" },
+    { center: [3.28, 0.18, 0.24], label: "REVIEW" },
+    { center: [2.92, -1.02, 0.64], label: "DEPLOY" },
+    { center: [1.62, -1.66, 0.22], label: "TOOLS" },
+    { center: [0.15, -1.92, 0.58], label: "DATA" },
+    { center: [-1.35, -1.72, 0.22], label: "MAIL" },
+    { center: [-2.62, -1.18, 0.62], label: "DOCS" },
+    { center: [-3.02, 0.08, 0.26], label: "VISION" },
   ];
-  const agentCenters: Vec3[] = [];
-  for (let column = 0; column < 3; column += 1) {
-    for (let row = 0; row < 3; row += 1) {
-      agentCenters.push([
-        1.45 + column * 0.92,
-        1.08 - row * 1.02,
-        -0.45 + column * 0.35,
-      ]);
-    }
-  }
-  const agentCards = agentCenters.flatMap((center) => [
-    boxEdgesSampler(center, [0.68, 0.54, 0.42], 0.025),
-    sphereShellSampler(
-      [center[0], center[1] + 0.06, center[2] + 0.24],
-      0.085,
-      0.025,
-    ),
-    lineSampler(
-      [center[0] - 0.16, center[1] - 0.14, center[2] + 0.24],
-      [center[0] + 0.16, center[1] - 0.14, center[2] + 0.24],
-      0.02,
-    ),
-  ]);
-  const fleetLinks = agentCenters.flatMap((center, index) => {
-    const links: PointSampler[] = [
+  const systemPanels = systemSpecs.flatMap(({ center, label }) =>
+    labeledPanelSamplers(center, 1.05, 0.62, label),
+  );
+  const systemNodes = systemSpecs.map(({ center }) =>
+    sphereShellSampler(center, 0.12, 0.035),
+  );
+  const systemLinks = systemSpecs.flatMap(({ center }, index) => {
+    const next = systemSpecs[(index + 1) % systemSpecs.length].center;
+    const across = systemSpecs[(index + 4) % systemSpecs.length].center;
+    return [
       bezierSampler(
-        [0.82, 0.18, 0.05],
-        [1.0, center[1], -0.3],
-        [1.2, center[1], center[2]],
+        coreCenter,
+        [center[0] * 0.35, center[1] * 0.2, -0.55],
+        [center[0] * 0.78, center[1] * 0.85, center[2] + 0.35],
         center,
-        0.022,
+        0.025,
       ),
+      lineSampler(center, next, 0.02),
+      index % 2 === 0
+        ? bezierSampler(
+            center,
+            [center[0] * 0.4, center[1] * 0.2, 0.8],
+            [across[0] * 0.4, across[1] * 0.2, -0.7],
+            across,
+            0.018,
+          )
+        : lineSampler(center, next, 0.02),
     ];
-    if (Math.floor(index / 3) < 2) {
-      links.push(lineSampler(center, agentCenters[index + 3], 0.02));
-    }
-    if (index % 3 !== 2) {
-      links.push(lineSampler(center, agentCenters[index + 1], 0.02));
-    }
-    return links;
   });
+  const tokenStreams = [
+    bezierSampler(
+      [-3.65, 1.9, -0.8],
+      [-1.9, 0.6, 0.9],
+      [1.7, 0.8, -0.9],
+      [3.6, -1.55, 0.75],
+      0.035,
+    ),
+    bezierSampler(
+      [-3.7, -1.65, 0.7],
+      [-1.75, -0.55, -0.85],
+      [1.55, -0.45, 0.9],
+      [3.7, 1.68, -0.7],
+      0.035,
+    ),
+    bezierSampler(
+      [-2.9, 2.28, 0.45],
+      [-0.7, 1.05, -0.95],
+      [0.85, -1.25, 0.95],
+      [2.75, -2.12, -0.45],
+      0.03,
+    ),
+  ];
 
   return [
-    { weight: 0.19, sample: choiceSampler(terminal) },
+    { weight: 0.14, sample: choiceSampler(core) },
     {
-      weight: 0.11,
-      sample: textSampler("[ AGENT CHAT ]", {
-        center: [-1.0, 1.32, 0.28],
-        width: 2.6,
-        height: 0.38,
+      weight: 0.06,
+      sample: textSampler("AI", {
+        center: coreCenter,
+        width: 0.88,
+        height: 0.68,
         depth: 0.06,
+        family: '"Segoe UI", Helvetica, Arial, sans-serif',
+        weight: 700,
+        scanStep: 2,
+      }),
+    },
+    {
+      weight: 0.06,
+      sample: textSampler("ORCHESTRATOR", {
+        center: [0.08, 1.16, 0.72],
+        width: 2.4,
+        height: 0.34,
+        depth: 0.05,
         family: '"Cascadia Mono", "Courier New", monospace',
         weight: 700,
         scanStep: 2,
       }),
     },
-    { weight: 0.16, sample: choiceSampler(chatLines) },
-    {
-      weight: 0.08,
-      sample: choiceSampler([
-        textSampler("YOU>", {
-          center: [-2.22, 0.78, 0.29],
-          width: 0.72,
-          height: 0.3,
-          depth: 0.05,
-          family: '"Cascadia Mono", "Courier New", monospace',
-          weight: 700,
-          scanStep: 2,
-        }),
-        textSampler("AI>", {
-          center: [-2.28, -0.1, 0.29],
-          width: 0.58,
-          height: 0.3,
-          depth: 0.05,
-          family: '"Cascadia Mono", "Courier New", monospace',
-          weight: 700,
-          scanStep: 2,
-        }),
-      ]),
-    },
-    {
-      weight: 0.12,
-      sample: textSampler(">_", {
-        center: [-1.05, -1.03, 0.28],
-        width: 1.45,
-        height: 0.64,
-        depth: 0.08,
-        family: '"Cascadia Mono", "Courier New", monospace',
-        weight: 700,
-        scanStep: 2,
-      }),
-    },
-    { weight: 0.22, sample: choiceSampler(agentCards) },
-    { weight: 0.12, sample: choiceSampler(fleetLinks) },
+    { weight: 0.28, sample: choiceSampler(systemPanels) },
+    { weight: 0.06, sample: choiceSampler(systemNodes) },
+    { weight: 0.28, sample: choiceSampler(systemLinks) },
+    { weight: 0.12, sample: choiceSampler(tokenStreams) },
   ];
 }
 
@@ -451,195 +563,86 @@ function microsoftScene(): WeightedSampler[] {
 }
 
 function rocketScene(): WeightedSampler[] {
-  const bodyCenter: Vec3 = [0.85, 0.28, 0.05];
-  const body = [
-    cylinderShellSampler(bodyCenter, 0.5, 2.55, 0.035),
-    ringSampler([0.85, -0.36, 0.05], 0.5, 0.5, "xz", 0.035),
-    ringSampler([0.85, 0.93, 0.05], 0.5, 0.5, "xz", 0.035),
-  ];
-  const nose = coneShellSampler([0.85, 1.555, 0.05], 0.5, 1.18, 0.035);
-  const fins = [
-    triangleSurfaceSampler(
-      [0.36, -0.62, 0.04],
-      [-0.58, -1.47, 0.02],
-      [0.36, -1.18, 0.04],
-      0.05,
+  const rocketX = 1.15;
+  const rocketDepth = 0.65;
+  const bodyCenter: Vec3 = [rocketX, -0.3, rocketDepth];
+  const body = cylinderShellSampler(bodyCenter, 0.27, 3.55, 0.025);
+  const interstage = cylinderShellSampler(
+    [rocketX, 0.42, rocketDepth],
+    0.29,
+    0.3,
+    0.022,
+  );
+  const nose = ogiveShellSampler(
+    [rocketX, 1.475, rocketDepth],
+    0.27,
+    0.76,
+    0.025,
+  );
+  const stageBands = [-1.68, -0.88, 0.02, 0.58, 1.12].map((y) =>
+    ringSampler(
+      [rocketX, y, rocketDepth],
+      0.275,
+      0.275,
+      "xz",
+      0.024,
     ),
-    triangleSurfaceSampler(
-      [1.34, -0.62, 0.04],
-      [2.28, -1.47, 0.02],
-      [1.34, -1.18, 0.04],
-      0.05,
-    ),
-    polylineSampler(
-      [
-        [0.36, -0.62, 0.04],
-        [-0.58, -1.47, 0.02],
-        [0.36, -1.18, 0.04],
-      ],
-      0.025,
-    ),
-    polylineSampler(
-      [
-        [1.34, -0.62, 0.04],
-        [2.28, -1.47, 0.02],
-        [1.34, -1.18, 0.04],
-      ],
-      0.025,
-    ),
-  ];
+  );
   const smokeCenters: Array<{ center: Vec3; radius: number }> = [
-    { center: [0.85, -2.15, 0], radius: 0.65 },
-    { center: [0.15, -2.35, 0.15], radius: 0.8 },
-    { center: [1.6, -2.45, -0.1], radius: 0.85 },
-    { center: [-0.65, -2.55, -0.2], radius: 0.72 },
-    { center: [2.45, -2.62, 0.25], radius: 0.7 },
+    { center: [rocketX, -2.08, 0.02], radius: 0.44 },
+    { center: [0.58, -2.18, 0.04], radius: 0.58 },
+    { center: [1.72, -2.2, -0.06], radius: 0.62 },
+    { center: [-0.08, -2.26, -0.18], radius: 0.52 },
+    { center: [2.4, -2.28, 0.1], radius: 0.5 },
   ];
   const smoke = smokeCenters.map(({ center, radius }) =>
     sphereVolumeSampler(center, radius),
   );
-  const trajectory = [
-    bezierSampler(
-      [0.85, 2.55, -0.2],
-      [1.15, 3.25, 0.65],
-      [2.45, 3.1, -0.55],
-      [3.75, 3.55, 0.35],
-      0.035,
+  const tower = [
+    lineSampler([2.05, -2.0, -0.22], [2.05, 1.62, -0.22], 0.035),
+    lineSampler([2.45, -2.0, -0.22], [2.45, 1.62, -0.22], 0.035),
+    ...Array.from({ length: 9 }, (_, index) =>
+      lineSampler(
+        [2.05, -1.82 + index * 0.42, -0.22],
+        [2.45, -1.82 + index * 0.42, -0.22],
+        0.025,
+      ),
     ),
-    ringSampler([0.85, 0.25, -0.85], 2.65, 3.15, "yz", 0.055),
+    ...Array.from({ length: 8 }, (_, index) =>
+      lineSampler(
+        [index % 2 === 0 ? 2.05 : 2.45, -1.82 + index * 0.42, -0.2],
+        [index % 2 === 0 ? 2.45 : 2.05, -1.4 + index * 0.42, -0.2],
+        0.022,
+      ),
+    ),
+    lineSampler([2.05, 0.9, -0.2], [1.42, 0.9, 0.22], 0.03),
+    lineSampler([2.05, 0.22, -0.2], [1.42, 0.22, 0.22], 0.03),
+    lineSampler([2.05, -0.5, -0.2], [1.42, -0.5, 0.22], 0.03),
   ];
-  const launchPad = [
-    lineSampler([-1.8, -2.58, 0.35], [3.55, -2.58, 0.35], 0.04),
-    lineSampler([-1.2, -2.9, 0.6], [3.0, -2.9, 0.6], 0.04),
+  const horizon = [
+    lineSampler([-4.5, -2.02, -0.55], [4.5, -2.02, -0.55], 0.025),
+    lineSampler([-4.5, -2.18, -0.25], [4.5, -2.18, -0.25], 0.035),
+    boxEdgesSampler([1.55, -1.92, -0.18], [2.5, 0.22, 0.6], 0.025),
   ];
+  const crowd = crowdSilhouetteSamplers();
 
   return [
-    { weight: 0.21, sample: choiceSampler(body) },
-    { weight: 0.1, sample: nose },
-    { weight: 0.1, sample: choiceSampler(fins) },
+    { weight: 0.23, sample: body },
+    { weight: 0.035, sample: interstage },
+    { weight: 0.075, sample: nose },
+    { weight: 0.06, sample: choiceSampler(stageBands) },
     {
-      weight: 0.06,
-      sample: ringSampler([0.85, 0.62, 0.55], 0.23, 0.23, "xy", 0.025),
+      weight: 0.14,
+      sample: rocketPlumeSampler(
+        [rocketX, -2.08, rocketDepth],
+        1.12,
+        0.36,
+      ),
     },
-    { weight: 0.22, sample: rocketPlumeSampler([0.85, -0.98, 0.05]) },
-    { weight: 0.14, sample: choiceSampler(smoke) },
-    { weight: 0.08, sample: starFieldSampler() },
-    { weight: 0.06, sample: choiceSampler(trajectory) },
-    { weight: 0.03, sample: choiceSampler(launchPad) },
-  ];
-}
-
-function crtMonitorSamplers(
-  center: Vec3,
-  width: number,
-  height: number,
-): PointSampler[] {
-  const [x, y, z] = center;
-  const screenZ = z + 0.33;
-  return [
-    boxEdgesSampler(center, [width, height, 0.62], 0.03),
-    boxEdgesSampler(
-      [x, y + 0.03, screenZ],
-      [width * 0.82, height * 0.73, 0.05],
-      0.022,
-    ),
-    planeSampler(
-      [x, y + 0.03, screenZ - 0.02],
-      width * 0.77,
-      height * 0.67,
-      0.035,
-    ),
-    lineSampler(
-      [x, y - height * 0.5, z],
-      [x, y - height * 0.72, z + 0.08],
-      0.03,
-    ),
-    lineSampler(
-      [x - width * 0.25, y - height * 0.72, z + 0.08],
-      [x + width * 0.25, y - height * 0.72, z + 0.08],
-      0.03,
-    ),
-  ];
-}
-
-function deskSamplers(center: Vec3, width: number): PointSampler[] {
-  const [x, y, z] = center;
-  return [
-    lineSampler(
-      [x - width / 2, y, z],
-      [x + width / 2, y, z],
-      0.045,
-    ),
-    lineSampler(
-      [x - width * 0.42, y, z],
-      [x - width * 0.42, y - 1.15, z - 0.2],
-      0.035,
-    ),
-    lineSampler(
-      [x + width * 0.42, y, z],
-      [x + width * 0.42, y - 1.15, z - 0.2],
-      0.035,
-    ),
-    planeSampler([x + width * 0.04, y - 0.18, z + 0.38], width * 0.34, 0.38, 0.08),
-  ];
-}
-
-function seatedPersonSamplers(center: Vec3, scale: number): PointSampler[] {
-  const [x, y, z] = center;
-  const head: Vec3 = [
-    x - 0.08 * scale,
-    y + 1.42 * scale,
-    z + 0.2 * scale,
-  ];
-  return [
-    sphereVolumeSampler(head, 0.31 * scale),
-    ellipsoidVolumeSampler(
-      [x + 0.06 * scale, y + 0.72 * scale, z],
-      [0.34 * scale, 0.6 * scale, 0.28 * scale],
-    ),
-    capsuleVolumeSampler(
-      [x - 0.1 * scale, y + 0.88 * scale, z + 0.12],
-      [x - 0.48 * scale, y + 0.57 * scale, z + 0.23],
-      0.12 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x - 0.48 * scale, y + 0.57 * scale, z + 0.23],
-      [x - 0.96 * scale, y + 0.54 * scale, z + 0.3],
-      0.1 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x + 0.18 * scale, y + 0.87 * scale, z - 0.12],
-      [x - 0.36 * scale, y + 0.49 * scale, z - 0.04],
-      0.11 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x + 0.1 * scale, y + 0.25 * scale, z + 0.03],
-      [x + 0.58 * scale, y - 0.08 * scale, z + 0.04],
-      0.17 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x + 0.58 * scale, y - 0.08 * scale, z + 0.04],
-      [x + 0.5 * scale, y - 0.88 * scale, z + 0.08],
-      0.13 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x + 0.02 * scale, y + 0.2 * scale, z - 0.12],
-      [x + 0.45 * scale, y - 0.18 * scale, z - 0.18],
-      0.15 * scale,
-    ),
-    capsuleVolumeSampler(
-      [x + 0.45 * scale, y - 0.18 * scale, z - 0.18],
-      [x + 0.92 * scale, y - 0.72 * scale, z - 0.2],
-      0.12 * scale,
-    ),
-    polylineSampler(
-      [
-        [x + 0.58 * scale, y + 0.9 * scale, z - 0.36],
-        [x + 0.72 * scale, y + 0.08 * scale, z - 0.36],
-        [x + 0.08 * scale, y + 0.02 * scale, z - 0.36],
-      ],
-      0.035 * scale,
-    ),
+    { weight: 0.1, sample: choiceSampler(smoke) },
+    { weight: 0.15, sample: choiceSampler(tower) },
+    { weight: 0.07, sample: choiceSampler(horizon) },
+    { weight: 0.14, sample: choiceSampler(crowd) },
   ];
 }
 
@@ -662,27 +665,85 @@ function ellipsoidVolumeSampler(
   };
 }
 
-function capsuleVolumeSampler(
-  start: Vec3,
-  end: Vec3,
-  radius: number,
-): PointSampler {
-  return (random, output, offset) => {
-    const progress = random();
-    const y = random() * 2 - 1;
-    const angle = random() * Math.PI * 2;
-    const radial = Math.sqrt(Math.max(0, 1 - y * y));
-    const distance = Math.cbrt(random()) * radius;
-    writePoint(
-      output,
-      offset,
-      start[0] + (end[0] - start[0]) * progress +
-        Math.cos(angle) * radial * distance,
-      start[1] + (end[1] - start[1]) * progress + y * distance,
-      start[2] + (end[2] - start[2]) * progress +
-        Math.sin(angle) * radial * distance,
+function interfacePanelSamplers(
+  center: Vec3,
+  width: number,
+  height: number,
+  title: string,
+  rowCount: number,
+): PointSampler[] {
+  const [x, y, z] = center;
+  const front = z + 0.09;
+  const titleY = y + height * 0.34;
+  const samplers: PointSampler[] = [
+    boxEdgesSampler(center, [width, height, 0.14], 0.025),
+    lineSampler(
+      [x - width * 0.46, y + height * 0.24, front],
+      [x + width * 0.46, y + height * 0.24, front],
+      0.02,
+    ),
+    lineSampler(
+      [x - width * 0.27, y + height * 0.2, front],
+      [x - width * 0.27, y - height * 0.42, front],
+      0.018,
+    ),
+    textSampler(title, {
+      center: [x, titleY, front],
+      width: width * 0.7,
+      height: height * 0.15,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+  ];
+
+  for (let row = 0; row < rowCount; row += 1) {
+    const rowY =
+      y + height * 0.13 - row * (height * 0.5 / Math.max(1, rowCount - 1));
+    const indent = row % 3 === 0 ? width * 0.08 : 0;
+    const rowWidth = width * (0.48 + ((row * 7) % 4) * 0.08);
+    samplers.push(
+      lineSampler(
+        [x - width * 0.19 + indent, rowY, front],
+        [Math.min(x + width * 0.43, x - width * 0.19 + indent + rowWidth), rowY, front],
+        0.018,
+      ),
+      boxEdgesSampler(
+        [x - width * 0.36, rowY, front],
+        [width * 0.1, height * 0.08, 0.04],
+        0.014,
+      ),
     );
-  };
+  }
+
+  return samplers;
+}
+
+function labeledPanelSamplers(
+  center: Vec3,
+  width: number,
+  height: number,
+  label: string,
+): PointSampler[] {
+  const [x, y, z] = center;
+  return [
+    boxEdgesSampler(center, [width, height, 0.16], 0.022),
+    textSampler(label, {
+      center: [x, y + height * 0.05, z + 0.11],
+      width: width * 0.72,
+      height: height * 0.34,
+      depth: 0.05,
+      family: '"Cascadia Mono", "Courier New", monospace',
+      weight: 700,
+      scanStep: 2,
+    }),
+    lineSampler(
+      [x - width * 0.3, y - height * 0.28, z + 0.1],
+      [x + width * 0.3, y - height * 0.28, z + 0.1],
+      0.018,
+    ),
+  ];
 }
 
 function paneSamplers(center: Vec3, size: number): PointSampler[] {
@@ -742,17 +803,41 @@ function documentSamplers(
   label: string,
 ): PointSampler[] {
   const [x, y, z] = center;
+  const labelSampler =
+    label === "POWERPOINT"
+      ? choiceSampler([
+          textSampler("POWER", {
+            center: [x, y + height * 0.24, z + 0.09],
+            width: width * 0.66,
+            height: height * 0.24,
+            depth: 0.06,
+            family: '"Segoe UI", Helvetica, Arial, sans-serif',
+            weight: 750,
+            scanStep: 2,
+          }),
+          textSampler("POINT", {
+            center: [x, y - height * 0.02, z + 0.09],
+            width: width * 0.62,
+            height: height * 0.24,
+            depth: 0.06,
+            family: '"Segoe UI", Helvetica, Arial, sans-serif',
+            weight: 750,
+            scanStep: 2,
+          }),
+        ])
+      : textSampler(label, {
+          center: [x, y + height * 0.16, z + 0.09],
+          width: width * 0.82,
+          height: height * 0.32,
+          depth: 0.06,
+          family: '"Segoe UI", Helvetica, Arial, sans-serif',
+          weight: 750,
+          scanStep: 2,
+        });
+
   return [
     boxEdgesSampler(center, [width, height, 0.12], 0.025),
-    textSampler(label, {
-      center: [x, y + height * 0.16, z + 0.09],
-      width: width * 0.72,
-      height: height * 0.35,
-      depth: 0.06,
-      family: '"Segoe UI", Helvetica, Arial, sans-serif',
-      weight: 750,
-      scanStep: 2,
-    }),
+    labelSampler,
     lineSampler(
       [x - width * 0.32, y - height * 0.16, z + 0.09],
       [x + width * 0.32, y - height * 0.16, z + 0.09],
@@ -785,17 +870,19 @@ function cylinderShellSampler(
   };
 }
 
-function coneShellSampler(
+function ogiveShellSampler(
   baseCenter: Vec3,
   radius: number,
   height: number,
   thickness = 0.03,
 ): PointSampler {
   return (random, output, offset) => {
-    const vertical = 1 - Math.sqrt(1 - random());
+    const vertical = random();
     const angle = random() * Math.PI * 2;
     const sampledRadius =
-      radius * (1 - vertical) + (random() - 0.5) * thickness;
+      radius *
+        Math.pow(Math.cos(vertical * Math.PI * 0.5), 0.68) +
+      (random() - 0.5) * thickness;
     writePoint(
       output,
       offset,
@@ -806,52 +893,44 @@ function coneShellSampler(
   };
 }
 
-function triangleSurfaceSampler(
-  a: Vec3,
-  b: Vec3,
-  c: Vec3,
-  thickness = 0.03,
-): PointSampler {
-  return (random, output, offset) => {
-    const root = Math.sqrt(random());
-    const aWeight = 1 - root;
-    const bWeight = root * (1 - random());
-    const cWeight = 1 - aWeight - bWeight;
-    writePoint(
-      output,
-      offset,
-      a[0] * aWeight + b[0] * bWeight + c[0] * cWeight +
-        (random() - 0.5) * thickness,
-      a[1] * aWeight + b[1] * bWeight + c[1] * cWeight +
-        (random() - 0.5) * thickness,
-      a[2] * aWeight + b[2] * bWeight + c[2] * cWeight +
-        (random() - 0.5) * thickness,
+function crowdSilhouetteSamplers(): PointSampler[] {
+  const samplers: PointSampler[] = [];
+  for (let index = 0; index < 28; index += 1) {
+    const row = index % 3;
+    const x = -4.35 + index * 0.325 + (row - 1) * 0.06;
+    const scale = 0.13 + ((index * 5) % 4) * 0.018;
+    const headY = -2.13 - row * 0.11;
+    const depth = 1.18 + row * 0.16;
+    samplers.push(
+      sphereVolumeSampler([x, headY, depth], scale),
+      ellipsoidVolumeSampler(
+        [x, headY - scale * 1.65, depth - 0.02],
+        [scale * 1.55, scale * 1.05, scale * 0.82],
+      ),
     );
-  };
+  }
+  return samplers;
 }
 
-function rocketPlumeSampler(origin: Vec3): PointSampler {
+function rocketPlumeSampler(
+  origin: Vec3,
+  length: number,
+  maxRadius: number,
+): PointSampler {
   return (random, output, offset) => {
     const vertical = Math.pow(random(), 0.72);
     const angle = random() * Math.PI * 2;
-    const radius = (0.1 + vertical * 0.72) * Math.sqrt(random());
-    const turbulence = Math.sin(vertical * 18 + angle * 2) * 0.12 * vertical;
+    const radius =
+      (0.035 + vertical * maxRadius) * Math.sqrt(random());
+    const turbulence =
+      Math.sin(vertical * 18 + angle * 2) * 0.07 * vertical;
     writePoint(
       output,
       offset,
       origin[0] + Math.cos(angle) * radius + turbulence,
-      origin[1] - vertical * 2.35,
+      origin[1] - vertical * length,
       origin[2] + Math.sin(angle) * radius,
     );
-  };
-}
-
-function starFieldSampler(): PointSampler {
-  return (random, output, offset) => {
-    const x = (random() - 0.5) * 8.8;
-    const y = -0.1 + Math.pow(random(), 0.72) * 3.75;
-    const z = -1.6 + random() * 2.6;
-    writePoint(output, offset, x, y, z);
   };
 }
 

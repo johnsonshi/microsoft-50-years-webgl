@@ -10,7 +10,7 @@ const desktop = await openExperience();
 try {
   const removedChromeCount = await desktop.page
     .locator(
-      ".intro__footer, .stage-status, .stage-meter, .era-copy__index",
+      ".intro__eyebrow, .intro__footer, .stage-status, .stage-meter, .era-copy__index",
     )
     .count();
   assert.equal(removedChromeCount, 0);
@@ -22,6 +22,50 @@ try {
     await desktop.page.locator(".era-copy__year, .era-copy h2").count(),
     0,
   );
+  assert.equal(
+    await desktop.page
+      .locator('.era-copy[style*="--scene-accent"]')
+      .count(),
+    0,
+    "Timeline copy still contains per-era inline colors.",
+  );
+
+  const contentState = await desktop.page.evaluate(() => {
+    const statement = document.querySelector(".era-copy__statement");
+    const finalStatement = document.querySelector(
+      ".era:last-child .era-copy__statement",
+    );
+    const footer = document.querySelector("footer p");
+    const author = document.querySelector("footer a");
+    if (
+      !(statement instanceof HTMLElement) ||
+      !(finalStatement instanceof HTMLElement) ||
+      !(footer instanceof HTMLElement) ||
+      !(author instanceof HTMLAnchorElement)
+    ) {
+      throw new Error("Editorial content not found.");
+    }
+    const style = getComputedStyle(statement);
+    const normalize = (value) => value.replace(/\s+/g, " ").trim();
+    return {
+      fontFamily: style.fontFamily,
+      fontWeight: Number.parseInt(style.fontWeight, 10),
+      finalStatement: normalize(finalStatement.textContent ?? ""),
+      footer: normalize(footer.textContent ?? ""),
+      authorHref: author.href,
+    };
+  });
+  assert.match(contentState.fontFamily, /Segoe UI|Helvetica|Arial/);
+  assert.ok(contentState.fontWeight <= 400);
+  assert.equal(
+    contentState.finalStatement,
+    "2026 and Beyond: AI can power an age of abundance—expanding agency, discovery, and possibility.",
+  );
+  assert.equal(
+    contentState.footer,
+    "An unofficial personal tribute to Microsoft's first 50 years. By Johnson Shi.",
+  );
+  assert.equal(contentState.authorHref, "https://johnsonshi.com/");
 
   const firstCopyBeforeTimeline = await desktop.page
     .locator(".era-copy")
@@ -173,7 +217,10 @@ try {
     "Reload did not preserve a useful mid-page scroll position.",
   );
 
+  await setTimelineProgress(desktop.page, 6.8 / 7, 200);
+  const rocketOnPad = await getSnapshot(desktop.page);
   await setTimelineProgress(desktop.page, 1, 200);
+  const rocketLiftoff = await getSnapshot(desktop.page);
   await desktop.page.evaluate(() => {
     const section = document.querySelector("#timeline");
     const lastEra = section?.querySelector(".era:last-child");
@@ -190,6 +237,7 @@ try {
     window.scrollTo(0, activeEnd + window.innerHeight * 0.23);
   });
   await desktop.page.waitForTimeout(150);
+  const rocketAscent = await getSnapshot(desktop.page);
   const exitState = await desktop.page.evaluate(() => {
     const copy = document.querySelector(".era:last-child .era-copy");
     const stage = document.querySelector(".experience-stage");
@@ -203,6 +251,11 @@ try {
   });
   assert.ok(exitState.copyOpacity < 0.03);
   assert.ok(Math.abs(exitState.stageTop) < 2);
+  assert.ok(rocketOnPad.finaleProgress < 0.02);
+  assert.ok(rocketLiftoff.finaleProgress > 0.45);
+  assert.ok(rocketAscent.finaleProgress > 0.95);
+  assert.ok(rocketOnPad.finaleProgress < rocketLiftoff.finaleProgress);
+  assert.ok(rocketLiftoff.finaleProgress < rocketAscent.finaleProgress);
 
   assert.deepEqual(desktop.consoleErrors, []);
   assert.deepEqual(desktop.failedRequests, []);
@@ -245,5 +298,5 @@ try {
 }
 
 console.log(
-  "Interaction checks passed: forward/back scroll, held morphs, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
+  "Interaction checks passed: editorial chrome, forward/back scroll, held morphs, launch ascent, pointer, idle, resize, mobile, reduced motion, and reload restoration.",
 );

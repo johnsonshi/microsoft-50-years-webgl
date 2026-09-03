@@ -9,15 +9,16 @@
       "sceneB": 1,
       "morphProgress": 0,
       "scrollProgress": 0,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 108,
+      "cumulativeFrames": 75,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.536111648435945,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 18.12933380126953,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -30,15 +31,16 @@
       "sceneB": 1,
       "morphProgress": 0.4997459349717891,
       "scrollProgress": 0.07140921409214092,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 163,
+      "cumulativeFrames": 131,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.57975515851214,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.503053941799482,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -51,15 +53,16 @@
       "sceneB": 1,
       "morphProgress": 0.99999999980105,
       "scrollProgress": 0.14281842818428184,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 218,
+      "cumulativeFrames": 186,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.60137669646412,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.25537685681415,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -72,15 +75,16 @@
       "sceneB": 2,
       "morphProgress": 0.4992378052139135,
       "scrollProgress": 0.21422764227642277,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 273,
+      "cumulativeFrames": 241,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.614652568167383,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.121162359150613,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -93,15 +97,16 @@
       "sceneB": 3,
       "morphProgress": 6.713203731448301e-10,
       "scrollProgress": 0.28577235772357723,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 328,
+      "cumulativeFrames": 290,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.623171274981846,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.331379844402445,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -114,15 +119,16 @@
       "sceneB": 3,
       "morphProgress": 0.5005081299817851,
       "scrollProgress": 0.35718157181571814,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 383,
+      "cumulativeFrames": 346,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.629504463380062,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.223699961094496,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -135,15 +141,16 @@
       "sceneB": 4,
       "morphProgress": 2.4873828699294545e-11,
       "scrollProgress": 0.4285907859078591,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 437,
+      "cumulativeFrames": 401,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.63386782956069,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.147132716571303,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -156,15 +163,16 @@
       "sceneB": 4,
       "morphProgress": 0.5,
       "scrollProgress": 0.5,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 492,
+      "cumulativeFrames": 455,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.637602180484834,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 17.090110439258616,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -177,14 +185,15 @@
       "sceneB": 4,
       "morphProgress": 0.9999999999751255,
       "scrollProgress": 0.571409214092141,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 547,
+      "cumulativeFrames": 510,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.640402745503177,
+      "meanFrameMs": 17.044510358922622,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -198,14 +207,15 @@
       "sceneB": 5,
       "morphProgress": 0.49949187001821405,
       "scrollProgress": 0.6428184281842818,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 603,
+      "cumulativeFrames": 566,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.66600054740906,
+      "meanFrameMs": 17.007067687098633,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -219,14 +229,15 @@
       "sceneB": 5,
       "morphProgress": 0.9999999993286803,
       "scrollProgress": 0.7142276422764228,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 658,
+      "cumulativeFrames": 620,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.665833870569866,
+      "meanFrameMs": 16.94383388519287,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -240,15 +251,16 @@
       "sceneB": 6,
       "morphProgress": 0.5007621947860857,
       "scrollProgress": 0.7857723577235772,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 712,
+      "cumulativeFrames": 675,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666167198816936,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.83250055948893,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -261,15 +273,16 @@
       "sceneB": 7,
       "morphProgress": 1.9895018270043432e-10,
       "scrollProgress": 0.8571815718157182,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 768,
+      "cumulativeFrames": 729,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000521977743,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.832667223612468,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -282,15 +295,16 @@
       "sceneB": 7,
       "morphProgress": 0.5002540650282096,
       "scrollProgress": 0.928590785907859,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 823,
+      "cumulativeFrames": 785,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000525156658,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.832667226791383,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -303,15 +317,82 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
+      "finaleProgress": 0.573706199026424,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 878,
+      "cumulativeFrames": 840,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000528335573,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.832667226791383,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "rocket-on-pad",
+    "progress": 0.9714285714285714,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 6,
+      "sceneB": 7,
+      "morphProgress": 0.9419758820797796,
+      "scrollProgress": 0.9714092140921409,
+      "finaleProgress": 0.0010729779725508174,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 895,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.69366722424825,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "rocket-liftoff",
+    "progress": 1,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 7,
+      "sceneB": 7,
+      "morphProgress": 0,
+      "scrollProgress": 1,
+      "finaleProgress": 0.573706199026424,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 949,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.69366722424825,
+      "p95FrameMs": 16.700000762939453
+    }
+  },
+  {
+    "name": "rocket-ascent",
+    "progress": 1,
+    "snapshot": {
+      "ready": true,
+      "particleCount": 90000,
+      "sceneA": 7,
+      "sceneB": 7,
+      "morphProgress": 0,
+      "scrollProgress": 1,
+      "finaleProgress": 1,
+      "pointerX": 0,
+      "pointerY": 0,
+      "drawCalls": 1,
+      "cumulativeFrames": 977,
+      "geometryBytes": 2880000,
+      "pixelRatio": 1.5,
+      "reducedMotion": false,
+      "meanFrameMs": 16.69383388519287,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -324,14 +405,15 @@
       "sceneB": 1,
       "morphProgress": 8.669437536579437e-11,
       "scrollProgress": 0.000029350142686847525,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 73,
+      "cumulativeFrames": 70,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.658904715760112,
+      "meanFrameMs": 16.64714343207223,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -345,14 +427,15 @@
       "sceneB": 7,
       "morphProgress": 2.3630333435565918e-11,
       "scrollProgress": 0.8571618863562476,
+      "finaleProgress": 0,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 127,
+      "cumulativeFrames": 124,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.66220529811589,
+      "meanFrameMs": 16.65564570119304,
       "p95FrameMs": 16.700000762939453
     }
   },
@@ -366,14 +449,15 @@
       "sceneB": 7,
       "morphProgress": 0,
       "scrollProgress": 1,
+      "finaleProgress": 0.5757831643106314,
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 181,
+      "cumulativeFrames": 178,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.662983994457605,
+      "meanFrameMs": 16.658427522423562,
       "p95FrameMs": 16.700000762939453
     }
   }

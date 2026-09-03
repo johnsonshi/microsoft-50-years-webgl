@@ -80,6 +80,20 @@ try {
     }
   }
 
+  for (const [name, progress] of [
+    ["rocket-on-pad", 6.8 / 7],
+    ["rocket-liftoff", 1],
+  ]) {
+    await setTimelineProgress(desktop.page, progress);
+    const snapshot = await getSnapshot(desktop.page);
+    samples.push({ name, progress, snapshot });
+    await desktop.page.screenshot({
+      path: path.join(outputDirectory, `${name}.jpg`),
+      type: "jpeg",
+      quality: 88,
+    });
+  }
+
   await setTimelineProgress(desktop.page, 1, 200);
   await desktop.page.evaluate(() => {
     const section = document.querySelector("#timeline");
@@ -97,8 +111,14 @@ try {
     window.scrollTo(0, activeEnd + window.innerHeight * 0.23);
   });
   await desktop.page.waitForTimeout(180);
+  const exitSnapshot = await getSnapshot(desktop.page);
+  samples.push({
+    name: "rocket-ascent",
+    progress: 1,
+    snapshot: exitSnapshot,
+  });
   await desktop.page.screenshot({
-    path: path.join(outputDirectory, "timeline-exit-hold.jpg"),
+    path: path.join(outputDirectory, "rocket-ascent.jpg"),
     type: "jpeg",
     quality: 86,
   });

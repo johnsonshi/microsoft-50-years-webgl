@@ -15,7 +15,8 @@ Microsoft.**
 
 - Warm paper-like canvas with near-black, depth-aware particles.
 - Eight semantic historical eras with one continuously evolving WebGL system.
-- One editorial sentence per era with a scroll-driven word-color reveal.
+- One light, sans-serif editorial sentence per era with a monochrome
+  scroll-driven word reveal.
 - GPU-side morphing between original procedural targets.
 - Subtle pointer yaw/pitch that reveals real Z depth at any scroll position.
 - Restrained time-based idle movement after scrolling stops.
@@ -23,7 +24,9 @@ Microsoft.**
 - No backend, database, runtime API, remote model, texture, image, video, or
   font dependency.
 
-The complete generated visual review is in [`site/screenshots/`](site/screenshots/).
+The complete generated visual review is in
+[`site/screenshots/`](site/screenshots/), including rocket-on-pad, liftoff, and
+ascent states.
 
 ## Architecture
 
@@ -40,6 +43,7 @@ semantic HTML timeline
             └── custom GLSL
                 ├── GPU morph + transition arc
                 ├── bounded idle motion
+                ├── final-scene rocket lift
                 ├── depth-aware point sizing
                 └── semantic-copy avoidance
 ```
@@ -91,10 +95,11 @@ npm run capture
 npm run profile
 ```
 
-The browser suite covers forward/backward scroll, held transition midpoints,
-independent pointer axes, idle motion, resize, mobile, reduced motion, and
-mid-page reload restoration. It also fails on console errors, page errors,
-failed requests, missing assets, and unexpected draw counts.
+The browser suite covers editorial chrome and attribution, forward/backward
+scroll, held transition midpoints, the three-stage rocket ascent, independent
+pointer axes, idle motion, resize, mobile, reduced motion, and mid-page reload
+restoration. It also fails on console errors, page errors, failed requests,
+missing assets, and unexpected draw counts.
 
 ## Production build
 
@@ -168,8 +173,9 @@ than depth videos, Morton-sorted target correspondence, native scrolling,
 always-subtle idle motion, scene-specific camera framing, shader-side copy
 clearance, and an original historical narrative.
 
-Microsoft and its product names are trademarks of Microsoft Corporation. No
-Microsoft logo, product icon, or official artwork is included.
+Microsoft and its product names are trademarks of Microsoft Corporation. The
+anniversary mark is procedurally reconstructed; no official artwork or asset
+file is included.
 
 ## Design documents
 
