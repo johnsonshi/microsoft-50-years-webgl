@@ -30,7 +30,7 @@ scrolling advances.
 
 ## 2. 1980s — The personal computer
 
-- **Copy:** `In the 1980s, the personal computer moved into everyday life.`
+- **Copy:** `In the 1980s, Microsoft helped realize the vision of a PC on every desk and in every home.`
 - **Geometry:** A compact PC silhouette, keyboard strata, nested terminal
   frames, status areas, and multiple `READY`, `> RUN`, and prompt rows.
 - **Depth:** The detailed terminal interface floats just ahead of the monitor;
@@ -108,7 +108,8 @@ scrolling advances.
 - **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
   tower and service arms, a Florida-like horizon, and 28 stationary foreground
   crowd silhouettes. Ground smoke is collapsed and invisible on the pad, then
-  expands upward and outward after liftoff begins.
+  expands upward and outward after liftoff begins. A separate tapered exhaust
+  trail remains attached to the engine as the vehicle rises.
 - **Depth:** The crowd occupies the foreground, the pad and tower occupy the
   middle plane, and the rocket sits slightly behind them before lifting.
 - **Camera:** Nearly frontal and vertically open, like a distant public launch
@@ -118,9 +119,10 @@ scrolling advances.
 - **Intent:** AI is framed as infrastructure for greater human agency,
   accelerated discovery, and capabilities that become broadly available.
 - **End state:** Late-scroll shader displacement raises only the rocket by a
-  full two world units while a separately masked smoke field expands from the
-  pad. The crowd, tower, and horizon remain fixed while the statement fades
-  and the stage yields to the closing line.
+  full two world units while a masked exhaust trail lengthens beneath it and a
+  separate smoke field expands from the pad. The crowd, tower, and horizon
+  remain fixed while the statement fades and the stage yields to the closing
+  line.
 
 ## Transition language
 

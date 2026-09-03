@@ -53,6 +53,7 @@ try {
     return {
       fontFamily: style.fontFamily,
       fontWeight: Number.parseInt(style.fontWeight, 10),
+      personalStatement: normalize(statements[1]?.textContent ?? ""),
       enterpriseStatement: normalize(statements[3]?.textContent ?? ""),
       intelligenceStatement: normalize(statements[5]?.textContent ?? ""),
       finalStatement: normalize(finalStatement.textContent ?? ""),
@@ -65,6 +66,10 @@ try {
   });
   assert.match(contentState.fontFamily, /Segoe UI|Helvetica|Arial/);
   assert.ok(contentState.fontWeight <= 400);
+  assert.equal(
+    contentState.personalStatement,
+    "In the 1980s, Microsoft helped realize the vision of a PC on every desk and in every home.",
+  );
   assert.equal(
     contentState.enterpriseStatement,
     "In the 2000s, enterprise work moved online, connecting teams, information, and decisions across the web.",
@@ -79,7 +84,7 @@ try {
   );
   assert.equal(
     contentState.closing,
-    "Microsoft's history of computing is a history of becoming.",
+    "Microsoft at 50: A history of computing is a history of becoming.",
   );
   assert.equal(
     contentState.footer,

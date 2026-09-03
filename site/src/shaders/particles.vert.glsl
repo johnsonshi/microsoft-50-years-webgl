@@ -61,10 +61,19 @@ void main() {
   float rocketHeight = smoothstep(-2.2, -2.12, positionTarget.y);
   float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
   float smokeDepth =
-    smoothstep(1.7, 1.78, positionTarget.z) *
-    (1.0 - smoothstep(2.5, 2.58, positionTarget.z));
+    smoothstep(1.98, 2.04, positionTarget.z) *
+    (1.0 - smoothstep(2.38, 2.44, positionTarget.z));
   float smokeHeight = 1.0 - smoothstep(-0.82, -0.62, positionTarget.y);
   float smokeMask = smokeDepth * smokeHeight;
+  float exhaustDepth =
+    smoothstep(0.54, 0.58, positionTarget.z) *
+    (1.0 - smoothstep(0.72, 0.76, positionTarget.z));
+  float exhaustHorizontal =
+    1.0 - smoothstep(0.32, 0.42, abs(positionTarget.x - 1.15));
+  float exhaustHeight =
+    1.0 - smoothstep(-2.1, -2.085, positionTarget.y);
+  float exhaustMask =
+    exhaustDepth * exhaustHorizontal * exhaustHeight;
   float liftProgress = mix(
     smoother(uFinaleProgress),
     step(0.001, uFinaleProgress) * 0.7,
@@ -78,6 +87,28 @@ void main() {
   vec3 expandedSmoke =
     smokeOrigin + (base - smokeOrigin) * smokeProgress;
   base = mix(base, expandedSmoke, smokeMask);
+  float exhaustProgress = smoother(
+    clamp((uFinaleProgress - 0.08) / 0.35, 0.0, 1.0)
+  );
+  float exhaustT = clamp(
+    (-2.12 - positionTarget.y) / 1.35,
+    0.0,
+    1.0
+  );
+  float engineY = -2.08 + liftProgress * 2.0;
+  float exhaustLength = mix(0.38, 1.55, liftProgress);
+  vec3 exhaustPosition = positionTarget;
+  exhaustPosition.x =
+    1.15 +
+    (positionTarget.x - 1.15) *
+    mix(0.35, 1.0, exhaustProgress);
+  exhaustPosition.x +=
+    sin(uTime * 4.0 + aSeed * TAU + exhaustT * 12.0) *
+    exhaustT *
+    exhaustProgress *
+    0.055;
+  exhaustPosition.y = engineY - exhaustT * exhaustLength;
+  base = mix(base, exhaustPosition, exhaustMask);
   float seedAngle = aSeed * TAU;
   vec3 flow = vec3(
     sin(base.y * 1.25 + seedAngle * 0.35),
@@ -133,5 +164,10 @@ void main() {
     mix(0.45, 0.94, aAccent) *
     mix(1.0, 0.58, transitionEnergy) *
     mix(1.0, 0.06, suppression) *
-    mix(1.0, smokeProgress, smokeMask);
+    mix(1.0, smokeProgress, smokeMask) *
+    mix(
+      1.0,
+      exhaustProgress * mix(0.92, 0.38, exhaustT),
+      exhaustMask
+    );
 }

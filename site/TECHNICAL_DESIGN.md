@@ -146,10 +146,13 @@ nearly formed, reaches a partial lift at the final scene's settled scroll
 position, and reaches `1` during the pinned exit hold. The vertex shader
 derives a mask from the final target's rocket-only X/Y/Z region, so the vehicle
 rises two world units while the crowd, tower, and horizon remain stationary.
-A second final-target depth band identifies smoke particles. Their positions
-stay collapsed at the pad with zero alpha until liftoff begins, then expand
-upward and outward with the same finale uniform. Both masks avoid another
-per-particle attribute and keep the renderer at one draw call.
+Two additional final-target depth bands identify launch effects. Ground-smoke
+positions stay collapsed at the pad with zero alpha until liftoff begins, then
+expand upward and outward. Exhaust particles also remain invisible before
+launch; afterward, the shader anchors their top to the lifted engine position
+and lengthens a tapered trail beneath the moving rocket. All three masks use
+the same finale uniform, avoid another per-particle attribute, and keep the
+renderer at one draw call.
 
 Each scene definition also supplies interpolated:
 

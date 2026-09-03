@@ -510,13 +510,18 @@ function rocketScene(): WeightedSampler[] {
     ),
   );
   const smoke = [
-    ellipsoidVolumeSampler([rocketX, -2.02, 2.12], [0.38, 0.2, 0.18]),
-    ellipsoidVolumeSampler([0.55, -1.94, 2.08], [0.65, 0.25, 0.2]),
-    ellipsoidVolumeSampler([1.8, -1.92, 2.15], [0.68, 0.25, 0.22]),
-    ellipsoidVolumeSampler([-0.08, -1.8, 2.05], [0.76, 0.32, 0.18]),
-    ellipsoidVolumeSampler([2.42, -1.78, 2.1], [0.74, 0.32, 0.2]),
-    ellipsoidVolumeSampler([0.95, -1.48, 2.18], [0.48, 0.56, 0.18]),
+    ellipsoidVolumeSampler([rocketX, -2.02, 2.2], [0.38, 0.2, 0.1]),
+    ellipsoidVolumeSampler([0.55, -1.94, 2.18], [0.65, 0.25, 0.12]),
+    ellipsoidVolumeSampler([1.8, -1.92, 2.22], [0.68, 0.25, 0.12]),
+    ellipsoidVolumeSampler([-0.08, -1.8, 2.16], [0.76, 0.32, 0.1]),
+    ellipsoidVolumeSampler([2.42, -1.78, 2.2], [0.74, 0.32, 0.12]),
+    ellipsoidVolumeSampler([0.95, -1.48, 2.24], [0.48, 0.56, 0.1]),
   ];
+  const exhaust = rocketExhaustSampler(
+    [rocketX, -2.12, rocketDepth],
+    1.35,
+    0.26,
+  );
   const tower = [
     lineSampler([2.05, -2.0, -0.22], [2.05, 1.62, -0.22], 0.035),
     lineSampler([2.45, -2.0, -0.22], [2.45, 1.62, -0.22], 0.035),
@@ -546,14 +551,15 @@ function rocketScene(): WeightedSampler[] {
   const crowd = crowdSilhouetteSamplers();
 
   return [
-    { weight: 0.27, sample: body },
-    { weight: 0.035, sample: interstage },
-    { weight: 0.085, sample: nose },
-    { weight: 0.07, sample: choiceSampler(stageBands) },
-    { weight: 0.12, sample: choiceSampler(smoke) },
-    { weight: 0.17, sample: choiceSampler(tower) },
-    { weight: 0.09, sample: choiceSampler(horizon) },
-    { weight: 0.16, sample: choiceSampler(crowd) },
+    { weight: 0.25, sample: body },
+    { weight: 0.03, sample: interstage },
+    { weight: 0.08, sample: nose },
+    { weight: 0.065, sample: choiceSampler(stageBands) },
+    { weight: 0.1, sample: exhaust },
+    { weight: 0.1, sample: choiceSampler(smoke) },
+    { weight: 0.16, sample: choiceSampler(tower) },
+    { weight: 0.08, sample: choiceSampler(horizon) },
+    { weight: 0.135, sample: choiceSampler(crowd) },
   ];
 }
 
@@ -799,6 +805,27 @@ function crowdSilhouetteSamplers(): PointSampler[] {
     );
   }
   return samplers;
+}
+
+function rocketExhaustSampler(
+  origin: Vec3,
+  length: number,
+  maxRadius: number,
+): PointSampler {
+  return (random, output, offset) => {
+    const vertical = random();
+    const angle = random() * Math.PI * 2;
+    const radius =
+      (0.025 + Math.pow(vertical, 0.72) * maxRadius) *
+      Math.sqrt(random());
+    writePoint(
+      output,
+      offset,
+      origin[0] + Math.cos(angle) * radius,
+      origin[1] - vertical * length,
+      origin[2] + (random() - 0.5) * 0.08,
+    );
+  };
 }
 
 function nextFrame(): Promise<void> {
