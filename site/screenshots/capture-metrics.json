@@ -13,12 +13,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 124,
+      "cumulativeFrames": 126,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.234677920418402,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.623016440679155,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -35,12 +35,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 179,
+      "cumulativeFrames": 181,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 17.059777034727556,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.636464645849408,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -57,12 +57,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 234,
+      "cumulativeFrames": 236,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.967521890615807,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.64279715085434,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -79,12 +79,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 289,
+      "cumulativeFrames": 291,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.91003510613755,
-      "p95FrameMs": 16.799999237060547
+      "meanFrameMs": 16.64742322639911,
+      "p95FrameMs": 16.700000762939453
     }
   },
   {
@@ -101,11 +101,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 343,
+      "cumulativeFrames": 346,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.87172062473464,
+      "meanFrameMs": 16.65057855120973,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -123,11 +123,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 399,
+      "cumulativeFrames": 401,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.84260702192933,
+      "meanFrameMs": 16.65236959909263,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -145,11 +145,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 453,
+      "cumulativeFrames": 456,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.82185481820938,
+      "meanFrameMs": 16.65416719829827,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -167,11 +167,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 508,
+      "cumulativeFrames": 510,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.804921771128345,
+      "meanFrameMs": 16.655490723778218,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -189,11 +189,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 564,
+      "cumulativeFrames": 566,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.79095796279028,
+      "meanFrameMs": 16.65653763053274,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -211,11 +211,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 620,
+      "cumulativeFrames": 621,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.69400051434835,
+      "meanFrameMs": 16.666000528335573,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -237,7 +237,7 @@
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666167186101276,
+      "meanFrameMs": 16.665833848317465,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -255,11 +255,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 719,
+      "cumulativeFrames": 731,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.666000528335573,
+      "meanFrameMs": 16.666000509262084,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -277,11 +277,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 778,
+      "cumulativeFrames": 786,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.943500525156658,
+      "meanFrameMs": 16.666000515619913,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -299,11 +299,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 833,
+      "cumulativeFrames": 841,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.94333386103312,
+      "meanFrameMs": 16.666000515619913,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -321,12 +321,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 888,
+      "cumulativeFrames": 896,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.94316720644633,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.666167186101276,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -343,12 +343,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 943,
+      "cumulativeFrames": 951,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.94333387374878,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.666000528335573,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -365,12 +365,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 998,
+      "cumulativeFrames": 1006,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.94333387374878,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.66600051879883,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -387,11 +387,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 1025,
+      "cumulativeFrames": 1033,
       "geometryBytes": 2880000,
       "pixelRatio": 1.5,
       "reducedMotion": false,
-      "meanFrameMs": 16.943333864212036,
+      "meanFrameMs": 16.666000515619913,
       "p95FrameMs": 16.799999237060547
     }
   },
@@ -409,12 +409,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 73,
+      "cumulativeFrames": 72,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.64794580903772,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.655556042989094,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -431,12 +431,12 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 127,
+      "cumulativeFrames": 126,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.655118679437113,
-      "p95FrameMs": 16.700000762939453
+      "meanFrameMs": 16.66111161973741,
+      "p95FrameMs": 16.799999237060547
     }
   },
   {
@@ -453,11 +453,11 @@
       "pointerX": 0,
       "pointerY": 0,
       "drawCalls": 1,
-      "cumulativeFrames": 181,
+      "cumulativeFrames": 180,
       "geometryBytes": 896000,
       "pixelRatio": 1,
       "reducedMotion": false,
-      "meanFrameMs": 16.658564114438896,
+      "meanFrameMs": 16.66222276687622,
       "p95FrameMs": 16.700000762939453
     }
   }

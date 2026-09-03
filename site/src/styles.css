@@ -213,16 +213,12 @@ footer {
 
 .era-copy__word {
   --word-reveal: 0;
-  color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    var(--scene-accent) 0%,
-    var(--scene-accent) calc(var(--word-reveal) * 100%),
-    var(--word-unread) calc(var(--word-reveal) * 100%),
-    var(--word-unread) 100%
+  color: var(--word-unread);
+  color: color-mix(
+    in srgb,
+    var(--word-unread),
+    var(--scene-accent) calc(var(--word-reveal) * 100%)
   );
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .closing {

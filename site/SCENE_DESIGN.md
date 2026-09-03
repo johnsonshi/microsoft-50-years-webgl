@@ -92,7 +92,7 @@ scrolling advances.
 
 ## 7. 2025 — Microsoft at fifty
 
-- **Copy:** `By 2025, Microsoft had spent fifty years pushing the frontiers of possibility so people everywhere could achieve more.`
+- **Copy:** `In 2025, Microsoft marked 50 years of empowering people and organizations to achieve more.`
 - **Geometry:** Four filled panes above a locally sampled `Microsoft` wordmark.
 - **Depth:** Each pane sits on a slightly different plane; the wordmark is
   shallow and calm beneath them.

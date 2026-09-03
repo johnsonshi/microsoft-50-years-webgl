@@ -137,9 +137,9 @@ pair only when `sceneA`/`sceneB` changes.
 The first sentence begins fading in as its era enters the viewport, before the
 sticky stage reaches the top. Its complete text is therefore visible in pale
 graphite during the approach. The entry hold then keeps scene zero fixed while
-the words fill from pale graphite to black. Each sentence is split into
-accessible word spans, and later eras use the same progressive fill as scroll
-advances.
+the words darken from pale graphite to black. Each sentence is split into
+accessible word spans, and later eras use the same progressive color change as
+scroll advances.
 
 The final era also exposes `finaleProgress`. It begins only after the rocket is
 nearly formed, reaches a partial lift at the final scene's settled scroll

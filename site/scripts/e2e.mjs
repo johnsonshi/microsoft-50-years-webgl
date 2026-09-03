@@ -91,7 +91,7 @@ try {
   );
   assert.equal(
     contentState.fiftyStatement,
-    "By 2025, Microsoft had spent fifty years pushing the frontiers of possibility so people everywhere could achieve more.",
+    "In 2025, Microsoft marked 50 years of empowering people and organizations to achieve more.",
   );
   assert.equal(
     contentState.finalStatement,
