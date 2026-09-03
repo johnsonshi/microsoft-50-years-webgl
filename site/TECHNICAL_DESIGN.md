@@ -115,12 +115,12 @@ post-processing, or framebuffer simulation is used.
 
 ## Scroll architecture
 
-The experience section contains one viewport-height step per era plus
-transition travel. JavaScript calculates:
+The experience section begins with a short entry hold, then contains one
+viewport-height step per era plus transition travel. JavaScript calculates:
 
 ```text
-progress = clamp((scrollY - sectionTop) /
-                 (sectionHeight - viewportHeight))
+progress = clamp((scrollY - firstEraTop) /
+                 (lastEraBottom - firstEraTop - viewportHeight))
 scaled = progress × (sceneCount - 1)
 sceneA = floor(scaled)
 sceneB = min(sceneA + 1, lastScene)
@@ -130,6 +130,12 @@ local = fract(scaled)
 A smootherstep curve shapes `local` for particle motion while raw local
 progress remains available for copy opacity. The controller updates the active
 pair only when `sceneA`/`sceneB` changes.
+
+The entry hold keeps scene zero fixed while its single sentence fades in
+continuously, eliminating the previous threshold where copy and its particle
+clearance appeared at once. Each sentence is split into accessible word spans;
+the incoming sentence fills from pale graphite to its era accent as scroll
+progress advances.
 
 Each scene definition also supplies interpolated:
 
@@ -213,4 +219,3 @@ The implementation imports nothing from `../research`. A final repository scan
 will reject Datacurve URLs or filenames under `site/`. Research downloads and
 screenshots remain ignored and local; only independently written analysis and
 reproduction tooling are tracked.
-

@@ -164,7 +164,7 @@ footer {
   position: relative;
   z-index: 2;
   margin: -100svh 0 0;
-  padding: 0;
+  padding: 20svh 0 0;
   list-style: none;
   pointer-events: none;
 }
@@ -182,16 +182,18 @@ footer {
 
 .era-copy {
   --scene-presence: 0;
+  --scene-accent: #0067a8;
+  --word-unread: rgba(17, 17, 15, 0.14);
   position: sticky;
   top: 50%;
-  width: min(28rem, 31vw);
+  width: min(37rem, 39vw);
   opacity: var(--scene-presence);
   transform: translate3d(
     0,
-    calc(-50% + (1 - var(--scene-presence)) * 1.6rem),
+    calc(-50% + (1 - var(--scene-presence)) * 1rem),
     0
   );
-  transition: opacity 80ms linear;
+  transition: opacity 60ms linear;
 }
 
 .era--right .era-copy {
@@ -204,27 +206,28 @@ footer {
   text-align: left;
 }
 
-.era-copy__year {
-  margin: 0 0 0.4rem;
-  font-size: clamp(0.82rem, 1vw, 1rem);
-  font-weight: 650;
-  letter-spacing: 0.03em;
-}
-
-.era-copy h2 {
+.era-copy__statement {
   margin: 0;
-  font-size: clamp(2.5rem, 4.8vw, 5.2rem);
-  font-weight: 430;
-  letter-spacing: -0.055em;
-  line-height: 0.95;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 3.75vw, 4.35rem);
+  font-weight: 600;
+  letter-spacing: -0.047em;
+  line-height: 1.02;
+  text-wrap: balance;
 }
 
-.era-copy > p:last-child {
-  max-width: 31rem;
-  margin: 1.25rem 0 0;
-  color: var(--muted);
-  font-size: clamp(0.98rem, 1.2vw, 1.2rem);
-  line-height: 1.55;
+.era-copy__word {
+  --word-reveal: 0;
+  color: transparent;
+  background-image: linear-gradient(
+    90deg,
+    var(--scene-accent) 0%,
+    var(--scene-accent) calc(var(--word-reveal) * 100%),
+    var(--word-unread) calc(var(--word-reveal) * 100%),
+    var(--word-unread) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .closing {
@@ -288,13 +291,8 @@ footer p {
     text-align: center;
   }
 
-  .era-copy h2 {
-    font-size: clamp(2.35rem, 10vw, 4rem);
-  }
-
-  .era-copy > p:last-child {
-    margin-right: auto;
-    margin-left: auto;
+  .era-copy__statement {
+    font-size: clamp(2.05rem, 8.8vw, 3.5rem);
   }
 
 }
@@ -312,9 +310,8 @@ footer p {
     top: 70%;
   }
 
-  .era-copy > p:last-child {
-    max-width: 25rem;
-    font-size: 0.95rem;
+  .era-copy__statement {
+    font-size: clamp(1.95rem, 9vw, 2.75rem);
   }
 }
 

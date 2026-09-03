@@ -14,6 +14,14 @@ try {
     )
     .count();
   assert.equal(removedChromeCount, 0);
+  assert.equal(
+    await desktop.page.locator(".era-copy__statement").count(),
+    8,
+  );
+  assert.equal(
+    await desktop.page.locator(".era-copy__year, .era-copy h2").count(),
+    0,
+  );
 
   const firstCopyBeforeTimeline = await desktop.page
     .locator(".era-copy")
@@ -23,6 +31,43 @@ try {
     firstCopyBeforeTimeline < 0.01,
     "The first era is visible above the fold.",
   );
+
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const firstEra = section?.querySelector(".era:first-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(firstEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline entry bounds not found.");
+    }
+    const sectionTop =
+      window.scrollY + section.getBoundingClientRect().top;
+    const firstEraTop =
+      window.scrollY + firstEra.getBoundingClientRect().top;
+    window.scrollTo(0, sectionTop + (firstEraTop - sectionTop) * 0.5);
+  });
+  await desktop.page.waitForTimeout(300);
+  const entryState = await desktop.page
+    .locator(".era-copy")
+    .first()
+    .evaluate((element) => {
+      const words = element.querySelectorAll(".era-copy__word");
+      return {
+        opacity: Number.parseFloat(getComputedStyle(element).opacity),
+        firstWord: Number.parseFloat(
+          getComputedStyle(words[0]).getPropertyValue("--word-reveal"),
+        ),
+        lastWord: Number.parseFloat(
+          getComputedStyle(words[words.length - 1]).getPropertyValue(
+            "--word-reveal",
+          ),
+        ),
+      };
+    });
+  assert.ok(entryState.opacity > 0.35 && entryState.opacity < 0.65);
+  assert.ok(entryState.firstWord > 0.95);
+  assert.ok(entryState.lastWord < 0.05);
 
   for (let index = 0; index < 8; index += 1) {
     const progress = index / 7;
@@ -41,8 +86,19 @@ try {
   const firstCopyAtTimeline = await desktop.page
     .locator(".era-copy")
     .first()
-    .evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity));
-  assert.ok(firstCopyAtTimeline > 0.95);
+    .evaluate((element) => {
+      const words = element.querySelectorAll(".era-copy__word");
+      return {
+        opacity: Number.parseFloat(getComputedStyle(element).opacity),
+        lastWord: Number.parseFloat(
+          getComputedStyle(words[words.length - 1]).getPropertyValue(
+            "--word-reveal",
+          ),
+        ),
+      };
+    });
+  assert.ok(firstCopyAtTimeline.opacity > 0.95);
+  assert.ok(firstCopyAtTimeline.lastWord > 0.95);
 
   for (let index = 6; index >= 0; index -= 1) {
     const progress = index / 7;

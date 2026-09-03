@@ -68,15 +68,17 @@ export async function openExperience(options = {}) {
 export async function setTimelineProgress(page, progress, settleMs = 850) {
   await page.evaluate((value) => {
     const section = document.querySelector("#timeline");
+    const firstEra = section?.querySelector(".era:first-child");
     const lastEra = section?.querySelector(".era:last-child");
     if (
       !(section instanceof HTMLElement) ||
+      !(firstEra instanceof HTMLElement) ||
       !(lastEra instanceof HTMLElement)
     ) {
       throw new Error("Timeline bounds not found.");
     }
     const sectionTop =
-      window.scrollY + section.getBoundingClientRect().top;
+      window.scrollY + firstEra.getBoundingClientRect().top;
     const lastEraBottom =
       window.scrollY + lastEra.getBoundingClientRect().bottom;
     const range = Math.max(

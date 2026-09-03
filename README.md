@@ -1,12 +1,12 @@
 # Microsoft: 50 Years of Computing
 
-![The particle field resolving into 50](site/screenshots/scene-07.jpg)
+![The particle field resolving into the Microsoft mark](site/screenshots/scene-07.jpg)
 
 An original scroll-driven WebGL essay marking Microsoft's first fifty years.
-One persistent field of particles reorganizes from terminal computing through
-PCs, graphical desktops, enterprise systems, cloud infrastructure,
-orchestrated AI systems, a monumental `50`, and an AI-enabled age of
-abundance.
+One persistent field of particles reorganizes from the first BASIC source
+listing through PCs, Windows and the Internet, connected Office workflows,
+cloud datacenters, agent fleets, the Microsoft mark, and a rocket lifting
+toward an AI-enabled age of abundance.
 
 **This is an unofficial personal tribute. It is not sponsored or endorsed by
 Microsoft.**
@@ -15,6 +15,7 @@ Microsoft.**
 
 - Warm paper-like canvas with near-black, depth-aware particles.
 - Eight semantic historical eras with one continuously evolving WebGL system.
+- One editorial sentence per era with a scroll-driven word-color reveal.
 - GPU-side morphing between original procedural targets.
 - Subtle pointer yaw/pitch that reveals real Z depth at any scroll position.
 - Restrained time-based idle movement after scrolling stops.

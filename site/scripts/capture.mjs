@@ -24,6 +24,28 @@ try {
     quality: 88,
   });
 
+  await desktop.page.evaluate(() => {
+    const section = document.querySelector("#timeline");
+    const firstEra = section?.querySelector(".era:first-child");
+    if (
+      !(section instanceof HTMLElement) ||
+      !(firstEra instanceof HTMLElement)
+    ) {
+      throw new Error("Timeline entry bounds not found.");
+    }
+    const sectionTop =
+      window.scrollY + section.getBoundingClientRect().top;
+    const firstEraTop =
+      window.scrollY + firstEra.getBoundingClientRect().top;
+    window.scrollTo(0, sectionTop + (firstEraTop - sectionTop) * 0.5);
+  });
+  await desktop.page.waitForTimeout(300);
+  await desktop.page.screenshot({
+    path: path.join(outputDirectory, "timeline-entry.jpg"),
+    type: "jpeg",
+    quality: 88,
+  });
+
   for (let index = 0; index < 8; index += 1) {
     const progress = index / 7;
     await setTimelineProgress(desktop.page, progress);
