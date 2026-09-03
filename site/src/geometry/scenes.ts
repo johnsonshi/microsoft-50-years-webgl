@@ -510,12 +510,12 @@ function rocketScene(): WeightedSampler[] {
     ),
   );
   const smoke = [
-    ellipsoidVolumeSampler([rocketX, -2.02, 2.2], [0.38, 0.2, 0.1]),
-    ellipsoidVolumeSampler([0.55, -1.94, 2.18], [0.65, 0.25, 0.12]),
-    ellipsoidVolumeSampler([1.8, -1.92, 2.22], [0.68, 0.25, 0.12]),
-    ellipsoidVolumeSampler([-0.08, -1.8, 2.16], [0.76, 0.32, 0.1]),
-    ellipsoidVolumeSampler([2.42, -1.78, 2.2], [0.74, 0.32, 0.12]),
-    ellipsoidVolumeSampler([0.95, -1.48, 2.24], [0.48, 0.56, 0.1]),
+    ellipsoidVolumeSampler([rocketX, -2.02, 0.98], [0.38, 0.2, 0.02]),
+    ellipsoidVolumeSampler([0.55, -1.94, 0.98], [0.65, 0.25, 0.02]),
+    ellipsoidVolumeSampler([1.8, -1.92, 0.98], [0.68, 0.25, 0.02]),
+    ellipsoidVolumeSampler([-0.08, -1.8, 0.98], [0.76, 0.32, 0.02]),
+    ellipsoidVolumeSampler([2.42, -1.78, 0.98], [0.74, 0.32, 0.02]),
+    ellipsoidVolumeSampler([0.95, -1.48, 0.98], [0.48, 0.56, 0.02]),
   ];
   const exhaust = rocketExhaustSampler(
     [rocketX, -2.12, rocketDepth],

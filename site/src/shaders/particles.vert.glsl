@@ -61,8 +61,8 @@ void main() {
   float rocketHeight = smoothstep(-2.2, -2.12, positionTarget.y);
   float rocketMask = rocketHorizontal * rocketDepth * rocketHeight;
   float smokeDepth =
-    smoothstep(1.98, 2.04, positionTarget.z) *
-    (1.0 - smoothstep(2.38, 2.44, positionTarget.z));
+    smoothstep(0.93, 0.95, positionTarget.z) *
+    (1.0 - smoothstep(1.01, 1.03, positionTarget.z));
   float smokeHeight = 1.0 - smoothstep(-0.82, -0.62, positionTarget.y);
   float smokeMask = smokeDepth * smokeHeight;
   float exhaustDepth =
@@ -83,7 +83,7 @@ void main() {
   float smokeProgress = smoother(
     clamp((uFinaleProgress - 0.06) / 0.5, 0.0, 1.0)
   );
-  vec3 smokeOrigin = vec3(1.15, -2.04, 2.12);
+  vec3 smokeOrigin = vec3(1.15, -2.04, 0.98);
   vec3 expandedSmoke =
     smokeOrigin + (base - smokeOrigin) * smokeProgress;
   base = mix(base, expandedSmoke, smokeMask);

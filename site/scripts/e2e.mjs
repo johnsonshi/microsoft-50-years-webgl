@@ -54,8 +54,11 @@ try {
       fontFamily: style.fontFamily,
       fontWeight: Number.parseInt(style.fontWeight, 10),
       personalStatement: normalize(statements[1]?.textContent ?? ""),
+      internetStatement: normalize(statements[2]?.textContent ?? ""),
       enterpriseStatement: normalize(statements[3]?.textContent ?? ""),
+      cloudStatement: normalize(statements[4]?.textContent ?? ""),
       intelligenceStatement: normalize(statements[5]?.textContent ?? ""),
+      fiftyStatement: normalize(statements[6]?.textContent ?? ""),
       finalStatement: normalize(finalStatement.textContent ?? ""),
       closing: normalize(
         document.querySelector(".closing h2")?.textContent ?? "",
@@ -71,16 +74,28 @@ try {
     "In the 1980s, Microsoft helped realize the vision of a PC on every desk and in every home.",
   );
   assert.equal(
+    contentState.internetStatement,
+    "In the 1990s, Microsoft brought the PC online, connecting people and information across the emerging web.",
+  );
+  assert.equal(
     contentState.enterpriseStatement,
-    "In the 2000s, enterprise work moved online, connecting teams, information, and decisions across the web.",
+    "In the 2000s, Microsoft moved work online, connecting teams, information, and decisions across the enterprise.",
+  );
+  assert.equal(
+    contentState.cloudStatement,
+    "In the 2010s, Azure brought enterprise systems to the cloud at global scale.",
   );
   assert.equal(
     contentState.intelligenceStatement,
-    "In the 2020s, Microsoft powered intelligence across people, software, and enterprise systems.",
+    "In the 2020s, Microsoft enabled intelligence across people, software, and enterprise systems.",
+  );
+  assert.equal(
+    contentState.fiftyStatement,
+    "By 2025, Microsoft had spent fifty years pushing the frontiers of possibility so people everywhere could achieve more.",
   );
   assert.equal(
     contentState.finalStatement,
-    "2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.",
+    "2026 and Beyond: Microsoft can power an age of abundance, expanding agency, discovery, and possibility.",
   );
   assert.equal(
     contentState.closing,

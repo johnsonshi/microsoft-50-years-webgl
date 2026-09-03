@@ -41,7 +41,7 @@ scrolling advances.
 
 ## 3. 1990s — Windows and the Internet
 
-- **Copy:** `In the 1990s, Windows and the Internet connected people beyond the desktop.`
+- **Copy:** `In the 1990s, Microsoft brought the PC online, connecting people and information across the emerging web.`
 - **Geometry:** A software-only composition of overlapping browser, email,
   terminal, and Windows-pane interfaces labeled `HTTP://`, `MAIL @`,
   `> CONNECT`, `TCP/IP`, and `WWW`. Five network nodes form one restrained
@@ -55,7 +55,7 @@ scrolling advances.
 
 ## 4. 2000s — Work begins to flow
 
-- **Copy:** `In the 2000s, enterprise work moved online, connecting teams, information, and decisions across the web.`
+- **Copy:** `In the 2000s, Microsoft moved work online, connecting teams, information, and decisions across the enterprise.`
 - **Geometry:** Email, `DOCS`, `SLIDES`, and `REPORT` cards moving through one
   continuous system of broad Bezier paths.
 - **Depth:** Artifacts occupy staggered planes along the flow, with no desk or
@@ -67,7 +67,7 @@ scrolling advances.
 
 ## 5. 2010s — Enterprise cloud
 
-- **Copy:** `In the 2010s, enterprise systems moved into cloud datacenters built for global scale.`
+- **Copy:** `In the 2010s, Azure brought enterprise systems to the cloud at global scale.`
 - **Geometry:** Three dense server racks with repeated units and infrastructure
   routes kept below the cabinets. No application cards or decorative routing
   sits above the rack line.
@@ -79,7 +79,7 @@ scrolling advances.
 
 ## 6. 2020s — Agent fleets
 
-- **Copy:** `In the 2020s, Microsoft powered intelligence across people, software, and enterprise systems.`
+- **Copy:** `In the 2020s, Microsoft enabled intelligence across people, software, and enterprise systems.`
 - **Geometry:** A central `AI` core surrounded by eight specialized panels
   (`PLAN`, `MEMORY`, `CODE`, `DEPLOY`, `TOOLS`, `DATA`, `VISION`, and
   `SEARCH`), one token stream, and a restrained ring of links. There is no
@@ -92,7 +92,7 @@ scrolling advances.
 
 ## 7. 2025 — Microsoft at fifty
 
-- **Copy:** `By 2025, Microsoft had spent fifty years turning ambitious ideas into everyday tools.`
+- **Copy:** `By 2025, Microsoft had spent fifty years pushing the frontiers of possibility so people everywhere could achieve more.`
 - **Geometry:** Four filled panes above a locally sampled `Microsoft` wordmark.
 - **Depth:** Each pane sits on a slightly different plane; the wordmark is
   shallow and calm beneath them.
@@ -104,7 +104,7 @@ scrolling advances.
 
 ## 8. 2026 and Beyond — Powering abundance
 
-- **Copy:** `2026 and Beyond: AI can power an age of abundance, expanding agency, discovery, and possibility.`
+- **Copy:** `2026 and Beyond: Microsoft can power an age of abundance, expanding agency, discovery, and possibility.`
 - **Geometry:** A tall staged orbital rocket with an ogive fairing, launch
   tower and service arms, a Florida-like horizon, and 28 stationary foreground
   crowd silhouettes. Ground smoke is collapsed and invisible on the pad, then
