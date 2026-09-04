@@ -126,15 +126,17 @@ The static output is written to `site/dist/`. Vite's production base is
 4. upload the Pages artifact;
 5. deploy through the official GitHub Pages actions.
 
-Enable **Settings → Pages → Source: GitHub Actions** in the destination
-repository. The expected URL is:
+The public repository is
+[`johnsonshi/microsoft-50-years-webgl`](https://github.com/johnsonshi/microsoft-50-years-webgl).
+GitHub Pages deploys from `main` through GitHub Actions with HTTPS enforced.
+The canonical site URL is:
 
 ```text
-https://<username>.github.io/microsoft-50-years-webgl/
+https://johnsonshi.com/microsoft-50-years-webgl/
 ```
 
-The workflow is prepared locally but this repository has not been pushed or
-published.
+The corresponding `johnsonshi.github.io/microsoft-50-years-webgl/` address
+redirects to the custom-domain URL.
 
 ## Research methodology
 
